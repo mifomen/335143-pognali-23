@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
-* Студент: [Илья Кошелев](https://up.htmlacademy.ru/htmlcss/31/user/335143).
-* Наставник: [Татьяна Симоненко ](https://up.htmlacademy.ru/htmlcss/31/user/6613).
+Студент: [Илья Кошелев](https://up.htmlacademy.ru/adaptive/23/user/335143).
+* Наставник: [Татьяна Симоненко ](https://up.htmlacademy.ru/adaptive/23/user/6613).
 
 ---
 
