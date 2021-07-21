@@ -1,47 +1,6 @@
-body {
-  background: transparent;
-}
+@import 'root.less';
+@import 'fonts.less';
+@import 'main.less';
 
-:root {
-  --basic-font: 'Roboto', 'Arial', sans-serif;
-  --body-width:  1200px;
-  --conteiner-width:  1146px;
 
-}
 
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: local('Roboto'),
-  url('../fonts/roboto.woff2') format('woff2'),
-  url('../fonts/roboto.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: local('Roboto Bold'),
-  url('../fonts/robotobold.woff2') format('woff2'),
-  url('../fonts/robotobold.woff') format('woff');
-}
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-// html,
-// body {
-//   height: 100%;
-//   margin: 0;
-//   padding: 0;
-// }
