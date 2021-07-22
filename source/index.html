@@ -10,10 +10,10 @@
   <link rel="apple-touch-icon" href="img/favicon/152.png">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
-<body class="page-body">
-  <header class="header">
+<body class="page">
+  <header class="header page__header">
     <h1 class="header__title">Погнали?</h1>
-    <button class="header__buttone">Открыть меню</button>
+    <button class="header__button">Открыть меню</button>
     <h2 class="header__intro">В путешествие с крутыми попутчиками</h2>
     <a href="tel:+496170961709" class="header__link tel-link"></a>
     <a href="email!" class="header__link email-link"></a>
@@ -21,7 +21,7 @@
     <p class="header__feedback-msg">«Лучшее приложение,что я видел в жизни!»</p>
     <p class="header__feedback-author">«Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
   </header>
-  <main class="main">
+  <main class="main page__main">
     <section class="main-plan">
       <h2 class="visually-hidden">Как работает наш сервис!</h2>
       <p class="main-plan__tourism step-one">Выберите направление</p>
@@ -72,9 +72,10 @@
       <p class="about-companions__call-is-easy">Теперь можно легко найти единомышленников!</p>
       <ul class="about-companions__list">
         <li class="about-companions__item">
+          <img src="https://via.placeholder.com/270x140" width="270" height="140" class="about-companions__photo" alt="фото компаньена Тани">
           <p class="about-companions__item-level">
             <span class="about-companions__item-level-number">99</span>
-            <span class="about-companions__item-leve-text">level</span>
+            <span class="about-companions__item-level-text">level</span>
           </p>
           <div class="about-companions__item-country-visited">
             <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited country-one" alt="pic1-country-one" width="35" height="25">
@@ -91,9 +92,10 @@
           </div>
         </li>
         <li class="about-companions__item">
+          <img src="https://via.placeholder.com/270x140" width="270" height="140" class="about-companions__photo" alt="фото компаньена Пети">
           <p class="about-companions__item-level">
             <span class="about-companions__item-level-number">80</span>
-            <span class="about-companions__item-leve-text">level</span>
+            <span class="about-companions__item-level-text">level</span>
           </p>
           <div class="about-companions__item-country-visited">
             <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited country-one" alt="pic1-country-one" width="35" height="25">
@@ -163,7 +165,7 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer page__footer">
     <h2 class="footer__title">Погнали?</h2>
     <ul class="footer__social-list">
       <li class="footer__social-list-item">
@@ -180,9 +182,9 @@
       </li>
     </ul>
     <span class="footer__authors">Разработано</span>
-    <a href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
       <h3 class="visually-hidden">Наш логотип и переход на наш курс</h3>
-      <img src="https://via.placeholder.com/45x45" alt="htmlacademy-icon">
+      <img class="footer__authors-logo" src="https://via.placeholder.com/45x45" alt="htmlacademy-icon">
     </a>
   </footer>
   <script src="js/app.js"></script>
