@@ -1,5 +1,5 @@
 .header {
-  font-family:var(--basic-font);
+  font-family: var(--basic-font);
   margin: 0 auto;
   background-color: var(--basic_blue);
   padding: 19px 25px 0 25px;
@@ -7,20 +7,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  &__title {
+   background-color: var(--blue);
 
+  &__title {
     margin-bottom: 25px;
   }
+
   &__button {
     position: relative;
     margin-left: auto;
-    right:8px;
+    right: 8px;
     top: 5px;
     font-size: 0;
-    border:0;
+    border: 0;
     background-color: transparent;
     width: 25px;
     height: 11px;
+
     &::after,
     &::before {
       content: "";
@@ -30,16 +33,19 @@
       border-radius: 1.5px;
       width: 25px;
       height: 3px;
+      cursor: pointer;
     }
+
     &::after {
-      top:0;
+      top: 0;
     }
+
     &::before {
-      bottom:0;
+      bottom: 0;
     }
   }
-  &__intro {
 
+  &__intro {
     font-size: 36px;
     line-height: 40px;
     width: 238px;
@@ -48,28 +54,28 @@
     color: var(--white);
     margin-bottom: 248px;
   }
-  &__link {
 
+  &__link {
     font-weight: bold;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    // border: 2px solid yellow;
-    background-color: var( --special_orange);
     font-size: 17px;
     line-height: 20px;
-    color:var(--basic_blue);
+    color: var(--basic_blue);
     text-transform: uppercase;
     text-decoration: none;
     margin-bottom: 25px;
   }
+
   &__feedback-wrapper {
     color: var(--white);
     width: 220px;
   }
+
   &__feedback-msg {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     color: var(--white);
     font-weight: 300;
     font-size: 16px;
@@ -77,26 +83,32 @@
     width: 151px;
     align-self: flex-start;
     margin-bottom: 19px;
-
-
-
   }
+
   &__feedback-author {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
     width: 161px;
     margin-bottom: 6px;
-
   }
-
 }
+
+.tel-link{
+  background-color: var(--special_orange);
+}
+
+.email-link {
+  background-color: var(--special_yellow_dark);
+}
+
 .login-link {
   width: auto;
   border-radius: 25px;
-  padding:12px 39px 8px 40px;
+  padding: 12px 39px 8px 40px;
   box-sizing: border-box;
+  background-color: var(--basic_yellow);
 }
