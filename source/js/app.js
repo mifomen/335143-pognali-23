@@ -10,7 +10,7 @@ function initMap() {
     position: coordinates,
     map,
     title: "Мы здесь!",
-    // content:"<h1 class="blog-content-link">mifomen</h1>",
+    // content:"<h1 class="blog-content-link'>mifomen</h1>',
     icon: "img/favicon/16.png",
     draggable: false
   });
