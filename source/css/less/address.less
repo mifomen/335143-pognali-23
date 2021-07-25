@@ -1,0 +1,130 @@
+.address {
+  background-color: var(--basic_yellow);
+  position: relative;
+  padding: 30px 0px 0 0px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  z-index: -1;
+
+
+  &::before {
+    display: block;
+    content: "";
+    background-color: var(--basic_yellow);
+    height: 320px;
+    box-sizing: border-box;
+    width: 50px;
+    position: absolute;
+    z-index: 10;
+    top: -25%;
+    left: -25px;
+    transform: rotate(90deg)  translate(-50%, -50%);
+  }
+
+  &__text {
+    color: var(--basic_blue_light-2);
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 0 0 61px;
+    position: relative;
+    margin: 0 0 34px 25px;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      width: 45px;
+      height: 45px;
+      display: block;
+      background-color: var(--basic_blue);
+      position: absolute;
+      left: 0;
+      border-radius: 50%;
+
+    }
+  }
+
+  &__login-link {
+    text-decoration: none;
+    color: var(--basic_blue_light-2);
+    border: 3px solid var(--basic_blue_light-2);
+    padding: 19px 0px 19px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 25px 5px 25px;
+
+    &::after {
+      content: "";
+      width: 13px;
+      height: 13px;
+      display: talbe-call;
+      box-sizing: border-box;
+      vertical-align: middle;
+      position: absolute;
+      top: 22px;
+      right: 19px;
+      border-left: 13px solid var(--basic_blue_light-2);
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+    }
+
+
+  }
+
+  &__map-block {
+  z-index: 3;
+  position: relative;
+  left: 0;
+  right: 0;
+  width: calc(100vw - (100vw - 100%));
+  /*width: 100vw;*/
+  /*margin-left: calc(50% - 50vw - 0px);*/
+  height: 430px;
+  background-color: var(--white);
+  background-image: url('../img/location-map.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+    &::before {
+    display: block;
+    content: "";
+    background-color: var(--basic_yellow);
+    height: 320px;
+    box-sizing: border-box;
+    width: 30px;
+    position: absolute;
+    z-index: 15;
+    top: -31%;
+    left: -15px;
+    transform: rotate(90deg)  translate(-50%, -50%);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+    &-google {
+
+      position: absolute;
+      left: 0;
+      /*right: 0;*/
+      height: 100%; /* Рекомендация Google*/
+      /*width: calc(100vw - (100vw - 100%));*/
+      z-index: 10;
+      overflow: hidden;
+      width: 100vw;
+      margin-left: calc(50% - 50vw - 9px);
+      /*width: calc(100vw - (100vw - 100%));*/
+    }
+  }
+
+}

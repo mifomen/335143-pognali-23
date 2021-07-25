@@ -13,10 +13,10 @@
 <body class="page">
   <header class="header page__header">
     <img class="header__title" src="img/lobo_mobile.svg" alt="logo" width="96" height="15">
-    <!-- <h1 class="header__title">Погнали?</h1> -->
+    <h1 class="visually-hidden">Погнали?</h1>
     <button class="header__button">Открыть меню</button>
     <h2 class="header__intro">В путешествие с крутыми попутчиками!</h2>
-    <a href="tel:+8 800 555-86-28" class="header__link tel-link"></a>
+    <a href="tel:+88005558628" class="header__link tel-link"></a>
     <a href="email!" class="header__link email-link"></a>
     <a href="auto.html" class="header__link login-link">Авторизация</a>
     <div class="header__feedback-wrapper">
@@ -25,6 +25,7 @@
     </div>
   </header>
   <main class="main page__main">
+     <h1 class="visually-hidden">Как работает наш сервис, попутчики карта как подобрать</h1>
     <section class="main-plan">
       <h2 class="visually-hidden">Как работает наш сервис!</h2>
       <p class="main-plan__tourism step-one">Выберите<br>направление</p>
@@ -81,7 +82,7 @@
     <p class="about-companions__call-is-easy">Теперь можно легко найти единомышленников!</p>
     <ul class="about-companions__list">
       <li class="about-companions__item">
-        <img class="about-companions__item-img" class="about-companions__img" src="https://via.placeholder.com/270x270" width="270" height="270" class="about-companions__photo" alt="фото компаньена Тани">
+        <img class="about-companions__item-img" src="https://via.placeholder.com/270x270" width="270" height="270"  alt="фото компаньена Тани">
         <p class="about-companions__item-level">
           <span class="about-companions__item-level-number">99</span>
           <span class="about-companions__item-level-text">level</span>
@@ -101,7 +102,7 @@
         </div>
       </li>
       <li class="about-companions__item">
-        <img class="about-companions__item-img" src="https://via.placeholder.com/270x270" width="270" height="270" class="about-companions__photo" alt="фото компаньена Пети">
+        <img class="about-companions__item-img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="фото компаньена Пети">
         <p class="about-companions__item-level">
           <span class="about-companions__item-level-number">80</span>
           <span class="about-companions__item-level-text">level</span>
@@ -141,58 +142,58 @@
   </section>
   <section class="subscribe">
     <h2 class="subscribe__title">Заинтересовались?</h2>
-    <p class="subscribe__info">Зарегистрируйтесь, это быстро и бесплатно!Уже зарегистрированы? Тогда скорее авторизуйтесь.</p>
+    <p class="subscribe__info">Зарегистрируйтесь,<br> это быстро и бесплатно!<br>Уже зарегистрированы? Тогда<br> скорее <a  class="subscribe__info-link" href="blank.html">авторизуйтесь</a>.</p>
     <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-      <label class="subscribe__form-email" for="subscribe__form-email">
-        <input type="text" name="subscribe__email" id="subscribe__form-email" placeholder="E-mail">
+      <label class="subscribe__form-label" for="subscribe__form-email">
+        <input class="subscribe__form-email" type="text" name="subscribe__form-email" id="subscribe__form-email" placeholder="E-mail" required>
       </label>
       <button class="subscribe__form-button">Enter</button>
     </form>
-    <p class="subscribe__questions">Остались вопросы?Мы с радостью на них ответим!</p>
+    <p class="subscribe__questions">Остались вопросы?<br>Мы с радостью на них ответим!</p>
     <ul class="subscribe__feedback-list">
       <li class="subscribe__feedback-item">
-        <img class="subscribe__feedback-img" src="https://via.placeholder.com/45x45" alt="telephone-icon">
+        <img class="subscribe__feedback-img" src="https://via.placeholder.com/45x45" width="45" height="45" alt="telephone-icon">
         <a class="subscribe__feedback-link" href="tel:88005558628">8 800 555-86-28</a>
       </li>
-      <li>
-        <img class="subscribe__feedback-img" src="https://via.placeholder.com/45x45" alt="telephone-icon">
+      <li class="subscribe__feedback-item">
+        <img class="subscribe__feedback-img" src="https://via.placeholder.com/45x45" width="45" height="45" alt="telephone-icon">
         <a class="subscribe__feedback-link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </li>
     </ul>
   </section>
   <section class="address">
     <h2 class="visually-hidden">Наш адресс</h2>
-    <img class="address__img" src="https://via.placeholder.com/45x45" alt="">
-    <p class="address__text">ул. Большая Конюшенная, 19/8</p>
-    <a href="blank.html">Проложить маршрут</a>
+    <p class="address__text">ул. Большая<br> Конюшенная, 19/8</p>
+    <a class="address__login-link" href="blank.html">Проложить маршрут</a>
     <div class="address__map-block">
       <div id="address__map-block-google" class="address__map-block-google"></div>
-      <img class="address__map-block-pin" src="https://via.placeholder.com/320x140" width="320" height="140" alt="Маркер на карте нашей организации">
+      <img class="visually-hidden1 address__map" src="https://via.placeholder.com/320x424" width="320" height="424" alt="Маркер на карте нашей организации">
     </div>
   </section>
 </main>
 <footer class="footer page__footer">
   <h2 class="footer__title">Погнали?</h2>
   <ul class="footer__social-list">
-    <li class="footer__social-list-item">
+    <li class="footer__social-item">
       <h3 class="visually-hidden">Наша страница на facebook</h3>
-      <img  class="footer__social-list-item-img" src="https://via.placeholder.com/45x45" alt="facebook">
+      <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="facebook">
     </li>
-    <li class="footer__social-list-item">
+    <li class="footer__social-item">
       <h3 class="visually-hidden">Наша страница во vkontakte</h3>
-      <img  class="footer__social-list-item-img" src="https://via.placeholder.com/45x45" alt="vkontakte">
+      <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="vkontakte">
     </li>
-    <li class="footer__social-list-item">
+    <li class="footer__social-item">
       <h3 class="visually-hidden">Наша страница в instagram</h3>
-      <img  class="footer__social-list-item-img" src="https://via.placeholder.com/45x45" alt="instagram">
+      <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="instagram">
     </li>
   </ul>
   <span class="footer__authors">Разработано</span>
   <a class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
-    <h3 class="visually-hidden">Наш логотип и переход на наш курс</h3>
-    <img class="footer__authors-logo" src="https://via.placeholder.com/45x45" alt="htmlacademy-icon">
+    <h3 class="visually-hidden">логотип htmlacademy и переход на наш курс адаптивной верстке</h3>
+    <img class="footer__authors-logo" src="https://via.placeholder.com/27x33" width="27"  height="33" alt="htmlacademy-icon">
   </a>
 </footer>
 <script src="js/app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdh9DoiVSsIkmBxD_GcAHduSPQbHLYKbs&callback=initMap&libraries=&v=weekly" async></script>
 </body>
 </html>
