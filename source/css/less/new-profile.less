@@ -34,18 +34,17 @@
       position: absolute;
       right: 27px;
       top: 37px;
+    }
 
-      &::after {
-        content: "&#8381;";
-        content: "123";
-        display: block;
-        width: 60px;
-        height: 60px;
-        top: 4px;
-        right: 0;
-        background-color: var(--basic_yellow);
-
-      }
+    &-icon::after {
+      // content: "&#8381;";
+      content: "123";
+      display: block;
+      width: 60px;
+      height: 60px;
+      top: 4px;
+      right: 0;
+      background-color: var(--basic_yellow);
     }
   }
 
@@ -117,30 +116,25 @@
 .number-one {
   margin-bottom: 25px;
 
-
   &::after {
     background-color: var(--special_orange);
-
-
   }
 }
 
 .number-two {
   margin-bottom: 25px;
 
-
   &::after {
     background-color: var(--step-one-bg-color);
     top: -7px;
-
   }
 }
 
 
 .number-three {
+
   &::after {
     background-color: var(--step-two-bg-color);
     top: -7px;
-
   }
 }
