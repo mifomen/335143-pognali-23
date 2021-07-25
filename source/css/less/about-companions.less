@@ -2,6 +2,9 @@
   padding: 0 25px 0 25px;
   position: relative;
   background-color: var(--blue);
+  z-index: 3;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
   &__title {
     font-style: normal;
@@ -18,11 +21,11 @@
     background-color: var(--blue);
     height: 320px;
     box-sizing: border-box;
-    width: 40px;
+    width: 70px;
     position: absolute;
     z-index: 1;
-    top: -15%;
-    left: -20px;
+    top: -12%;
+    left: -35px;
     transform: rotate(90deg)  translate(-50%, -50%);
   }
 
@@ -54,11 +57,163 @@
   &__item {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--white);
     border-radius: 10px;
+    position: relative;
+    margin-bottom: 9px;
+
+    &-img {
+      margin-bottom: 25px;
+
+    }
+
+    &-level {
+      margin: 0;
+      position: absolute;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+      min-width: 60px;
+      min-height: 60px;
+      box-sizing: border-box;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 17px;
+      left: 17px;
+      border-radius: 50%;
+      background: var(--bg-black);
+
+      &-number {
+        margin-top: 3px;
+      }
+
+      &-text {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        position: relative;
+        padding-top: 2px;
+
+
+        &::before {
+          content: "";
+          width: calc(100% + 10px);
+          height: 1px;
+          display: block;
+          background-color: var(--white);
+          top: 0;
+          left: -5px;
+          position: absolute;
+
+
+        }
+
+      }
+
+
+    }
+    &-country-visited {
+      position: absolute;
+      outline: 1px solid black;
+      outline-offset: -1px;
+      min-width: 145px;
+      display: flex;
+      justify-content: space-between;
+      left: 50%;
+      transform: translateX( -50%);
+      bottom: 33.5%;
+
+    }
+
+    &-name {
+      // margin: 0;
+      margin: 0 13px 0 0;
+      color: var(--basic_blue_light-2);
+      font-style: normal;
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 21px;
+      padding: 0 0 0 16px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--bg-before);
+        position: absolute;
+        left: -2px;
+        top: 9px;
+
+
+      }
+
+    }
+
+    &-tags {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--special_grey);
+      margin: 13px 44px 0 46px;
+      text-align: center;
+
+
+    }
+    &-ways-of-travel {
+      margin: 16px 0 16px 0;
+
+    }
+
   }
 
   &__img {
     border-radius: 10px;
   }
+
+  &__btn {
+    font-family: var(--basic-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    background-color: var(--basic_yellow);
+    border: none;
+    outline: 0;
+    color: var(--basic_blue_light-2);
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    padding: 22px 23px 21px 23px;
+    text-align: left;
+    margin: 11px 0 31px 0;
+
+    &::after {
+      content: "";
+      width: 13px;
+      height: 13px;
+      display: talbe-call;
+      box-sizing: border-box;
+      vertical-align: middle;
+      position: absolute;
+      top: 24px;
+      right: 21px;
+      border-left: 13px solid var(--basic_blue_light-2);
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+    }
+  }
+}
+
+
+.two-country {
+  min-width: 90px;
 }
