@@ -1,3 +1,61 @@
-body {
-  // background-color: var(--basic-blue);
+.main {
+  font-family: var(--basic-font);
+  // background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+
+  &-plan {
+    padding: 25px;
+    color: var(--basic-blue);
+
+    background-color: var(--blue);
+    counter-reset: section;
+
+    &__tourism {
+      position: relative;
+      color: var(--basic_blue);
+      margin: 0;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 18px;
+      padding: 22px 25px 0 22px;
+      background-color: var(--step-one-bg-color);
+      padding-bottom: 21px;
+    }
+  }
+}
+
+.step {
+  &-one {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  &-two {
+    background-color: var(--step-two-bg-color);
+  }
+
+  &-three {
+    background-color: var(--special_yellow_dark);
+  }
+
+  &-four {
+    background-color: var(--basic_yellow);
+    padding-top: 25px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &-one::after,
+  &-two::after,
+  &-three::after,
+  &-four::after {
+    color: var(--white);
+    position: absolute;
+    right: 21px;
+    top: 20px;
+    counter-increment: section;
+    content: counter(section);
+  }
 }
