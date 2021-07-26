@@ -16,6 +16,7 @@
     position: absolute;
     z-index: 1;
     top: -35%;
+
     left: -35px;
     transform: rotate(90deg)  translate(-50%, -50%);
   }
@@ -35,18 +36,17 @@
       position: absolute;
       right: 27px;
       top: 37px;
+    }
 
-      &::after {
-        content: "&#8381;";
-        content: "123";
-        display: block;
-        width: 60px;
-        height: 60px;
-        top: 4px;
-        right: 0;
-        background-color: var(--basic_yellow);
-
-      }
+    &-icon::after {
+      // content: "&#8381;";
+      content: "123";
+      display: block;
+      width: 60px;
+      height: 60px;
+      top: 4px;
+      right: 0;
+      background-color: var(--basic_yellow);
     }
   }
 
@@ -69,34 +69,30 @@
       align-items: flex-start;
       position: relative;
       margin-bottom: 35px;
-
-      &-price {
-        margin-top: 9px;
-
-      }
-
-
-      &::after {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 16px;
-        position: absolute;
-        display: block;
-        counter-increment: section;
-        content: counter(section);
-        color: var(--white);
-        box-sizing: border-box;
-        right: 0;
-        top: -6px;
-        border-radius: 50%;
-        width: 34px;
-        height: 34px;
-        padding: 8px 0 0 12px;
-      }
-
     }
 
+    &-item-price {
+      margin-top: 9px;
+    }
+
+    &-item::after {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      position: absolute;
+      display: block;
+      counter-increment: section;
+      content: counter(section);
+      color: var(--white);
+      box-sizing: border-box;
+      right: 0;
+      top: -6px;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      padding: 8px 0 0 12px;
+    }
   }
 
   &__offers-see-all {
@@ -108,40 +104,28 @@
     text-decoration: none;
     display: block;
     margin: 44px 0 38px 0;
-
-
   }
-
 }
 
 
 .number-one {
   margin-bottom: 25px;
 
-
   &::after {
     background-color: var(--special_orange);
-
-
   }
 }
 
 .number-two {
   margin-bottom: 25px;
 
-
   &::after {
     background-color: var(--step-one-bg-color);
     top: -7px;
-
   }
 }
 
-
-.number-three {
-  &::after {
-    background-color: var(--step-two-bg-color);
-    top: -7px;
-
-  }
+.number-three::after {
+  background-color: var(--step-two-bg-color);
+  top: -7px;
 }
