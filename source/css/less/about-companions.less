@@ -66,6 +66,7 @@
 
     &-img {
       margin-bottom: 25px;
+
     }
 
     &-level {
@@ -87,42 +88,47 @@
       left: 17px;
       border-radius: 50%;
       background: var(--bg-black);
+
+      &-number {
+        margin-top: 3px;
+      }
+
+      &-text {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        position: relative;
+        padding-top: 2px;
+
+
+        &::before {
+          content: "";
+          width: calc(100% + 10px);
+          height: 1px;
+          display: block;
+          background-color: var(--white);
+          top: 0;
+          left: -5px;
+          position: absolute;
+
+
+        }
+
+      }
+
+
     }
-
-    &-level-number {
-      margin-top: 3px;
-    }
-
-    &-level-text {
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 14px;
-      position: relative;
-      padding-top: 2px;
-    }
-
-    &-level-text::before {
-      content: "";
-      width: calc(100% + 10px);
-      height: 1px;
-      display: block;
-      background-color: var(--white);
-      top: 0;
-      left: -5px;
-      position: absolute;
-    }
-
-
     &-country-visited {
       position: absolute;
-      outline: 1px solid var(--black);
+      outline: 1px solid black;
       outline-offset: -1px;
       min-width: 145px;
       display: flex;
       justify-content: space-between;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX( -50%);
       bottom: 33.5%;
+
     }
 
     &-name {
@@ -135,17 +141,20 @@
       line-height: 21px;
       padding: 0 0 0 16px;
       position: relative;
-    }
 
-    &-name::after {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: var(--bg-before);
-      position: absolute;
-      left: -2px;
-      top: 9px;
+      &::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--bg-before);
+        position: absolute;
+        left: -2px;
+        top: 9px;
+
+
+      }
+
     }
 
     &-tags {
@@ -156,11 +165,14 @@
       color: var(--special_grey);
       margin: 13px 44px 0 46px;
       text-align: center;
-    }
 
+
+    }
     &-ways-of-travel {
       margin: 16px 0 16px 0;
+
     }
+
   }
 
   &__img {
