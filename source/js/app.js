@@ -2,7 +2,7 @@ console.log("work")
 let map;  // ,
 const coordinates = {  lat: 59.938805, lng: 30.323259};
 function initMap() {
-  map = new google.maps.Map(document.getElementById("address__map-block-google1"), {
+  map = new google.maps.Map(document.getElementById("address__map-block-google"), {
     center: { lat: 59.938635, lng: 30.323118},
     zoom: 18,
   });
