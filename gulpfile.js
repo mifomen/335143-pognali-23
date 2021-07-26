@@ -11,7 +11,7 @@ let rm = require( 'gulp-rm' )
 // let sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('less',function () {
-    return gulp.src('source/**/*.less')
+    return gulp.src('source/**/style.less')
     // .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(less())
@@ -101,6 +101,13 @@ gulp.task('copy-img', function (){
   }))
 })
 
+gulp.task('copy-fonts', function (){
+  return gulp.src(['source/fonts/**/*.{woff,woff2}'])
+  .pipe(gulp.dest('./build/fonts'))
+  .pipe(bs.reload({
+    stream: true
+  }))
+})
 
 gulp.task('copy-favicon', function (){
   return gulp.src(['source/favicon.png'])
@@ -131,7 +138,7 @@ gulp.task('clear', function() {
 gulp.task('build',
   gulp.series(
       'clear',
-      // 'copy-fonts',
+      'copy-fonts',
       // 'copy-css',
       // 'copy-css-54',
       // 'html2pug',

@@ -1,0 +1,140 @@
+.new-profile {
+  padding: 37px 25px 0 49px;
+  position: relative;
+  background-color: var(--grey);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  &::before {
+    display: block;
+    content: "";
+    background-color: var(--grey);
+    height: 320px;
+    box-sizing: border-box;
+    width: 70px;
+    position: absolute;
+    z-index: 1;
+    top: -30%;
+    left: -35px;
+    transform: rotate(90deg)  translate(-50%, -50%);
+  }
+
+  &__add {
+    padding: 0;
+    margin: 12px 0 0 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    width: 107px;
+    margin-bottom: 56px;
+
+    &-icon {
+      border-radius: 50%;
+      position: absolute;
+      right: 27px;
+      top: 37px;
+    }
+
+    &-icon::after {
+      // content: "&#8381;";
+      content: "123";
+      display: block;
+      width: 60px;
+      height: 60px;
+      top: 4px;
+      right: 0;
+      background-color: var(--basic_yellow);
+    }
+  }
+
+  &__offers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: section;
+
+    &-item {
+      margin: 0;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 16px;
+      color: var(--special_grey);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+      margin-bottom: 35px;
+
+      &-price {
+        margin-top: 9px;
+
+      }
+
+
+      &::after {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        position: absolute;
+        display: block;
+        counter-increment: section;
+        content: counter(section);
+        color: var(--white);
+        box-sizing: border-box;
+        right: 0;
+        top: -6px;
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        padding: 8px 0 0 12px;
+      }
+
+    }
+
+  }
+
+  &__offers-see-all {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--color-link);
+    text-decoration: none;
+    display: block;
+    margin: 44px 0 38px 0;
+
+
+  }
+
+}
+
+
+.number-one {
+  margin-bottom: 25px;
+
+  &::after {
+    background-color: var(--special_orange);
+  }
+}
+
+.number-two {
+  margin-bottom: 25px;
+
+  &::after {
+    background-color: var(--step-one-bg-color);
+    top: -7px;
+  }
+}
+
+
+.number-three {
+
+  &::after {
+    background-color: var(--step-two-bg-color);
+    top: -7px;
+  }
+}

@@ -20,7 +20,7 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint .",
-    "test": "npm run editorconfig",
+    "test": "npm run editorconfig && npm run stylelint",
     "start": "gulp build && gulp serve"
   },
   "editorconfig-cli": [
