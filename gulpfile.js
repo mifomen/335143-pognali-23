@@ -8,8 +8,8 @@ const mqpacker= require( "css-mqpacker" )
 const rename = require("gulp-rename");
 const csso = require("gulp-csso");
 const rm = require( "gulp-rm" )
-let stylelint   = require("stylelint");
-let sourcemaps = require("gulp-sourcemaps");
+const stylelint   = require("stylelint");
+const sourcemaps = require("gulp-sourcemaps");
 
 
 gulp.task("less",function () {
