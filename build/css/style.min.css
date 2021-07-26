@@ -436,7 +436,7 @@
   color: var(--special_orange);
   margin: 65px 0 0 25px;
 }
-.about-companions::before {
+.about-companions__title::before {
   display: block;
   content: "";
   background-color: var(--blue);
@@ -526,7 +526,7 @@
 }
 .about-companions__item-country-visited {
   position: absolute;
-  outline: 1px solid black;
+  outline: 1px solid var(--black);
   outline-offset: -1px;
   min-width: 145px;
   display: flex;
@@ -641,7 +641,6 @@
   top: 37px;
 }
 .new-profile__add-icon::after {
-  content: "&#8381;";
   content: "123";
   display: block;
   width: 60px;
@@ -673,7 +672,7 @@
 .new-profile__offers-list-item-price {
   margin-top: 9px;
 }
-.new-profile__offers-list-item::after {
+.new-profile__offers-list-item-price::after {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -747,7 +746,7 @@
 .subscribe__title {
   text-align: center;
   padding: 0;
-  margin: 0px 0 21px 0;
+  margin: 0 0 21px 0;
   color: var(--special_orange);
   display: flex;
   font-style: normal;
@@ -843,6 +842,7 @@
 }
 .subscribe__feedback-img {
   margin-right: 16px;
+  border-radius: 50%;
 }
 .subscribe__feedback-list {
   margin: 0 0 30px 0;
@@ -859,9 +859,6 @@
   justify-content: flex-start;
   align-items: center;
 }
-.subscribe__feedback-img {
-  border-radius: 50%;
-}
 .subscribe__feedback-link {
   color: var(--yellow-link);
   text-decoration: none;
@@ -870,7 +867,7 @@
 .address {
   background-color: var(--basic_yellow);
   position: relative;
-  padding: 30px 0px 0 0px;
+  padding: 30px 0 0 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -916,7 +913,7 @@
   text-decoration: none;
   color: var(--basic_blue_light-2);
   border: 3px solid var(--basic_blue_light-2);
-  padding: 19px 0px 19px 20px;
+  padding: 19px 0 19px 20px;
   box-sizing: border-box;
   width: 100%;
   border-radius: 10px;
@@ -951,7 +948,7 @@
   /*margin-left: calc(50% - 50vw - 0px);*/
   height: 430px;
   background-color: var(--white);
-  background-image: url('../img/location-map.jpg');
+  background-image: url("../img/location-map.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
