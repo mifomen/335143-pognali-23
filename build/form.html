@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="icon" href="img/favicon/icon-main.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/152.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body class="page">
+  <header class="header page__header">
+    <h1 class="header__title">Погнали?</h1>
+    <button class="header__buttone">Открыть меню</button>
+    <h2 class="header__intro">Направления</h2>
+  </header>
+  <main class="main page__main">
+    <section class="profile-card">
+      <h2 class="visually-hidden">Выбираем направления для путешествия</h2>
+      <p class="profile-card__item-level width-100">
+        <span class="profile-card__item-level-number">80</span>
+        <span class="profile-card__item-leve-text">level</span>
+      </p>
+      <button class="profile-card__change-photo" type="button">Сменить фото</button>
+      <span class="profile-card__tags">#бургер #бар #футбол #концерт #крафт</span>
+      <div class="profile-card__item-ways-of-travel">
+        <img class="profile-card__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/20x21" alt="plane" width="21" height="21">
+        <img class="profile-card__item-ways-of-travel-image" src="https://via.placeholder.com/17x19" alt="car" width="17" height="19">
+        <img class="profile-card__item-ways-of-travel-image" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
+        <img class="profile-card__item-ways-of-travel-image" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
+      </div>
+    </section>
+    <section class="my-plans">
+      <h2 class="visually-hidden">Мои планы на путешествие, следующие:</h2>
+      <h3 class="my-plans__title">Мои планы</h3>
+      <ul class="my-plans__list">
+        <li class="my-plans__item">
+          <span class="my-plans__number">1.</span>
+          <p class="my-plans__country">Франция, Италия</p>
+          <p class="my-plans__people">3 попутчика</p>
+          <p class="my-plans__date">26 мар — 29 мар</p>
+          <button type="button" class="my-plans__btn change-plan">изменить</button>
+        </li>
+        <li class="my-plans__item">
+          <span class="my-plans__number">2.</span>
+          <p class="my-plans__country">Таиланд, Индонезия</p>
+          <p class="my-plans__people">1 попутчик</p>
+          <p class="my-plans__date">1 июл — 15 июл</p>
+          <button type="button" class="my-plans__btn change-plan">изменить</button>
+        </li>
+      </ul>
+    </section>
+    <section class="new-plan">
+      <h2 class="visually-hidden">Создай свой план отдыха и найдешь попутчиков</h2>
+      <div class="new-plan__step-one step-one journey">
+        <h2 class="new-plan__title">Шаг 1.<span class="new-plan__title-lead">Даты пребывания</span></h2>
+        <p class="new-plan__lead">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длител1ость.</p>
+        <form class="new-plan__form form-of-journey" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form-of-journey__how-many-companion-need companion-need">
+            <h2 class="companion-need__title">ищу попутчиков:<span class="companion-need__count">чел.</span></h2>
+            <div class="companion-need__count-of-companions">
+              <button type="button" class="form-of-journey__btn-plus plus-companion">
+                Убрать 1-го попутчика
+              </button>
+              <input name="count-of-companions" id="count-of-companions" type="text" placeholder="2">
+              <button type="button" class="form-of-journey__btn-minus minus-companion">
+                Добавить 1-го попутчика
+              </button>
+            </div>
+          </div>
+          <div class="form-of-journey__how-many-companion-need companion-need">
+            <h2 class="companion-need__title journey-time">длительность:<span class="companion-need__count journey-days">дн.</span></h2>
+            <div class="companion-need__count-of-days">
+              <button type="button" class="form-of-journey__btn-plus plus-companion">
+                Убрать 1-день путешествия
+              </button>
+              <input name="count-time-of-journey" id="count-of-days" type="text" placeholder="3">
+              <button type="button" class="form-of-journey__btn-minus minus-companion">
+                Добавить 1-день путешествия
+              </button>
+            </div>
+            <label for="journey-with-childs" class="">
+              <input class="" id="journey-with-childs" type="checkbox" name="journey-with-childs">Можно с детьми
+            </label>
+          </div>
+          <div class="journey__choose-date">
+            <h2 class="journey__choose-month">Март 2019</h2>
+            <button  class="journey__choose-month-prev prev-month">Предыдущий месяц</button>
+            <button class="journey__choose-month-next next-month">Следующий месяц</button>
+            <table class="journey__choose-month calendar">
+              <tr class="calendar__day">
+                <th class="calendar__day-item">п</th>
+                <th class="calendar__day-item">в</th>
+                <th class="calendar__day-item">с</th>
+                <th class="calendar__day-item">ч</th>
+                <th class="calendar__day-item">п</th>
+                <th class="calendar__day-item">с</th>
+                <th class="calendar__day-item">в</th>
+              </tr>
+              <tr class="calendar__day">
+                <td class="calendar__day-item">23</td>
+                <td class="calendar__day-item">24</td>
+                <td class="calendar__day-item">25</td>
+                <td class="calendar__day-item">26</td>
+                <td class="calendar__day-item">27</td>
+                <td class="calendar__day-item">28</td>
+                <td class="calendar__day-item">1</td>
+              </tr>
+              <tr>
+                <td class="calendar__day-item">2</td>
+                <td class="calendar__day-item">3</td>
+                <td class="calendar__day-item">4</td>
+                <td class="calendar__day-item">5</td>
+                <td class="calendar__day-item">6</td>
+                <td class="calendar__day-item">7</td>
+                <td class="calendar__day-item">8</td>
+              </tr>
+              <tr>
+                <td class="calendar__day-item">9</td>
+                <td class="calendar__day-item">10</td>
+                <td class="calendar__day-item">11</td>
+                <td class="calendar__day-item">12</td>
+                <td class="calendar__day-item">13</td>
+                <td class="calendar__day-item">14</td>
+                <td class="calendar__day-item">15</td>
+              </tr>
+              <tr>
+                <td class="calendar__day-item">16</td>
+                <td class="calendar__day-item">17</td>
+                <td class="calendar__day-item">18</td>
+                <td class="calendar__day-item">19</td>
+                <td class="calendar__day-item">20</td>
+                <td class="calendar__day-item">21</td>
+                <td class="calendar__day-item">22</td>
+              </tr>
+              <tr>
+                <td class="calendar__day-item">23</td>
+                <td class="calendar__day-item">24</td>
+                <td class="calendar__day-item">25</td>
+                <td class="calendar__day-item day-item-blue day-item-red">26</td>
+                <td class="calendar__day-item day-active-blue">27</td>
+                <td class="calendar__day-item day-active-blue">28</td>
+                <td class="calendar__day-item day-active">29</td>
+              </tr>
+              <tr>
+                <td class="calendar__day-item day-active">30</td>
+                <td class="calendar__day-item day-active">31</td>
+                <td class="calendar__day-item day-active">1</td>
+                <td class="calendar__day-item day-active">2</td>
+                <td class="calendar__day-item day-active">3</td>
+                <td class="calendar__day-item day-active">4</td>
+                <td class="calendar__day-item day-active">5</td>
+              </tr>
+            </table>
+          </div>
+          <button class="new-plan__btn btn-next-step" type="button">Следующий шаг</button>
+        </form>
+      </div>
+      <div class="new-plan__step-two step-two route">
+        <h2 class="visually-hidden">Шаг №2 строим свой маршрут</h2>
+        <h3 class="new-plan__title">Шаг 2.<span class="new-plan__title-lead">Маршрут</span></h3>
+        <p class="new-plan__lead">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+        <div class="new-plan__choose-country first-country">
+          <select class="first-country__name" name="first-country" id="first-country__name">
+            <option value="">Босния и герцеговина</option>
+          </select>
+          <img class="new-plan__choose-country-img" src="https://via.placeholder.com/35x24" alt="флаг Боснии">
+          <button class="new-plan__choose-country-btn btn-close-country" type="button">Закрыть</button>
+        </div>
+        <div class="new-plan__choose-country second-country">
+          <select name="second-country" id="second-country__name">
+            <option value="">Чехия</option>
+          </select>
+          <img class="new-plan__choose-country-img" src="https://via.placeholder.com/35x24" alt="флаг Чехии">
+          <button class="new-plan__choose-country-btn btn-close-country" type="button">Закрыть</button>
+        </div>
+        <div class="new-plan__choose-country three-country">
+          <select name="three-country" id="three-country__name">
+            <option value="">Чехия</option>
+          </select>
+          <button class="new-plan__choose-country-btn btn-close-country" type="button">Закрыть</button>
+        </div>
+        <div class="new-plan__choose-country four-country">
+          <select name="four-country" id="four-country__name">
+            <option value="">Добавить страну</option>
+          </select>
+          <button class="new-plan__choose-country-btn btn-add-country" type="button">Добавить страну</button>
+        </div>
+        <button class="new-plan__btn btn-next-step" type="button">следующий шаг</button>
+        <button class="new-plan__btn btn-previous-step" type="button">на шаг назад</button>
+      </div>
+      <div class="new-plan__step-three step-three entertainment">
+        <h2 class="visually-hidden">Шаг №3 развлечения</h2>
+        <h3 class="new-plan__title">Шаг 3.<span class="new-plan__title-lead">Развлечения</span></h3>
+        <p class="new-plan__lead">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+        </p>
+        <p class="new-plan__choosen-country">Босния и Герцеговина</p>
+        <img class="new-plan__choosen-country-img" src="https://via.placeholder.com/35x24" alt="">
+        <textarea class="new-plan__area" name="first-country-plan" id="first-country-plan" cols="30" rows="10" placeholder="План действий"></textarea>
+        <p class="new-plan__lead">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+        </p>
+        <p class="new-plan__choosen-country">Чехия</p>
+        <img class="new-plan__choosen-country-img" src="https://via.placeholder.com/35x24" alt="">
+        <textarea class="new-plan__area" name="second-country-plan" id="second-country-plan" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот эт овсе.</textarea>
+        <button class="new-plan__btn btn-next-step" type="submit">Отправить</button>
+        <button class="new-plan__btn btn-previous-step" type="button">на шаг назад</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer page__footer">
+    <h2 class="footer__title">Погнали?</h2>
+    <ul class="footer__social-list">
+      <li class="footer__social-list-item">
+        <h3 class="visually-hidden">Наша страница на facebook</h3>
+        <img  class="footer__social-list-item-img" src="https://via.placeholder.com/45x45" alt="facebook">
+      </li>
+      <li class="footer__social-list-item">
+        <h3 class="visually-hidden">Наша страница во vkontakte</h3>
+        <img  class="footer__social-list-item-img" src="https://via.placeholder.com/45x45" alt="vkontakte">
+      </li>
+      <li class="footer__social-list-item">
+        <h3 class="visually-hidden">Наша страница в instagram</h3>
+        <img  class="footer__social-list-item-img" src="https://via.placeholder.com/45x45" alt="instagram">
+      </li>
+    </ul>
+    <span class="footer__authors">Разработано</span>
+    <a  class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
+      <h3 class="visually-hidden">Наш логотип и переход на наш курс</h3>
+      <img class="footer__authors-logo" src="https://via.placeholder.com/45x45" alt="htmlacademy-icon">
+    </a>
+  </footer>
+</body>
+</html>

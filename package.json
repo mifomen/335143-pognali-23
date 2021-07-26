@@ -4,6 +4,7 @@
   "description": "Личный проект «Погнали» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+<<<<<<< HEAD
     "browser-sync": "^2.27.4",
     "css-mqpacker": "^7.0.0",
     "gulp": "^4.0.2",
@@ -15,31 +16,40 @@
     "gulp-rename": "^2.0.0",
     "gulp-rm": "^2.0.0",
     "stylelint": "^13.13.1",
+=======
+    "autoprefixer": "10.2.5",
+    "browser-sync": "2.26.14",
+    "gulp": "4.0.2",
+    "gulp-less": "4.0.1",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.0",
+    "gulp-sourcemaps": "3.0.0",
+    "postcss": "8.2.8",
+    "stylelint": "13.13.1",
+>>>>>>> c680fdc1359e6194d5cd4a74d5570d7a2887864e
     "stylelint-config-htmlacademy": "0.1.10"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint .",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
-    "start": "gulp build && gulp serve"
+    "build": "gulp styles",
+    "start": "gulp"
   },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
   "editorconfig-cli": [
     "*.json",
-    "source/*.html"
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/less/**/*.less"
   ],
   "engines": {
     "node": "^12 || ^14"
-  },
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mifomen/335143-pognali-23.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mifomen/335143-pognali-23/issues"
-  },
-  "homepage": "https://github.com/mifomen/335143-pognali-23#readme"
+  }
 }
