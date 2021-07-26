@@ -14,7 +14,7 @@
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-rm": "^2.0.0",
-    "stylelint": "13.13.1",
+    "stylelint": "^13.13.1",
     "stylelint-config-htmlacademy": "0.1.10"
   },
   "scripts": {
