@@ -1,0 +1,64 @@
+.form-of-journey {
+
+
+  &__step-one {
+    margin: 0;
+    padding: 22px 25px 0 25px;
+    background-color: var(--white);
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 17px;
+    color: var(--basic_blue_light-2);
+  }
+
+  &__lead {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--special_grey);
+    margin-bottom: 19px;
+  }
+
+  &__with-childs-label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+
+
+.check__label {
+  position: relative;
+  padding-left: 39px;
+
+}
+
+.check__box {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: cover;
+  background-image: url("../img/checkbox-off.svg")
+}
+.check__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.check__input:checked + .check__box {
+  background-image: url("../img/checkbox-on.svg");
+}
