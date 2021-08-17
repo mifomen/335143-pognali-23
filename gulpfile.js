@@ -173,7 +173,7 @@ gulp.task("serve", function (){
     open: true,
     ui: false
   }),
-  gulp.watch("source/css/less/**/*.less",  gulp.parallel("less"));
+  gulp.watch("source/less/**/*.less",  gulp.parallel("less"));
   gulp.watch("source/**/*.html",  gulp.parallel("html"));
   gulp.watch("source/**/*.js",  gulp.parallel("script"));
   gulp.watch("source/**/*.{png,jpg,jpeg,svg}",  gulp.parallel("copy-img"));
