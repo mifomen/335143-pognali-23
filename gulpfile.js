@@ -14,12 +14,12 @@ const sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("less",function () {
   return gulp.src("source/**/style.less")
-// .pipe(sourcemaps.init())
+.pipe(sourcemaps.init())
 .pipe(plumber())
 .pipe(less())
 // .pipe(less()).on("error", less.logError)
-// .pipe(sourcemaps.write({includeContente: false, sourceRoot: "."}))// delete ?
-// .pipe(sourcemaps.init({loadMaps: true})) // delete ?
+.pipe(sourcemaps.write({includeContente: false, sourceRoot: "."}))// delete ?
+.pipe(sourcemaps.init({loadMaps: true})) // delete ?
 .pipe(postcss([
   mqpacker({ sort: true })
   ])
@@ -37,7 +37,7 @@ gulp.task("less",function () {
 // .pipe(stripCssComments())
 // .pipe(csso())
 .pipe(rename("style.min.css"))
-// .pipe(sourcemaps.write(".")) // delete "," ? ok ?
+.pipe(sourcemaps.write(".")) // delete "," ? ok ?
 .pipe(gulp.dest("build/css"))
 .pipe(bs.reload({
   stream: true
