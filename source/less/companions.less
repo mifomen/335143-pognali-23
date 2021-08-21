@@ -1,0 +1,98 @@
+.companions {
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: var(--special_white);
+}
+
+.companions-form {
+  padding: 25px;
+  background-color: var(--basic_yellow);
+  border-radius: 20px;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    color: var(--basic_blue);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 22px;
+    width: 70%;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--spoiler-underline);
+    // border-bottom: 1px solid var(--spoiler-underline);
+    position: relative;
+
+  }
+
+  &__item-lead {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic_blue_light-2);
+    position: relative;
+    padding: 12px 0 10px 0;
+
+  }
+
+ &__item &__item-lead::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: 19px;
+    border: 5px solid transparent;
+    border-top: 5px solid var(--blue);
+  }
+
+  &__item[open] &__item-lead::after {
+    transform: scale(-1) translate(0, 5px);
+  }
+
+  &__item-input {
+    display: none;
+  }
+
+  &__item-label {
+    position: relative;
+    padding-left: 27px;
+    margin-top: 3px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 11px;
+  }
+
+  &__item-check-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;
+    background-color: var(--white);
+    border-radius: 4px;
+  }
+
+  &__item-input:checked + &__item-check-box {
+   background-image: url("data:image/svg+xml,%3Csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.79004 8.88571L0.249954 6.125V5.75V5C0.249954 5.0307 0.249954 4.9693 0.249954 5C0.249954 4.83887 0.250006 4.625 0.250006 4.625V3.875L2.78298 6.31711C2.86981 6.40817 3.01116 6.40711 3.09799 6.31605L8.5 0.5V2.05454V2.75C8.5 3.125 8.5 3.125 8.5 3.125L3.85625 8.09057L3.85726 8.09163L3.10506 8.88465C3.01823 8.97571 2.87688 8.97571 2.79004 8.88571Z' fill='%23161C35'/%3E%3C/svg%3E%0A");
+  }
+}
+
+summary::marker {
+  display: none;
+  content: "";
+}
+
+
+.item-music {
+  margin-bottom: 18px;
+}

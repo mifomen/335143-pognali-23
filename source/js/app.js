@@ -15,3 +15,29 @@ function initMap() {
     draggable: false
   });
 }
+
+
+let BtnOpenAlphabet = document.querySelector(".js-open-alphabet")
+
+BtnOpenAlphabet.addEventListener('click', function () {
+  let CountryList = document.querySelector(".country-list__all")
+  let CountryLabel = document.querySelector(".country-list__label")
+
+  BtnOpenAlphabet.classList.toggle('close-alphabet-list')
+  CountryList.classList.toggle('visually-hidden')
+  CountryLabel.classList.toggle("country-list__opened")
+})
+
+let BtnCloseAlphabet = document.querySelector(".btn-close-alphabet")
+
+
+BtnCloseAlphabet.addEventListener('click', function () {
+  let CountryList = document.querySelector(".country-list__all")
+  let CountryLabel = document.querySelector(".country-list__label")
+
+  BtnOpenAlphabet.classList.toggle('close-alphabet-list')
+  CountryList.classList.toggle('visually-hidden')
+  CountryLabel.classList.toggle("country-list__opened")
+})
+
+

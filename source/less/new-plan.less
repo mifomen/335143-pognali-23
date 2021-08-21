@@ -8,6 +8,21 @@
   background-color: var(--bg-color);
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
+  margin-bottom: 5px;
+
+  &::after {
+    content: "";
+    background-color: var(--bg-color);
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    // z-index: 3;
+    display: block;
+    position: absolute;
+    bottom: -25px;
+
+  }
 
   &__title {
     margin: 0;

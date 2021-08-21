@@ -12,72 +12,156 @@
 </head>
 <body class="page">
   <header class="header page__header">
-    <h1 class="header__title">Погнали?</h1>
-    <button class="header__buttone">Открыть меню</button>
-    <h2 class="header__intro">Попутчики</h2>
+    <h1 class="visually-hidden">Погнали?</h1>
+    <img class="header__title" src="img/logo_mobile.svg" alt="logo" width="96" height="15">
+    <button class="header__button">Открыть меню</button>
   </header>
   <main class="main page__main">
+    <h1 class="visually-hidden">Статистика и редактирование вашего профиля</h1>
+    <div class="main-intro form-style">
+      <h2 class="main-intro__title">Попутчики</h2>
+    </div>
+    <section class="country-list">
+      <label class="country-list__label">
+        <h1 class="country-list__title">Фильтрация по странам:</h1>
+        <button class="country-list__btn open-alphabet-list js-open-alphabet" type="button">Открыть список стран</button>
+      </label>
+      <div class="country-list__all visually-hidden">
+        <ul class="country-list__mainlands">
+          <li class="country-list__mainlands-item active-mainland">европа</li>
+          <li class="country-list__mainlands-item">азия</li>
+          <li class="country-list__mainlands-item">америка</li>
+          <li class="country-list__mainlands-item">острова</li>
+        </ul>
+        <table class="country-list__alphabet alphabet">
+          <tbody class="alphabet__body">
+            <tr class="alphabet__letter-row">
+              <th class="alphabet__letter-item active-letter">а</th>
+              <th class="alphabet__letter-item">б</th>
+              <th class="alphabet__letter-item">в</th>
+              <th class="alphabet__letter-item">г</th>
+              <th class="alphabet__letter-item">д</th>
+            </tr>
+            <tr class="alphabet__letter-row">
+              <th class="alphabet__letter-item">е</th>
+              <th class="alphabet__letter-item">з</th>
+              <th class="alphabet__letter-item">и</th>
+              <th class="alphabet__letter-item">к</th>
+              <th class="alphabet__letter-item">л</th>
+            </tr>
+            <tr class="alphabet__letter-row">
+              <th class="alphabet__letter-item">м</th>
+              <th class="alphabet__letter-item">н</th>
+              <th class="alphabet__letter-item">о</th>
+              <th class="alphabet__letter-item">п</th>
+              <th class="alphabet__letter-item">р</th>
+            </tr>
+            <tr class="alphabet__letter-row">
+              <th class="alphabet__letter-item">с</th>
+              <th class="alphabet__letter-item">т</th>
+              <th class="alphabet__letter-item">у</th>
+              <th class="alphabet__letter-item">ф</th>
+              <th class="alphabet__letter-item">х</th>
+            </tr>
+            <tr class="alphabet__letter-row">
+              <th class="alphabet__letter-item">ч</th>
+              <th class="alphabet__letter-item">ш</th>
+              <th class="alphabet__letter-item">э</th>
+              <th class="alphabet__letter-item">ю</th>
+              <th class="alphabet__letter-item">я</th>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="country-list__letter choosen-letter">
+          <li class="choosen-letter__item">Австралия</li>
+          <li class="choosen-letter__item">Австрия</li>
+          <li class="choosen-letter__item">Азербайджан</li>
+          <li class="choosen-letter__item">Албания</li>
+          <li class="choosen-letter__item">Алжир</li>
+          <li class="choosen-letter__item">Ангола</li>
+          <li class="choosen-letter__item">Андорра</li>
+          <li class="choosen-letter__item">Антигуа и Барбуда</li>
+          <li class="choosen-letter__item">Аргентина</li>
+          <li class="choosen-letter__item">Армения</li>
+          <li class="choosen-letter__item">Афганистан</li>
+        </ul>
+        <button type="button" class="country-list__btn btn-close-alphabet">Свернуть</button>
+      </div>
+    </section>
     <section class="companions">
       <h2 class="visually-hidden">Собери свою компанию</h2>
       <form class="companions-form" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="companions-form__title">Подберите идеального попутчика</h2>
-        <details class="companions-form__hobby" open>
-          <summary class="companions-form__hobby-list">Хобби</summary>
-          <label for="hobby-one" class="companions-form__hobby-item">
-            <input class="companions-form__hobby-item-input" id="hobby-one" type="checkbox" name="hobby-tennis">Теннис
+        <details class="companions-form__item item-hobby">
+          <summary class="companions-form__item-lead hobby-list">Хобби</summary>
+          <label for="hobby-one" class="companions-form__item-label">
+            <input class="companions-form__item-input hobby-item-input" id="hobby-one" type="checkbox" name="hobby-tennis" checked>Теннис
+            <span class="companions-form__item-check-box"></span>
           </label>
-          <label for="hobby-two" class="companions-form__hobby-item">
-            <input class="companions-form__hobby-item-input" id="hobby-two" type="checkbox" name="hobby-football">Футбол
+          <label for="hobby-two" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="hobby-two" type="checkbox" name="hobby-football">Футбол
+            <span class="companions-form__item-check-box"></span>
           </label>
-          <label for="hobby-three" class="companions-form__hobby-item">
-            <input class="companions-form__hobby-item-input" id="hobby-three" type="checkbox" name="hobby-drink">Напиться
-          </label>
-        </details>
-        <details class="companions-form__music" open>
-          <summary class="companions-form__music-list">Музыка</summary>
-          <label for="music-one" class="companions-form__music-item">
-            <input class="companions-form__music-item-input" id="music-one" type="checkbox" name="music-hard-rock" checked>Тяжелый рок
-          </label>
-          <label for="music-two" class="companions-form__music-item">
-            <input class="companions-form__music-item-input" id="music-two" type="checkbox" name="music-russian-pop" checked>Русский рэп
-          </label>
-          <label for="music-three" class="companions-form__music-item">
-            <input class="companions-form__music-item-input" id="music-three" type="checkbox" name="music-euro-dance">Евроденс
+          <label for="hobby-three" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="hobby-three" type="checkbox" name="hobby-drink">Напиться
+            <span class="companions-form__item-check-box"></span>
           </label>
         </details>
-        <details class="companions-form__eat">
-          <summary class="companions-form__eat-list">Еда</summary>
-          <label for="eat-one" class="companions-form__eat-item">
-            <input class="companions-form__eat-item-input" id="eat-one" type="checkbox" name="food-fastfood">Фастфуд
+        <details class="companions-form__item item-music" open>
+          <summary class="companions-form__item-lead">Музыка</summary>
+          <label for="music-one" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="music-one" type="checkbox" name="music-hard-rock" checked>Тяжелый рок
+            <span class="companions-form__item-check-box"></span>
           </label>
-          <label for="eat-two" class="companions-form__eat-item">
-            <input class="companions-form__eat-item-input" id="eat-two" type="checkbox" name="food-vegetables">Овощи
+          <label for="music-two" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="music-two" type="checkbox" name="music-russian-pop" checked>Русский рэп
+            <span class="companions-form__item-check-box"></span>
           </label>
-          <label for="eat-three" class="companions-form__eat-item">
-            <input class="companions-form__eat-item-input" id="eat-three" type="checkbox" name="food-meat">Мясо
+          <label for="music-three" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="music-three" type="checkbox" name="music-euro-dance">Евроденс
+            <span class="companions-form__item-check-box"></span>
           </label>
         </details>
-        <details class="companions-form__transport" open>
-          <summary class="companions-form__transport-list">Транспорт</summary>
-          <label for="transport-one" class="companions-form__transport-item">
-            <input class="companions-form__transport-item-input" id="transport-one" type="checkbox" name="transport-airplane" checked>Самолет
+        <details class="companions-form__item item-eat">
+          <summary class="companions-form__item-lead">Еда</summary>
+          <label for="eat-one" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="eat-one" type="checkbox" name="food-fastfood">Фастфуд
+            <span class="companions-form__item-check-box"></span>
+          </label>
+          <label for="eat-two" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="eat-two" type="checkbox" name="food-vegetables">Овощи
+            <span class="companions-form__item-check-box"></span>
+          </label>
+          <label for="eat-three" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="eat-three" type="checkbox" name="food-meat">Мясо
+            <span class="companions-form__item-check-box"></span>
+          </label>
+        </details>
+        <details class="companions-form__item item-transport" open>
+          <summary class="companions-form__item-lead">Транспорт</summary>
+          <label for="transport-one" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="transport-one" type="checkbox" name="transport-airplane" checked>Самолет
             <img class="companions-form__transport-img" src="https://via.placeholder.com/32x32" alt="airplane">
+            <span class="companions-form__item-check-box"></span>
           </label>
-          <label for="transport-two" class="companions-form__transport-item">
-            <input class="companions-form__transport-item-input" id="transport-two" type="checkbox" name="transport-car" checked>Машина
+          <label for="transport-two" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="transport-two" type="checkbox" name="transport-car" checked>Машина
             <img class="companions-form__transport-img" src="https://via.placeholder.com/32x32" alt="car">
+            <span class="companions-form__item-check-box"></span>
           </label>
-          <label for="transport-three" class="companions-form__transport-item">
-            <input class="companions-form__transport-item-input" id="transport-three" type="checkbox" name="transport-bycicle">Велосипед
+          <label for="transport-three" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="transport-three" type="checkbox" name="transport-bycicle">Велосипед
             <img class="companions-form__transport-img" src="https://via.placeholder.com/32x32" alt="bycicle">
+            <span class="companions-form__item-check-box"></span>
           </label>
-          <label for="transport-four" class="companions-form__transport-item">
-            <input class="companions-form__transport-item-input" id="transport-four" type="checkbox" name="transport-foot" checked>Пешком
+          <label for="transport-four" class="companions-form__item-label">
+            <input class="companions-form__item-input" id="transport-four" type="checkbox" name="transport-foot" checked>Пешком
             <img class="companions-form__transport-img" src="https://via.placeholder.com/32x32" alt="foot">
+            <span class="companions-form__item-check-box"></span>
           </label>
         </details>
         <details class="companions-form__level" open>
-          <summary class="companions-form__level-list">Левел</summary>
+          <summary class="companions-form__item-lead">Левел</summary>
           <label for="level-min" class="companions-form__level-item">
             <input class="companions-form__level-min" id="level-min" type="text" name="max-level" value="30">
           </label>
@@ -244,5 +328,6 @@
       <img class="footer__authors-logo" src="https://via.placeholder.com/45x45" alt="htmlacademy-icon">
     </a>
   </footer>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
