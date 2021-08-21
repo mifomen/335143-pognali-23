@@ -95,8 +95,8 @@
             </label>
             <div class="form-of-journey__choose-date">
               <h2 class="form-of-journey__choose-month-title">Март 2019</h2>
-              <button class="form-of-journey__btn-month prev-month">Предыдущий месяц</button>
-              <button class="form-of-journey__btn-month next-month">Следующий месяц</button>
+              <button type="button" class="form-of-journey__btn-month prev-month">Предыдущий месяц</button>
+              <button type="button" class="form-of-journey__btn-month next-month">Следующий месяц</button>
               <table class="form-of-journey__choose-month calendar">
                 <tbody class="calendar__month">
                   <tr class="calendar__week">
@@ -165,45 +165,55 @@
                 </tbody>
               </table>
             </div>
-            <button class="form-of-journey__btn-next-step btn-next-step" type="button">Следующий шаг</button>
+            <button class="form-of-journey__btn btn-next-step btn-next-step" type="button">Следующий шаг</button>
           </div>
           <div class="form-of-journey__step step-two route">
             <h2 class="visually-hidden">Шаг №2 строим свой маршрут</h2>
-            <h3 class="form-of-journey__title">Шаг 2.<span class="new-plan__title-lead">Маршрут</span></h3>
+            <h3 class="form-of-journey__title step-two-title">Шаг 2.<span class="form-of-journey__title-lead">Маршрут</span></h3>
             <p class="form-of-journey__lead">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
-            <div class="new-plan__choose-country first-country">
-              <select class="first-country__name" name="first-country" id="first-country__name">
-                <option value="">Босния и герцеговина</option>
-              </select>
-              <img class="new-plan__choose-country-img" src="https://via.placeholder.com/35x24" alt="флаг Боснии">
-              <button class="new-plan__choose-country-btn btn-close-country" type="button">Закрыть</button>
+            <div class="choose-country first-country">
+              <label class="choose-country__name-label" for="three-country__name">
+                <select class="choose-country__name" name="first-country" id="first-country__name">
+                  <option selected value="Босния и герцеговина">Босния и герцеговина</option>
+                  <option value="">2Босния и герцеговина</option>
+                  <option value="">3Босния и герцеговина</option>
+                  <option value="">4Босния и герцеговина</option>
+                </select>
+              </label>
+              <div class="choose-country__conteiner-img">
+                <img class="choose-country__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии">
+                <button class="choose-country__btn btn-close-country" type="button">Закрыть</button>
+              </div>
             </div>
-            <div class="new-plan__choose-country second-country">
-              <select name="second-country" id="second-country__name">
-                <option value="">Чехия</option>
-              </select>
-              <img class="new-plan__choose-country-img" src="https://via.placeholder.com/35x24" alt="флаг Чехии">
-              <button class="new-plan__choose-country-btn btn-close-country" type="button">Закрыть</button>
+            <div class="choose-country second-country">
+              <label class="choose-country__name-label" for="three-country__name">
+                <select class="choose-country__name" name="second-country" id="second-country__name">
+                  <option value="">Чехия</option>
+                </select>
+              </label>
+              <div class="choose-country__conteiner-img">
+                <img class="choose-country__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии">
+                <button class="choose-country__btn btn-close-country" type="button">Закрыть</button>
+              </div>
             </div>
-            <div class="new-plan__choose-country three-country">
-              <select name="three-country" id="three-country__name">
-                <option value="">Чехия</option>
-              </select>
-              <button class="new-plan__choose-country-btn btn-close-country" type="button">Закрыть</button>
+            <div class="choose-country three-country">
+              <label class="choose-country__name-label choose-country-label" for="three-country__name">
+                <select class="choose-country__name" name="three-country" id="three-country__name">
+                  <option value="">Выберите страну</option>
+                </select>
+              </label>
+              <button class="choose-country__btn btn-close-country" type="button">Закрыть</button>
             </div>
-            <div class="new-plan__choose-country four-country">
-              <select name="four-country" id="four-country__name">
-                <option value="">Добавить страну</option>
-              </select>
-              <button class="new-plan__choose-country-btn btn-add-country" type="button">Добавить страну</button>
+            <div class="choose-country add-country">
+              <button class="choose-country__country-plus-btn btn-add-country" type="button">Добавить страну</button>
             </div>
-            <button class="new-plan__btn btn-next-step" type="button">следующий шаг</button>
-            <button class="new-plan__btn btn-previous-step" type="button">на шаг назад</button>
+            <button class="form-of-journey__btn btn-next-step step-two-margin" type="button">Следующий шаг</button>
+            <button class="form-of-journey__btn btn-previous-step" type="button">на шаг назад</button>
           </div>
-          <div class="new-plan__step-three step-three entertainment">
+          <div class="form-of-journey__step step-three entertainment">
             <h2 class="visually-hidden">Шаг №3 развлечения</h2>
-            <h3 class="new-plan__title">Шаг 3.<span class="new-plan__title-lead">Развлечения</span></h3>
-            <p class="new-plan__lead">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+            <h3 class="form-of-journey__title">Шаг 3.<span class="form-of-journey__title-lead">Развлечения</span></h3>
+            <p class="form-of-journey__lead">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
             </p>
             <p class="new-plan__choosen-country">Босния и Герцеговина</p>
             <img class="new-plan__choosen-country-img" src="https://via.placeholder.com/35x24" alt="">

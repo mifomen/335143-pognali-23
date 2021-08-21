@@ -99,7 +99,7 @@
     margin-bottom: 22px;
   }
 
-  &__btn-next-step {
+  &__btn {
     font-family: var(--basic-font);
     border: 0;
     color: var(--basic_blue_light-2);
@@ -110,12 +110,26 @@
     text-transform: uppercase;
     // margin: 0 auto;
     // align-self: flex-end;
-    background-color: var(--yellow-link);
-    padding: 6px 41px 5px 41px;
-    box-sizing: border-box;
-    border-radius: 20px;
+    width: 100%;
+
     margin-bottom: 22px;
   }
+}
+
+.btn-next-step {
+  background-color: var(--yellow-link);
+  padding: 6px 41px 5px 41px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.btn-previous-step {
+  background-color: transparent;
+  margin-bottom: 8px;
+}
+
+.step-two-margin {
+  margin-bottom: 10px;
 }
 
 .next-month {
@@ -123,4 +137,9 @@
   left: auto;
   top: -2px;
   right: -8px;
+}
+
+
+.step-two-title {
+  margin-top: -4px;
 }
