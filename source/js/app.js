@@ -39,5 +39,3 @@ BtnCloseAlphabet.addEventListener('click', function () {
   CountryList.classList.toggle('visually-hidden')
   CountryLabel.classList.toggle("country-list__opened")
 })
-
-

@@ -137,41 +137,41 @@
             <span class="companions-form__item-check-box"></span>
           </label>
         </details>
-        <details class="companions-form__item item-transport" open>
+        <details class="companions-form__item transport-items" open>
           <summary class="companions-form__item-lead">Транспорт</summary>
-          <label for="transport-one" class="companions-form__item-label">
-            <input class="companions-form__item-input" id="transport-one" type="checkbox" name="transport-airplane" checked>Самолет
-            <img class="companions-form__transport-img" src="https://via.placeholder.com/32x32" alt="airplane">
-            <span class="companions-form__item-check-box"></span>
-          </label>
-          <label for="transport-two" class="companions-form__item-label">
-            <input class="companions-form__item-input" id="transport-two" type="checkbox" name="transport-car" checked>Машина
-            <img class="companions-form__transport-img" src="https://via.placeholder.com/32x32" alt="car">
-            <span class="companions-form__item-check-box"></span>
-          </label>
-          <label for="transport-three" class="companions-form__item-label">
-            <input class="companions-form__item-input" id="transport-three" type="checkbox" name="transport-bycicle">Велосипед
-            <img class="companions-form__transport-img" src="https://via.placeholder.com/32x32" alt="bycicle">
-            <span class="companions-form__item-check-box"></span>
-          </label>
-          <label for="transport-four" class="companions-form__item-label">
-            <input class="companions-form__item-input" id="transport-four" type="checkbox" name="transport-foot" checked>Пешком
-            <img class="companions-form__transport-img" src="https://via.placeholder.com/32x32" alt="foot">
-            <span class="companions-form__item-check-box"></span>
-          </label>
+          <div class="companions-form__item-label-wrapper">
+            <label for="transport-one" class="companions-form__item-label-icon airplane-label">
+            <input class="companions-form__item-input-icon airplane-input" id="transport-one" type="checkbox" name="transport-airplane" checked>Самолет
+              <span class="companions-form__item-check-box-icon airplane"></span>
+            </label>
+            <label for="transport-two" class="companions-form__item-label-icon car-label">
+              <input class="companions-form__item-input-icon car-input" id="transport-two" type="checkbox" name="transport-car" checked>машина
+              <span class="companions-form__item-check-box-icon car"></span>
+            </label>
+            <label for="transport-three" class="companions-form__item-label-icon bicycle-label">
+              <input class="companions-form__item-input-icon bicycle-input" id="transport-three" type="checkbox" name="transport-bicycle">велосипедом
+              <span class="companions-form__item-check-box-icon bicycle"></span>
+            </label>
+            <label for="transport-four" class="companions-form__item-label-icon foot-label">
+              <input class="companions-form__item-input-icon foot-input" id="transport-four" type="checkbox" name="transport-foot" checked>пешком
+              <span class="companions-form__item-check-box-icon foot"></span>
+            </label>
+          </div>
         </details>
-        <details class="companions-form__level" open>
+        <details class="companions-form__item level-items" open>
           <summary class="companions-form__item-lead">Левел</summary>
-          <label for="level-min" class="companions-form__level-item">
-            <input class="companions-form__level-min" id="level-min" type="text" name="max-level" value="30">
-          </label>
-          <label for="level-max" class="companions-form__level-item">
-            <input class="companions-form__level-max" id="level-max" type="text" name="level-max" value="100">
-          </label>
+          <div class="companions-form__item-level-wrapper">
+            <label for="level-min" class="companions-form__level-item ">
+              <input class="companions-form__level min-level" id="level-min" type="text" name="max-level" value="30">
+            </label>
+            <label for="level-max" class="companions-form__level-item">
+              <input class="companions-form__level  max-level" id="level-max" type="text" name="level-max" value="100">
+            </label>
+          </div>
           <div class="companions-form__level-control-line level-control-line">
-            <div class="level-control-line__center">Полоска для регулирования уровня</div>
-            <button class="level-control-line-btn level-btn-left" type="button">Регулятор минимальной цены</button>
-            <button class="level-control-line-btn level-btn-right" type="button">Регулятор максимальной цены</button>
+            <div class="level-control-line__center">Полоска для регулирования уровня компаньена</div>
+            <button class="level-control-line__btn level-btn-left" type="button">Регулятор минимальной цены</button>
+            <button class="level-control-line__btn level-btn-right" type="button">Регулятор максимальной цены</button>
           </div>
         </details>
         <button class="companions-form__btn show-all" type="submit">Показать</button>
@@ -181,22 +181,22 @@
       <h2 class="visually-hidden">Зарекомендовавшие себя компаньены</h2>
       <ul class="companion-top__list">
         <li class="companion-top__list-item user-card">
-          <img class="user-card__avatar" src="https://via.placeholder.com/35x24" alt="user photo">
-          <span class="user-card__likes like-active">1,5 М</span>
+          <img class="user-card__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="user photo">
           <h3 class="user-card__name">Таня Фирсова</h3>
+          <span class="user-card__likes like-active">1,5 М</span>
           <p class="user-card__tag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          <div class="user-card__want-visit">
-            <span class="user-card__want-visit">Хочет посетить:</span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+          <div class="user-card__wishlist">
+            <span class="user-card__wishlist-lead">Хочет посетить:</span>
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               шри-ланка
             </span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               Таиланд
             </span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               сейшелы
             </span>
           </div>
@@ -217,14 +217,14 @@
           <span class="user-card__likes">1,5 М</span>
           <h3 class="user-card__name">Петя Демин</h3>
           <p class="user-card__tag">#бургер #бар #футбол #концерт #крафт</p>
-          <div class="user-card__want-visit">
-            <span class="user-card__want-visit">Хочет посетить:</span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+          <div class="user-card__wishlist">
+            <span class="user-card__wishlist">Хочет посетить:</span>
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               Бельгия
             </span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               Чехия
             </span>
           </div>
@@ -245,18 +245,18 @@
           <span class="user-card__likes">170</span>
           <h3 class="user-card__name">Марк Смолов</h3>
           <p class="user-card__tag">#рэп #тату #хайпбист #кроссовки #суприм</p>
-          <div class="user-card__want-visit">
-            <span class="user-card__want-visit">Хочет посетить:</span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+          <div class="user-card__wishlist">
+            <span class="user-card__wishlist">Хочет посетить:</span>
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               Сша
             </span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               Австралия
             </span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               Доминика
             </span>
           </div>
@@ -277,14 +277,14 @@
           <span class="user-card__likes">23</span>
           <h3 class="user-card__name">Лариса Рогова</h3>
           <p class="user-card__tag">#образование #карьера #учеба #линкедин</p>
-          <div class="user-card__want-visit">
-            <span class="user-card__want-visit">Хочет посетить:</span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+          <div class="user-card__wishlist">
+            <span class="user-card__wishlist-lead">Хочет посетить:</span>
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               Великобритания
             </span>
-            <span class="user-card__want-visit-name">
-              <img class="user-card__want-visit-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
+            <span class="user-card__wishlist-name">
+              <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               Германия
             </span>
           </div>
