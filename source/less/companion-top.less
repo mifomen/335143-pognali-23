@@ -1,12 +1,96 @@
 .companion-top {
   background-color: var(--special_white);
   padding: 2px 25px 5px 25px;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-color: var(--special_white);
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    display: block;
+    position: absolute;
+    bottom: -25px;
+  }
 
   &__list {
-    background-color: var(--white);
+    background-color: var(--special_white);
     margin: 0;
     padding: 0;
     list-style: none;
     border-radius: 20px;
   }
+
+  &__list-item {
+    margin-bottom: 15px;
+  }
+
+  &__btn {
+    font-family: var(--basic-font);
+    color: var(--basic_blue_light);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    border: 0;
+    background-color: var(--special_white);
+    width: 100%;
+    padding-left: 33px;
+  }
+  &__wrapper-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+     margin-bottom: 40px;
+  }
 }
+
+.see-more {
+  position: relative;
+  margin-bottom: 20px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 2px;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    background-color:var(--basic_blue_light-2);
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate(-90deg);
+  }
+}
+
+.see-previous,
+.see-next {
+  width: 50%;
+  font-size: 0;
+  box-sizing: border-box;
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding: 10px 0;
+}
+
+.see-previous {
+  border-right: 1px solid var(--special_white);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='18' viewBox='0 0 10 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 9L9.75 0.339745L9.75 17.6603L0 9Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
+}
+
+.see-next {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='18' viewBox='0 0 10 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 8.89478L0.25 17.555L0.25 0.234521L10 8.89478Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
+}
+

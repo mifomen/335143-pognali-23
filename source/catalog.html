@@ -183,10 +183,14 @@
         <li class="companion-top__list-item user-card">
           <img class="user-card__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="user photo">
           <h3 class="user-card__name">Таня Фирсова</h3>
-          <span class="user-card__likes like-active">1,5 М</span>
+          <label class="user-card__likes-label" for="first-user-likes">
+            <input checked class="user-card__likes-input" type="checkbox" id="first-user-likes" name="like-plus" >
+            <span class="user-card__likes like-active"></span>
+            1,5 М
+          </label>
           <p class="user-card__tag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
           <div class="user-card__wishlist">
-            <span class="user-card__wishlist-lead">Хочет посетить:</span>
+            <span class="user-card__wishlist-lead">хочет посетить:</span>
             <span class="user-card__wishlist-name">
               <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               шри-ланка
@@ -201,24 +205,32 @@
             </span>
           </div>
           <div class="user-card__transport">
-            <img class="user-card__transport-img active-img" src="https://via.placeholder.com/32x32" alt="plane" width="32" height="32">
-            <img class="user-card__transport-img" src="https://via.placeholder.com/32x32" alt="car" width="32" height="32">
-            <img class="user-card__transport-img" src="https://via.placeholder.com/32x32" alt="bicycle" width="32" height="32">
-            <img class="user-card__transport-img" src="https://via.placeholder.com/32x32" alt="bicycle" width="32" height="32">
+            <span class="user-card__transport-lead">транспорт:</span>
+            <span class="user-card__transport-item airplane">самолет</span>
+            <span class="user-card__transport-item car disabled">машина</span>
+            <span class="user-card__transport-item bicycle disabled">велосипед</span>
+            <span class="user-card__transport-item foot-disable  disabled">пеший</span>
+            <p class="user-card__item-level">
+              <svg class="user-card__item-level-percent" width="45" height="45" viewBox="0 0 45 45">
+                <circle r="20" cx="22" cy="22" fill="transparent" stroke="#ff8d30" stroke-width="2" stroke-dasharray="120px 5px"></circle>
+              </svg>
+              <span class="user-card__item-level-text">левел:</span>
+              <span class="user-card__item-level-number">99</span>
+            </p>
           </div>
-          <p class="user-card__item-level">
-            <span class="user-card__item-level-number">99</span>
-            <span class="user-card__item-level-text">level</span>
-          </p>
-          <button class="user-card__btn" type="button">Позвать</button>
+          <button class="user-card__btn" type="button">Позвать!</button>
         </li>
         <li class="companion-top__list-item user-card">
-          <img class="user-card__avatar" src="https://via.placeholder.com/35x24" alt="user photo">
-          <span class="user-card__likes">1,5 М</span>
+          <img class="user-card__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="user photo">
           <h3 class="user-card__name">Петя Демин</h3>
+          <label class="user-card__likes-label" for="second-user-likes">
+            <input checked class="user-card__likes-input" type="checkbox" id="second-user-likes" name="like-plus" >
+            <span class="user-card__likes like-active"></span>
+            1500
+          </label>
           <p class="user-card__tag">#бургер #бар #футбол #концерт #крафт</p>
           <div class="user-card__wishlist">
-            <span class="user-card__wishlist">Хочет посетить:</span>
+            <span class="user-card__wishlist-lead">хочет посетить:</span>
             <span class="user-card__wishlist-name">
               <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
               Бельгия
@@ -229,84 +241,106 @@
             </span>
           </div>
           <div class="user-card__transport">
-            <img class="user-card__transport-img active-img" src="https://via.placeholder.com/32x32" alt="plane" width="32" height="32">
-            <img class="user-card__transport-img active-img" src="https://via.placeholder.com/32x32" alt="car" width="32" height="32">
-            <img class="user-card__transport-img" src="https://via.placeholder.com/32x32" alt="bicycle" width="32" height="32">
-            <img class="user-card__transport-img active-img" src="https://via.placeholder.com/32x32" alt="bicycle" width="32" height="32">
+            <span class="user-card__transport-lead">транспорт:</span>
+            <span class="user-card__transport-item airplane">самолет</span>
+            <span class="user-card__transport-item car ">машина</span>
+            <span class="user-card__transport-item bicycle disabled">велосипед</span>
+            <span class="user-card__transport-item foot-disable ">пеший</span>
+            <p class="user-card__item-level">
+              <svg class="user-card__item-level-percent" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                <path d="M23.5144 1.50818C27.9498 1.63199 32.232 3.15753 35.7466 5.86592C39.2613 8.57431 41.8277 12.3264 43.0778 16.5838C44.3278 20.8412 44.1972 25.3851 42.7047 29.5637C41.2122 33.7423 38.4345 37.3407 34.7702 39.8428C31.1058 42.3449 26.743 43.6219 22.3078 43.4908C17.8726 43.3597 13.593 41.8271 10.0828 39.113C6.57259 36.3988 4.01232 32.6425 2.76927 28.3831C1.52623 24.1236 1.6643 19.5799 3.16367 15.4038" stroke="#FF8D30" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span class="user-card__item-level-text">левел:</span>
+              <span class="user-card__item-level-number">80</span>
+            </p>
           </div>
-          <p class="user-card__item-level">
-            <span class="user-card__item-level-number">80</span>
-            <span class="user-card__item-level-text">level</span>
-          </p>
-          <button class="user-card__btn" type="button">Позвать</button>
+          <button class="user-card__btn" type="button">Позвать!</button>
         </li>
         <li class="companion-top__list-item user-card">
-          <img class="user-card__avatar" src="https://via.placeholder.com/35x24" alt="user photo">
-          <span class="user-card__likes">170</span>
+          <img class="user-card__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="user photo">
           <h3 class="user-card__name">Марк Смолов</h3>
+          <label class="user-card__likes-label" for="three-user-likes">
+            <input checked class="user-card__likes-input" type="checkbox" id="three-user-likes" name="like-plus" >
+            <span class="user-card__likes like-active"></span>
+            170
+          </label>
           <p class="user-card__tag">#рэп #тату #хайпбист #кроссовки #суприм</p>
           <div class="user-card__wishlist">
-            <span class="user-card__wishlist">Хочет посетить:</span>
+            <span class="user-card__wishlist-lead">хочет посетить:</span>
             <span class="user-card__wishlist-name">
               <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
-              Сша
+              сша
             </span>
             <span class="user-card__wishlist-name">
               <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
-              Австралия
+              австралия
             </span>
             <span class="user-card__wishlist-name">
               <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
-              Доминика
+              доминика
             </span>
           </div>
           <div class="user-card__transport">
-            <img class="user-card__transport-img active-img" src="https://via.placeholder.com/32x32" alt="plane" width="32" height="32">
-            <img class="user-card__transport-img" src="https://via.placeholder.com/32x32" alt="car" width="32" height="32">
-            <img class="user-card__transport-img active-img" src="https://via.placeholder.com/32x32" alt="bicycle" width="32" height="32">
-            <img class="user-card__transport-img" src="https://via.placeholder.com/32x32" alt="bicycle" width="32" height="32">
+            <span class="user-card__transport-lead">транспорт:</span>
+            <span class="user-card__transport-item airplane">самолет</span>
+            <span class="user-card__transport-item car disabled">машина</span>
+            <span class="user-card__transport-item bicycle disabled">велосипед</span>
+            <span class="user-card__transport-item foot-disable ">пеший</span>
+            <p class="user-card__item-level">
+              <svg class="user-card__item-level-percent" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                <path d="M23.5144 1.50818C27.9498 1.63199 32.232 3.15753 35.7466 5.86592C39.2613 8.57431 41.8277 12.3264 43.0778 16.5838C44.3278 20.8412 44.1972 25.3851 42.7047 29.5637C41.2122 33.7423 38.4345 37.3407 34.7702 39.8428C31.1058 42.3449 26.743 43.6219 22.3078 43.4908C17.8726 43.3597 13.593 41.8271 10.0828 39.113C6.57259 36.3988 4.01232 32.6425 2.76927 28.3831C1.52623 24.1236 1.6643 19.5799 3.16367 15.4038" stroke="#FF8D30" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span class="user-card__item-level-text">левел:</span>
+              <span class="user-card__item-level-number">25</span>
+            </p>
           </div>
-          <p class="user-card__item-level">
-            <span class="user-card__item-level-number">25</span>
-            <span class="user-card__item-level-text">level</span>
-          </p>
-          <button class="user-card__btn" type="button">Позвать</button>
+          <button class="user-card__btn" type="button">Позвать!</button>
         </li>
-        <li class="companion-top__list-item user-card">
-          <img class="user-card__avatar" src="https://via.placeholder.com/35x24" alt="user photo">
-          <span class="user-card__likes">23</span>
+        <li class="companion-top__list-item user-card online">
+          <img class="user-card__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="user photo">
           <h3 class="user-card__name">Лариса Рогова</h3>
+          <label class="user-card__likes-label" for="four-user-likes">
+            <input checked class="user-card__likes-input" type="checkbox" id="four-user-likes" name="like-plus" >
+            <span class="user-card__likes like-active"></span>
+            23
+          </label>
           <p class="user-card__tag">#образование #карьера #учеба #линкедин</p>
           <div class="user-card__wishlist">
-            <span class="user-card__wishlist-lead">Хочет посетить:</span>
+            <span class="user-card__wishlist-lead">хочет посетить:</span>
             <span class="user-card__wishlist-name">
               <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
-              Великобритания
+              великобритания
             </span>
             <span class="user-card__wishlist-name">
               <img class="user-card__wishlist-img" src="https://via.placeholder.com/26x18" width="26" height="18" alt="флаг страны">
-              Германия
+              германия
             </span>
           </div>
           <div class="user-card__transport">
-            <img class="user-card__transport-img active-img" src="https://via.placeholder.com/32x32" alt="plane" width="32" height="32">
-            <img class="user-card__transport-img active-img" src="https://via.placeholder.com/32x32" alt="car" width="32" height="32">
-            <img class="user-card__transport-img" src="https://via.placeholder.com/32x32" alt="bicycle" width="32" height="32">
-            <img class="user-card__transport-img" src="https://via.placeholder.com/32x32" alt="bicycle" width="32" height="32">
+            <span class="user-card__transport-lead">транспорт:</span>
+            <span class="user-card__transport-item airplane">самолет</span>
+            <span class="user-card__transport-item car">машина</span>
+            <span class="user-card__transport-item bicycle disabled">велосипед</span>
+            <span class="user-card__transport-item foot-disable disabled">пеший</span>
+            <p class="user-card__item-level">
+              <svg class="user-card__item-level-percent" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                <path d="M23.5144 1.50818C27.9498 1.63199 32.232 3.15753 35.7466 5.86592C39.2613 8.57431 41.8277 12.3264 43.0778 16.5838C44.3278 20.8412 44.1972 25.3851 42.7047 29.5637C41.2122 33.7423 38.4345 37.3407 34.7702 39.8428C31.1058 42.3449 26.743 43.6219 22.3078 43.4908C17.8726 43.3597 13.593 41.8271 10.0828 39.113C6.57259 36.3988 4.01232 32.6425 2.76927 28.3831C1.52623 24.1236 1.6643 19.5799 3.16367 15.4038" stroke="#FF8D30" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span class="user-card__item-level-text">левел:</span>
+              <span class="user-card__item-level-number">50</span>
+            </p>
           </div>
-          <p class="user-card__item-level">
-            <span class="user-card__item-level-number">50</span>
-            <span class="user-card__item-level-text">level</span>
-          </p>
-          <button class="user-card__btn" type="button">Позвать</button>
+          <button class="user-card__btn" type="button">Позвать!</button>
         </li>
       </ul>
-      <button  class="companion-top__btn show-more">Показать еще</button>
-      <button  class="companion-top__btn show-previous">Показать еще</button>
-      <button  class="companion-top__btn show-next">Показать еще</button>
+      <button class="companion-top__btn see-more">Показать еще</button>
+      <div  class="companion-top__wrapper-btn">
+        <button  class="companion-top__btn see-previous">Предыдущие</button>
+        <button  class="companion-top__btn see-next">Следующие</button>
+      </div>
     </section>
   </main>
-  <footer class="footer page__footer">
+  <footer class="footer page__footer form-page">
     <h2 class="footer__title">Погнали?</h2>
     <ul class="footer__social-list">
       <li class="footer__social-list-item">
