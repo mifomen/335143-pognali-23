@@ -14,28 +14,48 @@ function initMap() {
     icon: "img/favicon/16.png",
     draggable: false
   });
+
+  if (document.querySelector('.js-hide-map')) {
+    document.querySelector('.js-hide-map').classList.add("visually-hidden")
+  }
 }
 
 
-let BtnOpenAlphabet = document.querySelector(".js-open-alphabet")
+window.addEventListener('scroll', function() {
+  // document.querySelector('.desk-about-us__title').innerHTML = pageYOffset + 'px';
+  let header = document.querySelector('.header');
+  let headerBtn = document.querySelector('.header__button');
+  // console.log(pageYOffset);
+  if(pageYOffset >= 60){
+    header.classList.add('header--white-theme');
+    headerBtn.classList.add('header__button--white-theme');
 
-BtnOpenAlphabet.addEventListener('click', function () {
-  let CountryList = document.querySelector(".country-list__all")
-  let CountryLabel = document.querySelector(".country-list__label")
+  } else {
+    header.classList.remove('header--white-theme');
+    headerBtn.classList.remove('header__button--white-theme');
 
-  BtnOpenAlphabet.classList.toggle('close-alphabet-list')
-  CountryList.classList.toggle('visually-hidden')
-  CountryLabel.classList.toggle("country-list__opened")
-})
+  }
+});
 
-let BtnCloseAlphabet = document.querySelector(".btn-close-alphabet")
+if (document.querySelector(".js-open-alphabet")) {
 
+  let BtnOpenAlphabet = document.querySelector(".js-open-alphabet")
+  BtnOpenAlphabet.addEventListener('click', function () {
+    let CountryList = document.querySelector(".country-list__all")
+    let CountryLabel = document.querySelector(".country-list__label")
 
-BtnCloseAlphabet.addEventListener('click', function () {
-  let CountryList = document.querySelector(".country-list__all")
-  let CountryLabel = document.querySelector(".country-list__label")
+    BtnOpenAlphabet.classList.toggle('close-alphabet-list')
+    CountryList.classList.toggle('visually-hidden')
+    CountryLabel.classList.toggle("country-list__opened")
+  })
 
-  BtnOpenAlphabet.classList.toggle('close-alphabet-list')
-  CountryList.classList.toggle('visually-hidden')
-  CountryLabel.classList.toggle("country-list__opened")
-})
+  let BtnCloseAlphabet = document.querySelector(".btn-close-alphabet")
+  BtnCloseAlphabet.addEventListener('click', function () {
+    let CountryList = document.querySelector(".country-list__all")
+    let CountryLabel = document.querySelector(".country-list__label")
+
+    BtnOpenAlphabet.classList.toggle('close-alphabet-list')
+    CountryList.classList.toggle('visually-hidden')
+    CountryLabel.classList.toggle("country-list__opened")
+  })
+}

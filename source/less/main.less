@@ -2,52 +2,74 @@
   font-family: var(--basic-font);
   display: flex;
   flex-direction: column;
+}
 
-  &-plan {
-    padding: 25px;
-    color: var(--basic-blue);
-    background-color: var(--blue);
-    counter-reset: section;
+.main-plan {
+  padding: 25px;
+  color: var(--basic-blue);
+  background-color: var(--blue);
+  counter-reset: section;
+}
 
-    &__tourism {
-      position: relative;
-      color: var(--basic_blue);
-      margin: 0;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 18px;
-      padding: 22px 25px 0 22px;
-      background-color: var(--step-one-bg-color);
-      padding-bottom: 21px;
-    }
+.main-plan__tourism {
+  position: relative;
+  color: var(--basic_blue);
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 22px 25px 0 22px;
+  background-color: var(--step-one-bg-color);
+  padding-bottom: 21px;
+}
+
+.tourism-step-one {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  &::after {
+    color: var(--white);
+    position: absolute;
+    right: 21px;
+    top: 20px;
+    counter-increment: section;
+    content: counter(section);
   }
 }
 
-.tourism-step {
-  &-one {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-  }
+.tourism-step-two {
+  background-color: var(--step-two-bg-color);
 
-  &-two {
-    background-color: var(--step-two-bg-color);
+  &::after {
+    color: var(--white);
+    position: absolute;
+    right: 21px;
+    top: 20px;
+    counter-increment: section;
+    content: counter(section);
   }
+}
 
-  &-three {
-    background-color: var(--special_yellow_dark);
+.tourism-step-three {
+  background-color: var(--special_yellow_dark);
+
+  &::after {
+    color: var(--white);
+    position: absolute;
+    right: 21px;
+    top: 20px;
+    counter-increment: section;
+    content: counter(section);
   }
+}
 
-  &-four {
-    background-color: var(--basic_yellow);
-    padding-top: 25px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
+.tourism-step-four {
+  background-color: var(--basic_yellow);
+  padding-top: 25px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 
-  &-one::after,
-  &-two::after,
-  &-three::after,
-  &-four::after {
+  &::after {
     color: var(--white);
     position: absolute;
     right: 21px;

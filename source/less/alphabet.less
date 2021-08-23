@@ -2,15 +2,28 @@
   border-spacing: 1px;
   border-collapse: collapse;
   margin: 0 auto;
+}
 
+.alphabet__letter-item {
+  width: 40px;
+  height: 38px;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
+  color: var(--basic_blue_light-2);
+}
 
-  &__letter-item {
-    width: 40px;
-    height: 38px;
-    border: 1px solid var(--border-color);
-    text-transform: uppercase;
-    background-color: var(--white);
-    color: var(--basic_blue_light-2);
+.alphabet__letter-link {
+  display: block;
+  background-color: var(--white);
+  text-decoration: none;
+  height: auto;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: var(--basic_blue_light-2);
+  width: 100%;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
