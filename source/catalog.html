@@ -24,17 +24,20 @@
       <h2 class="main-intro__title">Попутчики</h2>
     </div>
     <section class="country-list">
-      <label class="country-list__label">
-        <h1 class="country-list__title">Фильтрация по странам:</h1>
-        <button class="country-list__btn open-alphabet-list js-open-alphabet" type="button">Открыть список стран</button>
+      <h1 class="country-list__title">Фильтрация по странам:</h1>
+      <label class="country-list__label country-list__opened">
+        <button class="country-list__btn open-alphabet-list js-open-alphabet" type="button">
+          <span class="country-list__btn-text country-list__btn-text--open">Показать все</span>
+          <span class="country-list__btn-text country-list__btn-text--close">Свернуть</span>
+        </button>
       </label>
-      <div class="country-list__all visually-hidden">
-        <ul class="country-list__mainlands">
-          <li class="country-list__mainlands-item country-list__mainlands-active-link"><a class="country-list__mainlands-link country-list__mainlands-active-link" href="blank.html">европа</a></li>
-          <li class="country-list__mainlands-item"><a class="country-list__mainlands-link" href="blank.html">азия</a></li>
-          <li class="country-list__mainlands-item"><a class="country-list__mainlands-link" href="blank.html">америка</a></li>
-          <li class="country-list__mainlands-item"><a class="country-list__mainlands-link" href="blank.html">острова</a></li>
-        </ul>
+      <ul class="mainlands">
+        <li class="mainlands__item country-list__mainlands-active-link"><a class="mainlands__link mainlands__link--active" href="blank.html">европа</a></li>
+        <li class="mainlands__item"><a class="mainlands__link" href="blank.html">азия</a></li>
+        <li class="mainlands__item"><a class="mainlands__link" href="blank.html">америка</a></li>
+        <li class="mainlands__item"><a class="mainlands__link" href="blank.html">острова</a></li>
+      </ul>
+      <div class="country-list__all visually-hidden1">
         <table class="country-list__alphabet alphabet">
           <tbody class="alphabet__body">
             <tr class="alphabet__letter-row">
@@ -74,21 +77,21 @@
             </tr>
           </tbody>
         </table>
-        <ul class="country-list__letter choosen-letter">
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Австралия</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Австрия</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Азербайджан</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Албания</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Алжир</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Ангола</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Андорра</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Антигуа и Барбуда</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Аргентина</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Армения</a></li>
-          <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Афганистан</a></li>
-        </ul>
-        <button type="button" class="country-list__btn btn-close-alphabet">Свернуть</button>
       </div>
+      <ul class="country-list__letter choosen-letter">
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Австралия</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Австрия</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Азербайджан</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Албания</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Алжир</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Ангола</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Андорра</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Антигуа и Барбуда</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Аргентина</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Армения</a></li>
+        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Афганистан</a></li>
+      </ul>
+      <button type="button" class="country-list__btn btn-close-alphabet">Свернуть</button>
     </section>
     <section class="companions">
       <h2 class="visually-hidden">Собери свою компанию</h2>

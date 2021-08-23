@@ -10,10 +10,17 @@
   border: 1px solid var(--border-color);
   background-color: var(--white);
   color: var(--basic_blue_light-2);
+
+  @media @tablet {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 60px;
+  }
 }
 
 .alphabet__letter-link {
   display: block;
+  font-family: var(--basic-font);
   background-color: var(--white);
   text-decoration: none;
   height: auto;
@@ -21,13 +28,38 @@
   text-transform: uppercase;
   color: var(--basic_blue_light-2);
   width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
 
   &:hover {
     text-decoration: underline;
+
+  }
+
+  @media @tablet {
+    background-color: transparent;
+    color: var(--blue);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+    opacity: 0.3;
+
+    &:hover {
+      text-decoration: none;
+      line-height: 60px;
+      opacity: 1;
+    }
   }
 }
 
 .active-letter {
   background-color: var(--basic_blue_light-2);
   color: var(--white);
+
+  @media @tablet {
+    background-color: transparent;
+    opacity: 1;
+  }
 }

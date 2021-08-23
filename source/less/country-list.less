@@ -2,7 +2,7 @@
   background-color: var(--bg-grey-special);
   position: relative;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px 30px 10px 25px;
@@ -10,6 +10,10 @@
   border-bottom-left-radius: 20px;
   transition: 500ms ease;
   z-index: 4;
+
+  @media @tablet {
+    flex-direction: row;
+  }
 
   &::before {
     content: "";
@@ -21,6 +25,10 @@
     transform: translateX(-50%);
     top: -15px;
     background-color: var(--bg-grey-special);
+  }
+
+  @media @tablet {
+    flex-direction: row;
   }
 }
 
@@ -55,6 +63,13 @@
     background-size: cover;
     background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='7.17392' width='7.82609' height='2' fill='%23192144'/%3E%3Crect x='7.17383' y='8' width='7.82609' height='2' fill='%23192144'/%3E%3Crect y='4' width='7.82609' height='2' fill='%23192144'/%3E%3Crect x='3.91306' width='1.95652' height='2' fill='%23192144'/%3E%3Crect x='3.91309' y='8' width='1.95652' height='2' fill='%23192144'/%3E%3Crect x='9.13037' y='4' width='1.95652' height='2' fill='%23192144'/%3E%3Crect width='2.6087' height='2' fill='%23192144'/%3E%3Crect y='8' width='2.6087' height='2' fill='%23192144'/%3E%3Crect x='12.3914' y='4' width='2.6087' height='2' fill='%23192144'/%3E%3C/svg%3E%0A");
   }
+
+  @media @tablet {
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .country-list__btn {
@@ -72,20 +87,31 @@
   background-color: transparent;
 }
 
-.country-list__mainlands {
+.mainlands {
   margin: 0;
   padding: 0;
   list-style: none;
   margin-left: 25px;
   margin-bottom: 12px;
+
+  @media @tablet {
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 
-.country-list__mainlands-item {
+.mainlands__item {
   color: var(--blue);
   margin-bottom: 9px;
+
+  @media @tablet {
+    margin-right: 25px;
+  }
 }
 
-.country-list__mainlands-link {
+.mainlands__link {
   text-decoration: none;
   opacity: 0.3;
   font-style: normal;
@@ -103,13 +129,17 @@
 
 .country-list__alphabet {
   margin-bottom: 15px;
+
+  @media @tablet {
+    width: auto;
+  }
 }
 
 .country-list__letter {
   margin-bottom: 24px;
 }
 
-.country-list__mainlands-active-link {
+.mainlands__link--active {
   opacity: 1;
 }
 
