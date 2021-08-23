@@ -1,0 +1,34 @@
+.new-plan {
+  position: relative;
+  z-index: 6;
+  padding: 27px 25px 25px 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: var(--bg-color);
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  margin-bottom: 5px;
+
+  &::after {
+    content: "";
+    background-color: var(--bg-color);
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    display: block;
+    position: absolute;
+    bottom: -25px;
+  }
+
+  &__title {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 32px;
+    color: var(--basic_blue_light-2);
+  }
+}

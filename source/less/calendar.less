@@ -1,0 +1,47 @@
+.calendar {
+  margin: 0 auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  &__day-item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--special_grey);
+    text-transform: uppercase;
+    width: 31px;
+    height: 31px;
+    border: 1px solid var(--border-color-second);
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+.days-of-week {
+  border: 0;
+}
+
+.day-off {
+  color: var(--color-day-off);
+}
+
+.day-item-red {
+  outline: 2px solid var(--color-day-off);
+  outline-offset: -2px;
+}
+
+.day-active {
+  color: var(--basic_blue_light-2);
+  background-color: var(--special_white);
+  font-weight: 500;
+}
+
+.day-active-blue {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--basic_blue_light-2);
+}

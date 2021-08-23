@@ -14,31 +14,30 @@
     width: 70px;
     position: absolute;
     z-index: 1;
-    top: -30%;
+    top: -35%;
     left: -35px;
     transform: rotate(90deg)  translate(-50%, -50%);
   }
 
   &__add {
     padding: 0;
-    margin: 12px 0 0 0;
+    margin: 14px 0 0 0;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 24px;
     width: 107px;
-    margin-bottom: 56px;
+    margin-bottom: 58px;
+  }
 
-    &-icon {
-      border-radius: 50%;
-      position: absolute;
-      right: 27px;
-      top: 37px;
-    }
+  &__add-icon {
+    border-radius: 50%;
+    position: absolute;
+    right: 27px;
+    top: 37px;
 
-    &-icon::after {
-      // content: "&#8381;";
-      content: "123";
+    &::after {
+      content: "";  // was 123
       display: block;
       width: 60px;
       height: 60px;
@@ -67,34 +66,30 @@
       align-items: flex-start;
       position: relative;
       margin-bottom: 35px;
-
-      &-price {
-        margin-top: 9px;
-
-      }
-
-
-      &::after {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 16px;
-        position: absolute;
-        display: block;
-        counter-increment: section;
-        content: counter(section);
-        color: var(--white);
-        box-sizing: border-box;
-        right: 0;
-        top: -6px;
-        border-radius: 50%;
-        width: 34px;
-        height: 34px;
-        padding: 8px 0 0 12px;
-      }
-
     }
 
+    &-item-price {
+      margin-top: 9px;
+    }
+
+    &-item-price::after {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      position: absolute;
+      display: block;
+      counter-increment: section;
+      content: counter(section);
+      color: var(--white);
+      box-sizing: border-box;
+      right: 0;
+      top: -6px;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      padding: 8px 0 0 12px;
+    }
   }
 
   &__offers-see-all {
@@ -106,10 +101,7 @@
     text-decoration: none;
     display: block;
     margin: 44px 0 38px 0;
-
-
   }
-
 }
 
 
@@ -130,11 +122,7 @@
   }
 }
 
-
-.number-three {
-
-  &::after {
-    background-color: var(--step-two-bg-color);
-    top: -7px;
-  }
+.number-three::after {
+  background-color: var(--step-two-bg-color);
+  top: -7px;
 }

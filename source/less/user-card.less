@@ -1,0 +1,216 @@
+.user-card {
+  padding: 11px 10px 5px 16px;
+  display: grid;
+  grid-template-areas:
+    "img-avatar     name-avatar"
+    "img-avatar     likes"
+    "tag-line       tag-line"
+    "wishlist       wishlist"
+    "path-travels   path-travels"
+    "invite         invite";
+  grid-template-columns: 1fr 2fr;
+  background-color: var(--white);
+  border-radius: 20px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: var(--bg-before);
+    border-radius: 50%;
+    top: 5.5%;
+    right: 8%;
+  }
+
+
+  &__avatar {
+    grid-area: img-avatar;
+    border-radius: 50%;
+  }
+
+  &__likes-label {
+    grid-area: likes;
+    padding-left: 35px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin-left: -30px;
+  }
+
+  &__likes-input {
+    display: none;
+  }
+
+  &__name {
+    grid-area: name-avatar;
+    color: var(--basic_blue_light-2);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 0 7px;
+    width: 50%;
+  }
+
+  &__tag {
+    grid-area: tag-line;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--special_grey);
+    width: 70%;
+    padding: 0;
+    margin: 15px 0 0 10px;
+    margin-bottom: 13px;
+  }
+
+  &__wishlist {
+    grid-area: wishlist;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 3px;
+    margin-bottom: 8px;
+  }
+
+  &__wishlist-lead,
+  &__transport-lead {
+    color: var(--special_grey);
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16px;
+    padding-left: 10px;
+    margin-bottom: 9px;
+  }
+
+  &__wishlist-name {
+    color: var(--basic_blue_light);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 7px 0 0 9px;
+  }
+
+  &__wishlist-img {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    margin-right: 7px;
+  }
+
+  &__transport {
+    grid-area: path-travels;
+    position: relative;
+    margin-top: 3px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 23px;
+  }
+
+  &__transport-lead {
+    width: 100%;
+  }
+
+  &__transport-item {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;
+    background-color: var(--special_white);
+    border-radius: 50%;
+    font-size: 0;
+    margin: 6px 0 0 3px;
+  }
+
+  &__item-level {
+    position: absolute;
+    right: 4%;
+    display: flex;
+    flex-direction: column;
+    top: -17px;
+  }
+
+  &__item-level-text {
+    margin-bottom: 20px;
+  }
+
+  &__item-level-number {
+    color: var(--basic_blue_light-2);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 4px;
+  }
+
+  &__item-level-percent {
+    width: 45px;
+    height: 45px;
+    left: -4px;
+    top: 27px;
+    stroke-width: 3px;
+    transform: rotate(-90deg);
+    position: absolute;
+  }
+
+  &__btn {
+    grid-area: invite;
+    font-family: var(--basic-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 17px;
+    color: var(--basic_blue);
+    background-color: var(--yellow-link);
+    border-radius: 25px;
+    border: 0;
+    width: 98%;
+    padding: 11px 0 12px 0;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+}
+
+.disabled {
+  opacity: 0.2;
+}
+
+.user-card__likes {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-position: 51% 50%;
+  background-repeat: no-repeat;
+  background-color: var(--bg-btn-like);
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M3.25532 1.47406C4.94809 1.47406 6.31915 2.82156 6.31915 4.48385C6.31915 2.82156 7.69022 1.47406 9.38298 1.47406C11.0757 1.47406 12.4468 2.82156 12.4468 4.48385C12.4468 6.98919 9.96971 7.87293 6.61941 11.8609C6.58252 11.9047 6.53654 11.9399 6.48468 11.9641C6.43283 11.9882 6.37633 12.0007 6.31915 12.0007C6.26197 12.0007 6.20548 11.9882 6.15362 11.9641C6.10176 11.9399 6.05578 11.9047 6.0189 11.8609C2.6686 7.87293 0.19149 6.98919 0.19149 4.48385C0.19149 2.82156 1.56255 1.47406 3.25532 1.47406Z' fill='%23F02323'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='12.2553' height='12.2849' fill='white' transform='translate(0.19149 0.706238)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.user-card__likes-input:checked + .user-card__likes {
+  background-color: var(--bg-grey-special);
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cg opacity='0.5'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z' fill='%23192144'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='12' height='12' fill='white' transform='translate(0 0.790039)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+
+.online::before {
+  background-color: var(--status-online);
+}
