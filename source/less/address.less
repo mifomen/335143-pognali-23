@@ -44,6 +44,9 @@
     position: absolute;
     left: 0;
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 0C6.15169 0 2.625 3.52669 2.625 7.875C2.625 12.9334 6.42846 15.1449 7.26923 16.1538C9.28846 18.5769 9.40257 21 10.5 21C11.5974 21 11.7115 18.5769 13.7308 16.1538C14.5715 15.1449 18.375 12.9334 18.375 7.875C18.375 3.52669 14.8483 0 10.5 0ZM10.5 13.125C7.60069 13.125 5.25 10.7743 5.25 7.875C5.25 4.97569 7.60069 2.625 10.5 2.625C13.3993 2.625 15.75 4.97569 15.75 7.875C15.75 10.7743 13.3993 13.125 10.5 13.125ZM10.5 5.25C9.051 5.25 7.875 6.426 7.875 7.875C7.875 9.324 9.051 10.5 10.5 10.5C11.949 10.5 13.125 9.324 13.125 7.875C13.125 6.426 11.949 5.25 10.5 5.25Z' fill='%23FFD74B'/%3E%3Cellipse cx='10.5' cy='7.875' rx='0.875001' ry='0.875' fill='%23161C35'/%3E%3C/svg%3E%0A");
   }
 }
 
@@ -76,57 +79,4 @@
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
   }
-}
-
-.address__map-img {
-  position: relative;
-  z-index: 7;
-}
-
-.address__map-block {
-  z-index: 3;
-  position: relative;
-  left: 0;
-  right: 0;
-  width: calc(100vw - (100vw - 100%));
-  /*width: 100vw;*/
-  /*margin-left: calc(50% - 50vw - 0px);*/
-  height: 430px;
-  background-color: var(--white);
-  // background-image: url("../img/location-map.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  &::before {
-    display: flex;
-    flex-direction: row;
-    content: "";
-    background-color: var(--basic_yellow);
-    height: 23px;
-    box-sizing: border-box;
-
-    width: 100%;
-
-    position: absolute;
-    z-index: 12;
-    top: 0;
-    left: 50%;
-    transform: rotate(0deg)  translate(-50%, 0%);
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-  }
-}
-
-.address__map-block-google {
-  position: absolute;
-  left: 0;
-  /*right: 0;*/
-  height: 100%; /* Рекомендация Google*/
-  /*width: calc(100vw - (100vw - 100%));*/
-  z-index: 10;
-  overflow: hidden;
-  width: 100vw;
-  margin-left: calc(50% - 50vw - 9px);
-  /*width: calc(100vw - (100vw - 100%));*/
 }

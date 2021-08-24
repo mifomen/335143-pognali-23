@@ -139,6 +139,14 @@ gulp.task("clear", function() {
   }) )
 })
 
+gulp.task("clear-img", function() {
+  return gulp.src( "build/img/**/*", { read: false })
+  .pipe(rm({
+    async: true
+  }) )
+})
+
+
 gulp.task("build",
   gulp.series(
     "clear",
@@ -162,8 +170,6 @@ gulp.task("build",
 // "watch"
 ));
 
-
-
 gulp.task("serve", function (){
   bs.init({
     server: {
@@ -176,9 +182,6 @@ gulp.task("serve", function (){
   gulp.watch("source/less/**/*.less",  gulp.parallel("less"));
   gulp.watch("source/**/*.html",  gulp.parallel("html"));
   gulp.watch("source/**/*.js",  gulp.parallel("script"));
-  gulp.watch("source/**/*.{png,jpg,jpeg,svg}",  gulp.parallel("copy-img"));
+  gulp.watch("source/**/*.{png,jpg,jpeg,svg}",  gulp.series("clear-img", "copy-img"));
   gulp.watch("source/manifest.webmanifest",  gulp.parallel("copy-webmanifest"));
-
-
-
 })

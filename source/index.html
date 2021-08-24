@@ -12,7 +12,11 @@
 </head>
 <body class="page">
   <header class="header page__header">
-    <img class="header__title" src="img/logo_mobile.svg" alt="logo" width="96" height="15">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/logo-white-desktop@1x.png 1x, img/logo-white-desktop@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="img/logo-white-tablet@1x.png 1x, img/logo-white-tablet@2x.png 2x">
+      <img class="header__logo" src="img/logo-white-mobile.svg" alt="logo" width="96" height="15">
+    </picture>
     <h1 class="visually-hidden">Погнали?</h1>
     <button class="header__button">Открыть меню</button>
   </header>
@@ -21,17 +25,19 @@
     <section class="main-intro">
       <h2 class="visually-hidden">Путишествуй с надежными людьми!</h2>
       <h3 class="main-intro__text">В путешествие с крутыми попутчиками!</h3>
-      <a href="tel:+88005558628" class="main-intro__link tel-link"></a>
-      <a href="email!" class="main-intro__link email-link"></a>
-      <a href="auto.html" class="main-intro__link login-link">Авторизация</a>
-      <div class="main-intro__feedback-wrapper">
-        <p class="main-intro__feedback-msg">«Лучшее приложение, что я видел в жизни!»</p>
-        <p class="main-intro__feedback-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/traveller-illustration-desktop@1x.png 1x, img/traveller-illustration-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/traveller-illustration-tablet@1x.png 1x, img/traveller-illustration-tablet@2x.png 2x">
+        <img class="main-intro__img" src="img/traveller-illustration-mobile@1x.png" srcset="img/traveller-illustration-mobile@2x.png 2x" alt="traveller illustration" width="192" height="255">
+      </picture>
+      <a href="tel:+88005558628" class="main-intro__link main-intro__link--tel"></a>
+      <a href="email!" class="main-intro__link main-intro__link--email"></a>
+      <a href="auto.html" class="main-intro__link main-intro__link--login">Авторизация</a>
+      <div class="main-intro__feedback-list">
+        <blockquote class="main-intro__feedback-item main-intro__feedback-msg">«Лучшее приложение, что я видел в жизни!»</blockquote>
+        <cite class="main-intro__feedback-item main-intro__feedback-author">Мурат Эльтазин<br> главный редактор<br> газеты «гаджетлайф»</cite>
       </div>
-
     </section>
-
-
     <section class="main-plan">
       <h2 class="visually-hidden">Как работает наш сервис!</h2>
       <p class="main-plan__tourism tourism-step-one">Выберите<br>направление</p>
@@ -52,27 +58,27 @@
       <p class="directions__intro">Мы не продаем туры<br> и ничего не рекламируем.<br>Люди сами пишут о странах, куда хотели бы отправиться<br> и чем можно там заняться.</p>
       <ul class="directions-list">
         <li class="directions-list__item first-direction">
-          <img class="directions-list__item-country" src="https://via.placeholder.com/270x110" alt="background-tailand" width="270" height="110">
+          <img class="directions-list__item-country" src="img/thailand-mobile@1x.png" srcset="img/thailand-mobile@2x.png 2x" alt="background-tailand" width="270" height="110">
           <div class="directions-list__item-wrapper">
-            <img class="directions-list__item-img" src="https://via.placeholder.com/35x24" alt="pic1" width="35" height="24">
+            <img class="directions-list__item-img" src="img/thailand-flag-mobile@1x.png" srcset="img/thailand-flag-mobile@2x.png 2x" alt="tailand-flag" width="35" height="24">
             <h3 class="directions-list__item-title">Таиланд</h3>
             <p class="directions-list__item-tagline">Джунгли зовут</p>
             <p class="directions-list__item-counter">18321</p>
           </div>
         </li>
         <li class="directions-list__item first-direction">
-          <img class="directions-list__item-country" src="https://via.placeholder.com/270x110" alt="background-france" width="270" height="110">
+          <img class="directions-list__item-country" src="img/france-mobile@1x.png" srcset="img/france-mobile@2x.png 2x" alt="background-france" width="270" height="110">
           <div class="directions-list__item-wrapper">
-            <img class="directions-list__item-img" src="https://via.placeholder.com/35x24" alt="pic1" width="35" height="24">
+            <img class="directions-list__item-img" src="img/france-flag-mobile@1x.png" srcset="img/france-flag-mobile@2x.png 2x" alt="france-flag" width="35" height="24">
             <h3 class="directions-list__item-title">Франция</h3>
             <p class="directions-list__item-tagline">Трэ бьен, манифик!</p>
             <p class="directions-list__item-counter">12518</p>
           </div>
         </li>
         <li class="directions-list__item first-direction">
-          <img class="directions-list__item-country" src="https://via.placeholder.com/270x110" alt="background-czech" width="270" height="110">
+          <img class="directions-list__item-country" src="img/czech-mobile@1x.png" srcset="img/czech-mobile@2x.png 2x" alt="background-czech" width="270" height="110">
           <div class="directions-list__item-wrapper">
-            <img class="directions-list__item-img" src="https://via.placeholder.com/35x24" alt="pic1" width="35" height="24">
+            <img class="directions-list__item-img" src="img/czech-flag-mobile@1x.png" srcset="img/czech-flag-mobile@2x.png 2x" alt="czech-flag" width="35" height="24">
             <h3 class="directions-list__item-title">Чехия</h3>
             <p class="directions-list__item-tagline">Закоулки старой Европы</p>
             <p class="directions-list__item-counter">5326</p>
@@ -88,15 +94,15 @@
       <p class="about-companions__call-is-easy">Теперь можно легко найти единомышленников!</p>
       <ul class="about-companions__list">
         <li class="about-companions__item">
-          <img class="about-companions__item-img" src="https://via.placeholder.com/270x270" width="270" height="270"  alt="фото компаньена Тани">
+          <img class="about-companions__item-img" src="img/user-1@1x.png" srcset="img/user-1@2x.png 2x" alt="фото компаньена Тани" width="270" height="270">
           <p class="about-companions__item-level">
             <span class="about-companions__item-level-number">99</span>
             <span class="about-companions__item-level-text">level</span>
           </p>
           <div class="about-companions__item-country-visited">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-one" alt="pic1-country-one" width="35" height="25">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-two" alt="pic1-country-two" width="35" height="25">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-three" alt="pic1-country-three" width="35" height="25">
+            <img class="about-companions__item-country-visited-img country-one" src="img/sri-lanka-user@1x.png" srcset="img/sri-lanka-user@2x.png 2x" alt="picture-country-two" width="35" height="25">
+            <img class="about-companions__item-country-visited-img country-one" src="img/thailand-user@1x.png" srcset="img/thailand-user@2x.png 2x" alt="thailand-flag" width="35" height="25">
+            <img class="about-companions__item-country-visited-img country-one" src="img/seychelles-user@1x.png" srcset="img/seychelles-user@2x.png 2x" alt="seychelles-flag" width="35" height="25">
           </div>
           <h4 class="about-companions__item-name">Таня Фирсова</h4>
           <span class="about-companions__item-tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</span>
@@ -108,31 +114,31 @@
           </div>
         </li>
         <li class="about-companions__item">
-          <img class="about-companions__item-img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="фото компаньена Пети">
+          <img class="about-companions__item-img" src="img/user-2@1x.png" srcset="img/user-2@2x.png 2x" alt="фото компаньена Пети" width="270" height="270">
           <p class="about-companions__item-level">
-            <span class="about-companions__item-level-number">80</span>
-            <span class="about-companions__item-level-text">level</span>
-          </p>
-          <div class="about-companions__item-country-visited two-country">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-one" alt="pic1-country-one" width="35" height="25">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-two" alt="pic1-country-two" width="35" height="25">
-          </div>
-          <h4 class="about-companions__item-name">Петя Демин</h4>
-          <span class="about-companions__item-tags">#бургер #бар #футбол #концерт #крафт</span>
-          <div class="about-companions__item-ways-of-travel">
-            <img class="about-companions__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/20x21" alt="plane" width="21" height="21">
-            <img class="about-companions__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/17x19" alt="car" width="17" height="19">
-            <img class="about-companions__item-ways-of-travel-image" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
-            <img class="about-companions__item-ways-of-travel-imageactive-way-img" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
-          </div>
-        </li>
+          <span class="about-companions__item-level-number">80</span>
+          <span class="about-companions__item-level-text">level</span>
+        </p>
+        <div class="about-companions__item-country-visited two-country">
+          <img class="about-companions__item-country-visited-img country-one" src="img/belgium-user@1x.png" srcset="img/belgium-user@2x.png 2x" alt="belgium-flag" width="35" height="25">
+          <img class="about-companions__item-country-visited-img country-one" src="img/czech-flag-mobile@1x.png" srcset="img/czech-flag-mobile@2x.png 2x" alt="czech-flag" width="35" height="25">
+        </div>
+        <h4 class="about-companions__item-name">Петя Демин</h4>
+        <span class="about-companions__item-tags">#бургер #бар #футбол #концерт #крафт</span>
+        <div class="about-companions__item-ways-of-travel">
+          <img class="about-companions__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/20x21" alt="plane" width="21" height="21">
+          <img class="about-companions__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/17x19" alt="car" width="17" height="19">
+          <img class="about-companions__item-ways-of-travel-image" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
+          <img class="about-companions__item-ways-of-travel-imageactive-way-img" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
+        </div>
+      </li>
       </ul>
       <a href="catalog.html" class="about-companions__link">Показать всех</a>
     </section>
     <section class="new-profile">
       <h2 class="visually-hidden">Создайте свой профиль</h2>
       <p class="new-profile__add">Добавьте свой профиль</p>
-      <img class="new-profile__add-icon value-rubli" src="https://via.placeholder.com/100x100" alt="icon-avatar" height="100" width="100">
+      <img class="new-profile__add-icon value-rubli" src="img/rates@1x.png" srcset="img/rates@2x.png 2x" alt="icon-avatar" height="100" width="100">
       <ul class="new-profile__offers-list">
         <li class="new-profile__offers-list-item number-one">
           Базовое размещение<span class="new-profile__offers-list-item-price">Бесплатно</span>
@@ -144,7 +150,29 @@
           Кастомный цвет карточки<span class="new-profile__offers-list-item-price">59 руб./мес</span>
         </li>
       </ul>
-      <a class="new-profile__offers-see-all" href="blank.html">Показать тарифы для бизнеса</a>
+      <a class="new-profile__offers-see-all js-business-tariffs-open" href="business-tariffs.html">Показать тарифы для бизнеса</a>
+      <div class="business-tariffs js-modal-window__business-tariffs">
+        <h2 class="business-tariffs__title">Бизнес-тарифы</h2>
+        <ul class="business-tariffs__list">
+          <li class="business-tariffs__item">
+            <span class="business-tariffs__text business-tariffs__text--one">Реклама у блоггера</span>
+            <span class="business-tariffs__text business-tariffs__text--two">300 000 руб./пост</span>
+          </li>
+          <li class="business-tariffs__item">
+            <span class="business-tariffs__text business-tariffs__text--one">Накрутка подписчиков</span>
+            <span class="business-tariffs__text business-tariffs__text--two">от 1 руб./шт.</span>
+          </li>
+          <li class="business-tariffs__item">
+            <span class="business-tariffs__text business-tariffs__text--one">Лайки от ботов</span>
+            <span class="business-tariffs__text business-tariffs__text--two">от 20 коп./лайк</span>
+          </li>
+          <li class="business-tariffs__item business-tariffs__item--last">
+            <span class="business-tariffs__text business-tariffs__text--one">Ваш продакт-плейсмент</span>
+            <span class="business-tariffs__text business-tariffs__text--two">Индивидуально</span>
+          </li>
+        </ul>
+        <button class="business-tariffs__btn js-business-tariffs-close" type="button">закрыть окно</button>
+      </div>
     </section>
     <section class="subscribe">
       <h2 class="subscribe__title">Заинтересовались?</h2>
@@ -158,12 +186,14 @@
       <p class="subscribe__questions">Остались вопросы?<br>Мы с радостью на них ответим!</p>
       <ul class="subscribe__feedback-list">
         <li class="subscribe__feedback-item">
-          <img class="subscribe__feedback-img" src="https://via.placeholder.com/45x45" width="45" height="45" alt="telephone-icon">
-          <a class="subscribe__feedback-link" href="tel:88005558628">8 800 555-86-28</a>
+          <a class="subscribe__feedback-link" href="tel:88005558628">
+            <div class="subscribe__feedback-img subscribe__feedback-img--tel"></div>
+          8 800 555-86-28</a>
         </li>
         <li class="subscribe__feedback-item">
-          <img class="subscribe__feedback-img" src="https://via.placeholder.com/45x45" width="45" height="45" alt="telephone-icon">
-          <a class="subscribe__feedback-link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a class="subscribe__feedback-link" href="mail@htmlacademy.ru">
+            <div class="subscribe__feedback-img subscribe__feedback-img--email"></div>
+          mail@htmlacademy.ru</a>
         </li>
       </ul>
     </section>
@@ -171,32 +201,44 @@
       <h2 class="visually-hidden">Наш адресс</h2>
       <p class="address__text">ул. Большая<br> Конюшенная, 19/8</p>
       <a class="address__login-link" href="https://maps.google.com?saddr=Current+Location&daddr=59.938673,30.323155">Проложить маршрут</a>
-      <div class="address__map-block">
-        <div id="address__map-block-google" class="address__map-block-google"></div>
-        <img class="js-hide-map address__map-img" src="https://via.placeholder.com/320x424" width="320" height="424" alt="Маркер на карте нашей организации">
-      </div>
+    </section>
+    <section class="map">
+      <h2 class="visually-hidden">Карта, чтобы нас найти!</h2>
+      <div id="js-google-map" class="map__google"></div>
+      <picture>
+        <source media="(min-width: 768px)" srcset="https://via.placeholder.com/768x581">
+          <source media="(min-width: 1440px)" srcset="https://via.placeholder.com/1440x584">
+        <img class="js-hide-map map__img" src="https://via.placeholder.com/320x424" width="320" height="424" alt="Маркер на карте нашей организации">
+      </picture>
     </section>
   </main>
   <footer class="footer page__footer">
-    <h2 class="footer__title">Погнали?</h2>
+     <picture>
+      <source media="(min-width: 1440px)" srcset="img/logo-black-desktop@1x.png 1x, img/logo-black-desktop@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="img/logo-black-tablet@1x.png 1x, img/logo-black-tablet@2x.png 2x">
+      <img class="footer__title" src="img/logo-black-mobile.svg" alt="logo" width="96" height="15">
+    </picture>
     <ul class="footer__social-list">
       <li class="footer__social-item">
-        <h3 class="visually-hidden">Наша страница на facebook</h3>
-        <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="facebook">
+        <a href="#"  class="footer__social-link footer__social-link--facebook">
+          <h3 class="visually-hidden">Наша страница на facebook</h3>
+        </a>
       </li>
       <li class="footer__social-item">
-        <h3 class="visually-hidden">Наша страница во vkontakte</h3>
-        <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="vkontakte">
+        <a href="#"  class="footer__social-link footer__social-link--vk">
+          <h3 class="visually-hidden">Наша страница во vkontakte</h3>
+        </a>
       </li>
       <li class="footer__social-item">
-        <h3 class="visually-hidden">Наша страница в instagram</h3>
-        <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="instagram">
+        <a href="#"  class="footer__social-link footer__social-link--instagram">
+          <h3 class="visually-hidden">Наша страница в instagram</h3>
+        </a>
       </li>
     </ul>
     <span class="footer__authors">Разработано</span>
     <a class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
       <h3 class="visually-hidden">логотип htmlacademy и переход на наш курс адаптивной верстке</h3>
-      <img class="footer__authors-logo" src="https://via.placeholder.com/27x33" width="27"  height="33" alt="htmlacademy-icon">
+      <img class="footer__authors-logo" src="img/htmlacademy-logo.svg" width="27"  height="33" alt="htmlacademy-icon">
     </a>
   </footer>
   <script src="js/app.js"></script>

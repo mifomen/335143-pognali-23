@@ -1,0 +1,51 @@
+.map {
+  // z-index: 3;
+  position: relative;
+  left: 0;
+  right: 0;
+  width: calc(100vw - (100vw - 100%));
+  /*width: 100vw;*/
+  /*margin-left: calc(50% - 50vw - 0px);*/
+  height: 430px;
+  background-color: var(--white);
+  // background-image: url("../img/location-map.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    display: flex;
+    flex-direction: row;
+    content: "";
+    background-color: var(--basic_yellow);
+    height: 23px;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    z-index: 12;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+}
+
+.map__google {
+  position: absolute;
+  left: 0;
+  /*right: 0;*/
+  height: 100%; /* Рекомендация Google*/
+  /*width: calc(100vw - (100vw - 100%));*/
+  z-index: 10;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(50% - 50vw - 9px);
+  /*width: calc(100vw - (100vw - 100%));*/
+}
+
+
+.map__img {
+  position: relative;
+  z-index: 7;
+}
