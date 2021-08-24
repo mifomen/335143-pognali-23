@@ -40,14 +40,14 @@ window.addEventListener('scroll', function() {
 if (document.querySelector(".js-business-tariffs-open"))  {
   document.querySelector(".js-business-tariffs-open").addEventListener("click", function (evt) {
     evt.preventDefault();
-    document.querySelector(".js-modal-window__business-tariffs").classList.toggle("business-tariffs--open")
+    document.querySelector(".js-modal-window").classList.toggle("business-tariffs--open")
   })
 }
 
 if (document.querySelector(".js-business-tariffs-close"))  {
   document.querySelector(".js-business-tariffs-close").addEventListener("click", function (evt) {
     evt.preventDefault();
-    document.querySelector(".js-modal-window__business-tariffs").classList.toggle("business-tariffs--open")
+    document.querySelector(".js-modal-window").classList.toggle("business-tariffs--open")
   })
 }
 

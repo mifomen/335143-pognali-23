@@ -182,6 +182,6 @@ gulp.task("serve", function (){
   gulp.watch("source/less/**/*.less",  gulp.parallel("less"));
   gulp.watch("source/**/*.html",  gulp.parallel("html"));
   gulp.watch("source/**/*.js",  gulp.parallel("script"));
-  gulp.watch("source/**/*.{png,jpg,jpeg,svg}",  gulp.series("clear-img", "copy-img"));
+  gulp.watch("source/**/*.{png,jpg,jpeg,svg,webp}",  gulp.series("clear-img", "copy-img"));
   gulp.watch("source/manifest.webmanifest",  gulp.parallel("copy-webmanifest"));
 })
