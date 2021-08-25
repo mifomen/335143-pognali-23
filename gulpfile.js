@@ -35,7 +35,7 @@ gulp.task("less",function () {
 //   title: "Error in scss"
 // }))
 // .pipe(stripCssComments())
-// .pipe(csso())
+.pipe(csso())
 .pipe(rename("style.min.css"))
 .pipe(sourcemaps.write(".")) // delete "," ? ok ?
 .pipe(gulp.dest("build/css"))

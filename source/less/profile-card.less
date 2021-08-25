@@ -107,7 +107,34 @@
   margin-bottom: 33px;
 }
 
-.profile-card__tags {
+.profile-card__tags-wrapper {
+  position: relative;
+  width: 100%;
+  // margin: 0 auto;
+  display: flex;
+}
+
+.profile-card__tags-lead {
+  content: "тэги";
+  margin: 0;
+  position: absolute;
+  top: -10px;
+  z-index: 5;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--basic_blue_light-2);
+  background-color: var(--special_white);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 0 18px;
+}
+
+.profile-card__tags-item {
+  font-family: var(--basic-font);
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -118,22 +145,10 @@
   position: relative;
   color: var(--special_grey);
   margin-bottom: 25px;
-
-  &::before {
-    content: "тэги";
-    position: absolute;
-    top: -10px;
-    left: 23.5%;
-    transform: translateX(50%);
-    color: var(--basic_blue_light-2);
-    background-color: var(--special_white);
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 18px;
-    padding: 0 18px;
-  }
+  resize: none;
+  display: block;
+  width: 100%;
+  background-color: var(--special_white);
 }
 
 .profile-card__item-ways-of-travel {
@@ -151,7 +166,8 @@
     content: "транспорт";
     position: absolute;
     top: -9px;
-    left: 28%;
+    left: 50%;
+    transform: translateX(-50%);
     color: var(--basic_blue_light-2);
     background-color: var(--special_white);
     text-transform: uppercase;

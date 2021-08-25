@@ -12,17 +12,17 @@
 </head>
 <body class="page">
   <header class="header page__header">
-    <h1 class="visually-hidden">Навигационное меню. Погнали?</h1>
-    <nav class="header-nav">
-      <a class="header-nav__link" href="index.html">
-        <img class="header__title" src="img/logo_mobile.svg" alt="logo" width="96" height="15">
-      </a>
-    </nav>
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/logo-white-desktop@1x.png 1x, img/logo-white-desktop@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="img/logo-white-tablet@1x.png 1x, img/logo-white-tablet@2x.png 2x">
+      <img class="header__logo" src="img/logo-white-mobile.svg" alt="logo" width="96" height="15">
+    </picture>
+    <h1 class="visually-hidden">Погнали?</h1>
     <button class="header__button">Открыть меню</button>
   </header>
   <main class="main page__main">
     <h1 class="visually-hidden">Статистика и редактирование вашего профиля</h1>
-    <section class="main-intro form-style">
+    <section class="main-intro main-intro--form-page">
       <h2 class="main-intro__title">Направления</h2>
     </section>
     <section class="profile-card">
@@ -33,7 +33,10 @@
       </p>
       <img class="profile-card__avatar" src="https://via.placeholder.com/100x100" alt="plane" width="100" height="100">
       <button class="profile-card__change-photo" type="button">Сменить фото</button>
-      <span class="profile-card__tags">#бургер #бар #футбол #концерт #крафт</span>
+      <div class="profile-card__tags-wrapper">
+        <p class="profile-card__tags-lead">тэги</p>
+        <textarea class="profile-card__tags-item">#бургер #бар #футбол #концерт #крафт</textarea>
+      </div>
       <div class="profile-card__item-ways-of-travel">
         <img class="profile-card__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/33x33" alt="plane" width="33" height="33">
         <img class="profile-card__item-ways-of-travel-image" src="https://via.placeholder.com/33x33" alt="car" width="33" height="33">
@@ -236,26 +239,42 @@
       </section>
     </main>
     <footer class="footer page__footer form-page">
-      <h2 class="footer__title">Погнали?</h2>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-black-desktop@1x.png 1x, img/logo-black-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-black-tablet@1x.png 1x, img/logo-black-tablet@2x.png 2x">
+        <img class="footer__title" src="img/logo-black-mobile.svg" alt="logo" width="96" height="15">
+      </picture>
       <ul class="footer__social-list">
         <li class="footer__social-item">
-          <h3 class="visually-hidden">Наша страница на facebook</h3>
-          <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="facebook">
+          <a href="#"  class="footer__social-link footer__social-link--facebook">
+            <h3 class="visually-hidden">Наша страница на facebook</h3>
+          </a>
         </li>
         <li class="footer__social-item">
-          <h3 class="visually-hidden">Наша страница во vkontakte</h3>
-          <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="vkontakte">
+          <a href="#"  class="footer__social-link footer__social-link--vk">
+            <h3 class="visually-hidden">Наша страница во vkontakte</h3>
+          </a>
         </li>
         <li class="footer__social-item">
-          <h3 class="visually-hidden">Наша страница в instagram</h3>
-          <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="instagram">
+          <a href="#" class="footer__social-link footer__social-link--instagram">
+            <h3 class="visually-hidden">Наша страница в instagram</h3>
+          </a>
+        </li>
+        <li>
+        <li class="footer__social-item footer__social-item--instagram">
+          <a class="footer__social-link" href="#" aria-label="Наша страница в инстаграме">
+            <svg class="instagram-svg" viewBox="0 0 24 24">
+              <path class="instagram-svg__path" d="M17.28 2.4a4.33 4.33 0 014.32 4.32v10.56a4.33 4.33 0 01-4.32 4.32H6.72a4.33 4.33 0 01-4.31-4.32V6.72A4.33 4.33 0 016.72 2.4h10.56zm0-1.44H6.72A5.76 5.76 0 00.96 6.72v10.56a5.76 5.76 0 005.76 5.76h10.56a5.76 5.76 0 005.76-5.76V6.72A5.76 5.76 0 0017.28.96z" fill="currentColor"/>
+              <path class="instagram-svg__path" d="M12.01 7.756a4.253 4.253 0 11-4.254 4.253 4.244 4.244 0 014.253-4.253zm0-1.44a5.693 5.693 0 105.682 5.693 5.681 5.681 0 00-5.683-5.693zM17.904 7.413a1.286 1.286 0 100-2.573 1.286 1.286 0 000 2.573z" fill="currentColor"/>
+            </svg>
+          </a>
         </li>
       </ul>
       <span class="footer__authors">Разработано</span>
       <a class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
         <h3 class="visually-hidden">логотип htmlacademy и переход на наш курс адаптивной верстке</h3>
-        <img class="footer__authors-logo" src="https://via.placeholder.com/27x33" width="27"  height="33" alt="htmlacademy-icon">
+        <img class="footer__authors-logo" src="img/htmlacademy-logo.svg" width="27"  height="33" alt="htmlacademy-icon">
       </a>
-    </footer>
-  </body>
-  </html>
+  </footer>
+</body>
+</html>

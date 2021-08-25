@@ -12,15 +12,17 @@
 </head>
 <body class="page">
   <header class="header page__header">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/logo-white-desktop@1x.png 1x, img/logo-white-desktop@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="img/logo-white-tablet@1x.png 1x, img/logo-white-tablet@2x.png 2x">
+      <img class="header__logo" src="img/logo-white-mobile.svg" alt="logo" width="96" height="15">
+    </picture>
     <h1 class="visually-hidden">Погнали?</h1>
-    <a class="header__link" href="index.html">
-      <img class="header__title" src="img/logo_mobile.svg" alt="logo" width="96" height="15">
-    </a>
     <button class="header__button">Открыть меню</button>
   </header>
   <main class="main page__main">
     <h1 class="visually-hidden">Статистика и редактирование вашего профиля</h1>
-    <div class="main-intro form-style">
+    <div class="main-intro main-intro--form-page">
       <h2 class="main-intro__title">Попутчики</h2>
     </div>
     <section class="country-list">
@@ -347,25 +349,32 @@
     </section>
   </main>
   <footer class="footer page__footer form-page">
-    <h2 class="footer__title">Погнали?</h2>
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/logo-black-desktop@1x.png 1x, img/logo-black-desktop@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="img/logo-black-tablet@1x.png 1x, img/logo-black-tablet@2x.png 2x">
+      <img class="footer__title" src="img/logo-black-mobile.svg" alt="logo" width="96" height="15">
+    </picture>
     <ul class="footer__social-list">
-      <li class="footer__social-list-item">
-        <h3 class="visually-hidden">Наша страница на facebook</h3>
-        <img  class="footer__social-list-item-img" src="https://via.placeholder.com/45x45" alt="facebook">
+      <li class="footer__social-item">
+        <a href="#"  class="footer__social-link footer__social-link--facebook">
+          <h3 class="visually-hidden">Наша страница на facebook</h3>
+        </a>
       </li>
-      <li class="footer__social-list-item">
-        <h3 class="visually-hidden">Наша страница во vkontakte</h3>
-        <img  class="footer__social-list-item-img" src="https://via.placeholder.com/45x45" alt="vkontakte">
+      <li class="footer__social-item">
+        <a href="#"  class="footer__social-link footer__social-link--vk">
+          <h3 class="visually-hidden">Наша страница во vkontakte</h3>
+        </a>
       </li>
-      <li class="footer__social-list-item">
-        <h3 class="visually-hidden">Наша страница в instagram</h3>
-        <img  class="footer__social-list-item-img" src="https://via.placeholder.com/45x45" alt="instagram">
+      <li class="footer__social-item">
+        <a href="#"  class="footer__social-link footer__social-link--instagram">
+          <h3 class="visually-hidden">Наша страница в instagram</h3>
+        </a>
       </li>
     </ul>
     <span class="footer__authors">Разработано</span>
     <a class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
-      <h3 class="visually-hidden">Наш логотип и переход на наш курс</h3>
-      <img class="footer__authors-logo" src="https://via.placeholder.com/45x45" alt="htmlacademy-icon">
+      <h3 class="visually-hidden">логотип htmlacademy и переход на наш курс адаптивной верстке</h3>
+      <img class="footer__authors-logo" src="img/htmlacademy-logo.svg" width="27"  height="33" alt="htmlacademy-icon">
     </a>
   </footer>
   <script src="js/app.js"></script>
