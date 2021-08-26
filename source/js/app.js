@@ -11,7 +11,7 @@ function initMap() {
     map,
     title: "Мы здесь!",
     // content:"<h1 class="blog-content-link">mifomen</h1>",
-    icon: "img/favicon/16.png",
+    icon: "img/pin-on-map.svg",
     draggable: false
   });
 
@@ -74,5 +74,14 @@ if (document.querySelector(".js-open-alphabet")) {
     BtnOpenAlphabet.classList.toggle('close-alphabet-list')
     CountryList.classList.toggle('visually-hidden')
     CountryLabel.classList.toggle("country-list__opened")
+  })
+}
+
+
+if (document.querySelector(".subscribe__form-button")) {
+  document.querySelector(".subscribe__form-button"). addEventListener("click", function () {
+    if  (document.querySelector(".subscribe__form-email").value==="") {
+      document.querySelector(".subscribe__form-email").placeholder="Введите e-mail"
+    }
   })
 }

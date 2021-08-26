@@ -10,6 +10,8 @@ const csso = require("gulp-csso");
 const rm = require( "gulp-rm" )
 const stylelint   = require("stylelint");
 const sourcemaps = require("gulp-sourcemaps");
+const webp = require("gulp-webp");
+
 
 
 gulp.task("less",function () {
@@ -20,10 +22,10 @@ gulp.task("less",function () {
 // .pipe(less()).on("error", less.logError)
 .pipe(sourcemaps.write({includeContente: false, sourceRoot: "."}))// delete ?
 .pipe(sourcemaps.init({loadMaps: true})) // delete ?
-.pipe(postcss([
-  mqpacker({ sort: true })
-  ])
-)
+// .pipe(postcss([
+//   mqpacker({ sort: true })
+//   ])
+// )
 // .pipe(uncss({
 //   html: ["./build/index.html"]
 // }))
@@ -105,6 +107,16 @@ gulp.task("copy-img", function (){
   }))
 })
 
+gulp.task("optimizationImage", function (){
+  return gulp.src(["./build/img/*.{jpg,png}"])
+  .pipe(webp({quality: 85}))
+  .pipe(gulp.dest("build/img"))
+  .pipe(bs.reload({
+    stream: true
+  }))
+})
+
+
 gulp.task("copy-fonts", function (){
   return gulp.src(["source/fonts/**/*.{woff,woff2}"])
   .pipe(gulp.dest("./build/fonts"))
@@ -161,6 +173,7 @@ gulp.task("build",
 "copy-favicon",
 "copy-webmanifest",
 "copy-img",
+"optimizationImage",
 "html",
 "less",
 "script",

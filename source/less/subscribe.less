@@ -10,6 +10,7 @@
   box-sizing: border-box;
   border-bottom-right-radius: 35px;
   border-bottom-left-radius: 35px;
+  z-index: 1;
 
 
   &::before {
@@ -20,7 +21,7 @@
     width: 100%;
     height: 40px;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: -35px;
     left: 50%;
     transform: translateX(-50%);
@@ -70,7 +71,6 @@
 
 .subscribe__form-email {
   font-family: var(--basic-font);
-  border: none;
   outline: 0;
   font-style: normal;
   font-weight: bold;
@@ -80,29 +80,76 @@
   box-sizing: border-box;
   border-radius: 10px;
   width: 100%;
+  color: var(--special_grey);
+  background-color: var(--white);
+  border: 4px solid transparent;
 
   &::-moz-placeholder {
-    color: var(--grey);
+    color: var(--special_grey_opacity-3);
+    background-color: transparent;
   }
 
   &:-moz-placeholder {
-    color: var(--grey);
+    color: var(--special_grey_opacity-3);
+    background-color: transparent;
   }
 
   &:-ms-input-placeholder {
-    color: var(--grey);
+    color: var(--special_grey_opacity-3);
+    background-color: transparent;
   }
 
   &::-webkit-input-placeholder {
-    color: var(--grey);
+    color: var(--special_grey_opacity-3);
+    background-color: transparent;
+  }
+
+  &:hover {
+    background-color: var(--special_white);
+    color: var(--special_grey_opacity-5);
+  }
+
+  &:active,
+  &:focus {
+    background-color: var(--blue);
+    color: var(--white);
+    border: 4px solid var(--white);
+  }
+
+  &:focus:placeholder-shown {
+    border: 4px solid var(--white);
+  }
+
+  &:active:placeholder-shown {
+    border: 4px solid var(--white);
+  }
+
+  &:placeholder-shown {
+    border: 4px solid transparent;
+  }
+
+  &:valid::-moz-placeholder {
+    color: var(--red);
+  }
+
+  &:valid:-ms-input-placeholder {
+    color: var(--red);
+  }
+
+  &:valid::-webkit-input-placeholder {
+    color: var(--red);
+  }
+
+  &:valid:-moz-placeholder {
+    color: var(--red);
   }
 }
 
 .subscribe__form-button {
   font-size: 0;
-  border: 0;
   outline: 0;
-  background-color: var(--yellow-link);
+  background-color: var(--basic_yellow);
+  border: 4px solid var(--basic_yellow);
   display: block;
   position: absolute;
   right: 0;
@@ -138,23 +185,44 @@
   margin: 0 2px 20px 0;
 }
 
-.subscribe__feedback-img {
+.subscribe__feedback-icon {
   margin-right: 16px;
   border-radius: 50%;
   display: block;
   width: 45px;
   height: 45px;
   background-color: var(--bg-btn-feedback);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+  position: relative;
 }
 
-.subscribe__feedback-img--tel {
-  background-image: url("data:image/svg+xml,%3Csvg width='19' height='17' viewBox='0 0 19 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.5 1.08594C6.70355 1.08594 3.90038 1.55861 2.88327 2.50071C2.03939 3.2823 1.75809 4.66308 1.66326 5.53732C1.66326 5.53732 1.6502 5.62371 1.6502 5.66087C1.6502 6.0037 1.9445 6.27865 2.30432 6.27865C2.34683 6.27865 3.92007 6.15816 4.86856 6.08404C4.89139 6.08091 4.91439 6.07785 4.93721 6.0717C5.29048 6.06248 5.5751 5.79059 5.5751 5.45392L5.57827 4.23679C5.57827 3.85993 5.90219 3.55716 6.30125 3.55716H12.6987C13.0978 3.55716 13.4218 3.8599 13.4218 4.23679L13.425 5.45392C13.425 5.79059 13.7096 6.06248 14.0628 6.0717C14.0855 6.07789 14.1085 6.08091 14.1316 6.08404C15.0801 6.15812 16.6533 6.27865 16.6957 6.27865C17.0554 6.27865 17.3499 6.0037 17.3499 5.66087C17.3499 5.62371 17.3368 5.53732 17.3368 5.53732C17.2419 4.66308 16.961 3.28234 16.1171 2.50071C15.0996 1.55861 12.2964 1.08594 9.5 1.08594ZM9.5 9.11752C8.77715 9.11752 8.19169 9.67043 8.19169 10.3531C8.19169 11.0358 8.77715 11.5887 9.5 11.5887C10.2228 11.5887 10.8083 11.0358 10.8083 10.3531C10.8083 9.67043 10.2228 9.11752 9.5 9.11752ZM8.51878 6.33731V5.56506C8.51878 5.13881 8.15241 4.79282 7.70111 4.79282C7.24982 4.79282 6.88345 5.13884 6.88345 5.56506V6.33731L2.471 10.7887C2.16694 11.0698 1.97718 11.462 1.97718 11.8946V13.1333C1.97718 13.816 2.56269 14.3689 3.2855 14.3689H3.61259V15.1412C3.61259 15.5675 3.979 15.9134 4.4303 15.9134C4.88159 15.9134 5.24797 15.5675 5.24797 15.1412V14.3689H13.752V15.1412C13.752 15.5675 14.1183 15.9134 14.5698 15.9134C15.0211 15.9134 15.3874 15.5675 15.3874 15.1412V14.3689H15.7145C16.4373 14.3689 17.0227 13.816 17.0227 13.1333V11.8946C17.0227 11.462 16.833 11.0698 16.5289 10.7887L12.1167 6.33731V5.56506C12.1167 5.13881 11.7502 4.79282 11.2989 4.79282C10.8476 4.79282 10.4813 5.13884 10.4813 5.56506V6.33731H8.51878ZM9.5 7.88189C10.9457 7.88189 12.1167 8.98777 12.1167 10.3531C12.1167 11.7185 10.9457 12.8244 9.5 12.8244C8.05431 12.8244 6.88341 11.7185 6.88341 10.3531C6.88341 8.98774 8.05431 7.88189 9.5 7.88189Z' fill='%23FFD74B'/%3E%3C/svg%3E%0A");
+.subscribe__feedback-svg {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 19px;
 }
 
-.subscribe__feedback-img--email {
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.1393 16.4663L14.8089 12.5L19.1393 8.53365L18.5488 7.90264L12.25 13.6719L5.95119 7.90264L5.36068 8.53365L9.69111 12.5L5.36068 16.4663L5.95119 17.0974L10.3308 13.0859L12.25 14.8438L14.1692 13.0859L18.5488 17.0974L19.1393 16.4663ZM4.57596 6.25C3.76694 6.25 3.11111 6.94884 3.11111 7.80786V17.1921C3.11111 18.0525 3.76162 18.75 4.57596 18.75H19.924C20.733 18.75 21.3889 18.0512 21.3889 17.1921V7.80786C21.3889 6.94748 20.7384 6.25 19.924 6.25H4.57596Z' fill='%23FFD74B'/%3E%3C/svg%3E%0A");
+.subscribe__feedback-svg__tel {
+  height: 17px;
+}
+
+.subscribe__feedback-svg__email {
+  height: 13px;
+}
+
+.subscribe__feedback-svg__path {
+  fill: var(--basic_yellow);
+}
+
+.subscribe__feedback-link:hover .subscribe__feedback-svg__path {
+  fill: var(--special_yellow_dark);
+}
+
+.subscribe__feedback-link:focus .subscribe__feedback-svg__path {
+  fill: var(--special_yellow_dark-opacity-3);
 }
 
 .subscribe__feedback-list {
@@ -175,7 +243,7 @@
 }
 
 .subscribe__feedback-link {
-  color: var(--yellow-link);
+  color: var(--basic_yellow);
   text-decoration: none;
   text-transform: uppercase;
   display: flex;

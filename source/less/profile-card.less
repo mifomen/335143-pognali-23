@@ -133,7 +133,7 @@
   padding: 0 18px;
 }
 
-.profile-card__tags-item {
+.profile-card__tags-area {
   font-family: var(--basic-font);
   font-style: normal;
   font-weight: normal;
@@ -143,12 +143,23 @@
   border: 1px solid var(--border-color);
   padding: 25px 24px 26px 24px;
   position: relative;
-  color: var(--special_grey);
+  color: var(--special_grey_opacity-6);
   margin-bottom: 25px;
   resize: none;
   display: block;
   width: 100%;
   background-color: var(--special_white);
+
+  &:hover {
+    border: 1px solid var(--border-hover-area);
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid var(--basic_blue);
+    color: var(--special_grey);
+    outline: 0;
+  }
 }
 
 .profile-card__item-ways-of-travel {
