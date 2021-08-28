@@ -27,73 +27,717 @@
     </div>
     <section class="country-list">
       <h2 class="country-list__title">Фильтрация по странам:</h2>
-      <label class="country-list__label country-list__opened">
+      <label class="country-list__label">
         <button class="country-list__btn open-alphabet-list js-open-alphabet" type="button">
           <span class="country-list__btn-text country-list__btn-text--open">Показать все</span>
           <span class="country-list__btn-text country-list__btn-text--close">Свернуть</span>
         </button>
       </label>
-      <ul class="mainlands">
-        <li class="mainlands__item country-list__mainlands-active-link"><a class="mainlands__link mainlands__link--active" href="blank.html">европа</a></li>
+      <ul class="mainlands visually-hidden">
+        <li class="mainlands__item"><a class="mainlands__link mainlands__link--active" href="blank.html">европа</a></li>
         <li class="mainlands__item"><a class="mainlands__link" href="blank.html">азия</a></li>
         <li class="mainlands__item"><a class="mainlands__link" href="blank.html">америка</a></li>
         <li class="mainlands__item"><a class="mainlands__link" href="blank.html">острова</a></li>
       </ul>
-      <div class="country-list__all visually-hidden1">
-        <table class="country-list__alphabet alphabet">
-          <tbody class="alphabet__body">
-            <tr class="alphabet__letter-row">
-              <th class="alphabet__letter-item active-letter"><a href="blank.html" class="alphabet__letter-link active-letter">а</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">б</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">в</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">г</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">д</a></th>
-            </tr>
-            <tr class="alphabet__letter-row">
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">е</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">з</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">и</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">к</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">л</a></th>
-            </tr>
-            <tr class="alphabet__letter-row">
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">м</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">н</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">о</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">п</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">р</a></th>
-            </tr>
-            <tr class="alphabet__letter-row">
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">с</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">т</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">у</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">ф</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">х</a></th>
-            </tr>
-            <tr class="alphabet__letter-row">
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">ч</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">ш</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">э</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">ю</a></th>
-              <th class="alphabet__letter-item"><a href="blank.html" class="alphabet__letter-link">я</a></th>
-            </tr>
-          </tbody>
-        </table>
+      <div class="country-list__all alphabet visually-hidden">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--1" id="latter-1"  checked="">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--2" id="latter-2">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--3" id="latter-3">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--4" id="latter-4">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--5" id="latter-5">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--6" id="latter-6">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--7" id="latter-7">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--8" id="latter-8">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--9" id="latter-9">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--10" id="latter-10">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--11" id="latter-11">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--12" id="latter-12">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--13" id="latter-13">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--14" id="latter-14">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--15" id="latter-15">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--16" id="latter-16">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--17" id="latter-17">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--18" id="latter-18">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--19" id="latter-19">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--20" id="latter-20">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--21" id="latter-21">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--22" id="latter-22">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--23" id="latter-23">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--24" id="latter-24">
+        <input type="radio" name="letter" class="alphabet__toggler alphabet__toggler--25" id="latter-25">
+
+        <ul class="country-list__alphabet alphabet__list">
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-1">a</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-2">б</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-3">в</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-4">г</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-5">д</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-6">е</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-7">з</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-8">и</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-9">к</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-10">л</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-11">м</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-12">н</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-13">о</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-14">п</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-15">р</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-16">с</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-17">т</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-18">у</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-19">ф</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-20">х</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-21">ч</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-22">ш</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-23">э</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-24">ю</label></li>
+          <li class="alphabet__list-item"><label class="alphabet__toggler-label" for="latter-25">я</label></li>
+        </ul>
+        <ul class="alphabet__all-countries">
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">А</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--1">
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/australia.html" class="alphabet__country-link">Австралия
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/austria.html" class="alphabet__country-link">Австрия
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/azerbaijan.html" class="alphabet__country-link">Азербайджан
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/albania.html" class="alphabet__country-link">Албания
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/algeria.html" class="alphabet__country-link">Алжир
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/angola.html" class="alphabet__country-link">Ангола
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/andorra.html" class="alphabet__country-link">Андорра
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/antigua-i-barbuda.html" class="alphabet__country-link">Антигуа и Барбуда
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/argentina.html" class="alphabet__country-link">Аргентина
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/armenia.html" class="alphabet__country-link">Армения
+                </a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/afganistan.html" class="alphabet__country-link">Афганистан
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Б</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--2">
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/bagamas.html" class="alphabet__country-link">Багамские Острова</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/bangladesh.html" class="alphabet__country-link">Бангладеш</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/barbados.html" class="alphabet__country-link">Барбадос</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/bahrein.html" class="alphabet__country-link">Бахрейн</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/belarus.html" class="alphabet__country-link">Белоруссия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/beliz.html" class="alphabet__country-link">Белиз</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/belgium.html" class="alphabet__country-link">Бельгия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/benin.html" class="alphabet__country-link">Бенин</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/bulgaria.html" class="alphabet__country-link">Болгария</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/bolivia.html" class="alphabet__country-link">Боливия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/bosnia-i-gerzegovina.html" class="alphabet__country-link">Босния и Герцеговина</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/botsvana.html" class="alphabet__country-link">Ботсвана</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/brazilia.html" class="alphabet__country-link">Бразилия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/brunei.html" class="alphabet__country-link">Бруней</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/burkina-faso.html" class="alphabet__country-link">Буркина-Фасо</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/burundi.html" class="alphabet__country-link">Бурунди</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/butan.html" class="alphabet__country-link">Бутан</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">В</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--3">
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/vanuatu.html" class="alphabet__country-link">Вануату</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/united-kingdom.html" class="alphabet__country-link">Великобритания</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/hungary.html" class="alphabet__country-link">Венгрия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/venesuela.html" class="alphabet__country-link">Венесуэла</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/east-timor.html" class="alphabet__country-link">Восточный Тимор</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/vietnam.html" class="alphabet__country-link">Вьетнам</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Г</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--4">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/gabon.html" class="alphabet__country-link">Габон</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/gaiti.html" class="alphabet__country-link">Гаити</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/gaiana.html" class="alphabet__country-link">Гайана</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/gambia.html" class="alphabet__country-link">Гамбия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/gana.html" class="alphabet__country-link">Гана</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/guatemala.html" class="alphabet__country-link">Гватемала</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/guinea.html" class="alphabet__country-link">Гвинея</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/guinea-bissau.html" class="alphabet__country-link">Гвинея-Бисау</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/germany.html" class="alphabet__country-link">Германия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/honduras.html" class="alphabet__country-link">Гондурас</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/grenada.html" class="alphabet__country-link">Гренада</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/greece.html" class="alphabet__country-link">Греция</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/georgia.html" class="alphabet__country-link">Грузия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Д</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--5">
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/denmark.html" class="alphabet__country-link">Дания</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/dgibuti.html" class="alphabet__country-link">Джибути</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/dominika.html" class="alphabet__country-link">Доминика</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/dominikana.html" class="alphabet__country-link">Доминикана</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Е</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--6">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/egypt.html" class="alphabet__country-link">Египет</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">З</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--7">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/zambia.html" class="alphabet__country-link">Замбия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/zimbabve.html" class="alphabet__country-link">Зимбабве</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">И</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--8">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/israel.html" class="alphabet__country-link">Израиль</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/india.html" class="alphabet__country-link">Индия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/indonesia.html" class="alphabet__country-link">Индонезия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/iordania.html" class="alphabet__country-link">Иордания</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/iraq.html" class="alphabet__country-link">Ирак</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/iran.html" class="alphabet__country-link">Иран</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/ireland.html" class="alphabet__country-link">Ирландия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/iceland.html" class="alphabet__country-link">Исландия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/spain.html" class="alphabet__country-link">Испания</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/italy.html" class="alphabet__country-link">Италия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">К</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--9">
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/kabo-verde.html" class="alphabet__country-link">Кабо-Верде</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/kazakhstan.html" class="alphabet__country-link">Казахстан</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/cambodia.html" class="alphabet__country-link">Камбоджа</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/camerun.html" class="alphabet__country-link">Камерун</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/canada.html" class="alphabet__country-link">Канада</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/quatar.html" class="alphabet__country-link">Катар</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/kenia.html" class="alphabet__country-link">Кения</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/cyprus.html" class="alphabet__country-link">Кипр</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/kirgizia.html" class="alphabet__country-link">Киргизия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/kiribati.html" class="alphabet__country-link">Кирибати</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/china.html" class="alphabet__country-link">Китай</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/colombia.html" class="alphabet__country-link">Колумбия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Л</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--10">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/laos.html" class="alphabet__country-link">Лаос</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/latvia.html" class="alphabet__country-link">Латвия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/lesoto.html" class="alphabet__country-link">Лесото</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/liberia.html" class="alphabet__country-link">Либерия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/lebanon.html" class="alphabet__country-link">Ливан</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/livia.html" class="alphabet__country-link">Ливия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/lithuania.html" class="alphabet__country-link">Литва</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/lichtenstein.html" class="alphabet__country-link">Лихтенштейн</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/luxembourgh.html" class="alphabet__country-link">Люксембург</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">М</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--11">
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/mauricius.html" class="alphabet__country-link">Маврикий</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/mauritania.html" class="alphabet__country-link">Мавритания</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/madagascar.html" class="alphabet__country-link">Мадагаскар</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/malaui.html" class="alphabet__country-link">Малави</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/malasia.html" class="alphabet__country-link">Малайзия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/mali.html" class="alphabet__country-link">Мали</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/maldivas.html" class="alphabet__country-link">Мальдивы</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/malta.html" class="alphabet__country-link">Мальта</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/marocco.html" class="alphabet__country-link">Марокко</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/mexico.html" class="alphabet__country-link">Мексика</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Н</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--12">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/namibia.html" class="alphabet__country-link">Намибия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/nauru.html" class="alphabet__country-link">Науру</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/nepal.html" class="alphabet__country-link">Непал</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/niger.html" class="alphabet__country-link">Нигер</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/nigeria.html" class="alphabet__country-link">Нигерия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/netherlands.html" class="alphabet__country-link">Нидерланды</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/nikaragua.html" class="alphabet__country-link">Никарагуа</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/new-zealand.html" class="alphabet__country-link">Новая Зеландия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/norway.html" class="alphabet__country-link">Норвегия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">О</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--13">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/oae.html" class="alphabet__country-link">ОАЭ</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/oman.html" class="alphabet__country-link">Оман</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">П</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--14">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/pakistan.html" class="alphabet__country-link">Пакистан</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/palau.html" class="alphabet__country-link">Палау</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/panama.html" class="alphabet__country-link">Панама</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/papua-new-guinea.html" class="alphabet__country-link">Папуа — Новая Гвинея</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/paraguai.html" class="alphabet__country-link">Парагвай</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/peru.html" class="alphabet__country-link">Перу</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/poland.html" class="alphabet__country-link">Польша</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/portugal.html" class="alphabet__country-link">Португалия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Р</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--15">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/ruanda.html" class="alphabet__country-link">Руанда</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/romania.html" class="alphabet__country-link">Румыния</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/russia.html" class="alphabet__country-link">Россия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">С</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--16">
+              <li class="alphabet__countries-list-item">
+                <a href="/america/salvador.html" class="alphabet__country-link">Сальвадор</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/samoa.html" class="alphabet__country-link">Самоа</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/san-marino.html" class="alphabet__country-link">Сан-Марино</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/saudi-arabia.html" class="alphabet__country-link">Саудовская Аравия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/seyshellas.html" class="alphabet__country-link">Сейшелы</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/senegal.html" class="alphabet__country-link">Сенегал</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/serbia.html" class="alphabet__country-link">Сербия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/singapur.html" class="alphabet__country-link">Сингапур</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/siria.html" class="alphabet__country-link">Сирия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/slovakia.html" class="alphabet__country-link">Словакия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/slovenia.html" class="alphabet__country-link">Словения</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/usa.html" class="alphabet__country-link">США</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Т</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--17">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/tajikistan.html" class="alphabet__country-link">Таджикистан</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/thailand.html" class="alphabet__country-link">Таиланд</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/tanzania.html" class="alphabet__country-link">Танзания</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/togo.html" class="alphabet__country-link">Того</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/tonga.html" class="alphabet__country-link">Тонга</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/trinidad-i-tobago.html" class="alphabet__country-link">Тринидад и Тобаго</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="" class="alphabet__country-link">Тувалу</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="" class="alphabet__country-link">Тунис</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="" class="alphabet__country-link">Туркмения</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="" class="alphabet__country-link">Турция</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">У</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--18">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/uganda.html" class="alphabet__country-link">Уганда</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/uzbekistan.html" class="alphabet__country-link">Узбекистан</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/ukraine.html" class="alphabet__country-link">Украина</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/urugwai.html" class="alphabet__country-link">Уругвай</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Ф</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--19">
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/fiji.html" class="alphabet__country-link">Фиджи</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/philippines.html" class="alphabet__country-link">Филиппины</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/finland.html" class="alphabet__country-link">Финляндия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/france.html" class="alphabet__country-link">Франция</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Х</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--20">
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/croatia.html" class="alphabet__country-link">Хорватия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Ч</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--21">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/chad.html" class="alphabet__country-link">Чад</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/montenegro.html" class="alphabet__country-link">Черногория</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/cheque.html" class="alphabet__country-link">Чехия</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/america/chili.html" class="alphabet__country-link">Чили</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Ш</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--22">
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/switzerland.html" class="alphabet__country-link">Швейцария</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/sweden.html" class="alphabet__country-link">Швеция</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/sri-lanka.html" class="alphabet__country-link">Шри-Ланка</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Э</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--23">
+              <li class="alphabet__countries-list-item">
+                <a href="/america/ecuador.html" class="alphabet__country-link">Эквадор</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/eritrea.html" class="alphabet__country-link">Эритрея</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/eswatini.html" class="alphabet__country-link">Эсватини</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/europe/estonia.html" class="alphabet__country-link">Эстония</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/ephiopia.html" class="alphabet__country-link">Эфиопия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Ю</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--24">
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/south-africa.html" class="alphabet__country-link">ЮАР</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/south-sudan.html" class="alphabet__country-link">Южный Судан</a>
+              </li>
+            </ul>
+          </li>
+          <li class="alphabet__all-countries-item">
+            <p class="alphabet__country-letter">Я</p>
+            <ul class="alphabet__countries-list alphabet__countries-list--25">
+              <li class="alphabet__countries-list-item">
+                <a href="/islands/jamaica.html" class="alphabet__country-link">Ямайка</a>
+              </li>
+              <li class="alphabet__countries-list-item">
+                <a href="/asia/japain.html" class="alphabet__country-link">Япония</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      <ul class="country-list__letter choosen-letter">
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Австралия</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Австрия</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Азербайджан</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Албания</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Алжир</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Ангола</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Андорра</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Антигуа и Барбуда</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Аргентина</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Армения</a></li>
-        <li class="choosen-letter__item"><a href="blank.html" class="choosen-letter__link">Афганистан</a></li>
+      <ul class="country-list__letter choosen-letter visually-hidden">
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Австралия</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Австрия</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Азербайджан</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Албания</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Алжир</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Ангола</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Андорра</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Антигуа и Барбуда</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Аргентина</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Армения</a></li>
+        <li class="choosen-letter__item"><a href="#" class="choosen-letter__link">Афганистан</a></li>
       </ul>
-      <button type="button" class="country-list__btn btn-close-alphabet">Свернуть</button>
+      <button type="button" class="country-list__btn country-list__btn--close alphabet__btn ">Свернуть</button>
     </section>
     <section class="companions">
       <h2 class="visually-hidden">Собери свою компанию</h2>

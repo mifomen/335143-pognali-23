@@ -58,22 +58,30 @@ if (document.querySelector(".js-open-alphabet")) {
 
   let BtnOpenAlphabet = document.querySelector(".js-open-alphabet")
   BtnOpenAlphabet.addEventListener('click', function () {
-    let CountryList = document.querySelector(".country-list__all")
-    let CountryLabel = document.querySelector(".country-list__label")
+    let CountryList = document.querySelector(".alphabet")
+    let MainlandsTitle = document.querySelector(".country-list__title")
+    let Mainlands = document.querySelector(".mainlands")
+    let CloseBtn = document.querySelector(".alphabet__btn")
 
-    BtnOpenAlphabet.classList.toggle('close-alphabet-list')
-    CountryList.classList.toggle('visually-hidden')
-    CountryLabel.classList.toggle("country-list__opened")
+    BtnOpenAlphabet.classList.toggle("close-alphabet-list")
+    CountryList.classList.toggle("visually-hidden")
+    MainlandsTitle.classList.toggle("country-list__title--opened")
+    Mainlands.classList.toggle("visually-hidden")
+    CloseBtn.classList.toggle("country-list__btn--close")
   })
 
-  let BtnCloseAlphabet = document.querySelector(".btn-close-alphabet")
+  let BtnCloseAlphabet = document.querySelector(".alphabet__btn")
   BtnCloseAlphabet.addEventListener('click', function () {
-    let CountryList = document.querySelector(".country-list__all")
-    let CountryLabel = document.querySelector(".country-list__label")
+let CountryList = document.querySelector(".alphabet")
+    let MainlandsTitle = document.querySelector(".country-list__title")
+    let Mainlands = document.querySelector(".mainlands")
+    let CloseBtn = document.querySelector(".alphabet__btn")
 
-    BtnOpenAlphabet.classList.toggle('close-alphabet-list')
-    CountryList.classList.toggle('visually-hidden')
-    CountryLabel.classList.toggle("country-list__opened")
+    BtnOpenAlphabet.classList.toggle("close-alphabet-list")
+    CountryList.classList.toggle("visually-hidden")
+    MainlandsTitle.classList.toggle("country-list__title--opened")
+    Mainlands.classList.toggle("visually-hidden")
+    CloseBtn.classList.toggle("country-list__btn--close")
   })
 }
 
