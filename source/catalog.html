@@ -743,7 +743,7 @@
       <h2 class="visually-hidden">Собери свою компанию</h2>
       <form class="companions-form" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="companions-form__title">Подберите идеального попутчика</h2>
-        <details class="companions-form__item item-hobby">
+        <details class="companions-form__item companions-form__item-hobby">
           <summary class="companions-form__item-lead hobby-list">Хобби</summary>
           <label for="hobby-one" class="companions-form__item-label">
             <input class="companions-form__item-input hobby-item-input" id="hobby-one" type="checkbox" name="hobby-tennis" checked>Теннис
@@ -758,7 +758,7 @@
             <span class="companions-form__item-check-box"></span>
           </label>
         </details>
-        <details class="companions-form__item item-music" open>
+        <details class="companions-form__item companions-form__item-music" open>
           <summary class="companions-form__item-lead">Музыка</summary>
           <label for="music-one" class="companions-form__item-label">
             <input class="companions-form__item-input" id="music-one" type="checkbox" name="music-hard-rock" checked>Тяжелый рок
@@ -773,7 +773,7 @@
             <span class="companions-form__item-check-box"></span>
           </label>
         </details>
-        <details class="companions-form__item item-eat">
+        <details class="companions-form__item companions-form__item-eat">
           <summary class="companions-form__item-lead">Еда</summary>
           <label for="eat-one" class="companions-form__item-label">
             <input class="companions-form__item-input" id="eat-one" type="checkbox" name="food-fastfood">Фастфуд
@@ -788,7 +788,7 @@
             <span class="companions-form__item-check-box"></span>
           </label>
         </details>
-        <details class="companions-form__item transport-items" open>
+        <details class="companions-form__item companions-form__item-items" open>
           <summary class="companions-form__item-lead">Транспорт</summary>
           <div class="companions-form__item-label-wrapper">
             <label for="transport-one" class="companions-form__item-label-icon airplane-label">
@@ -836,8 +836,8 @@
           <img class="user-card__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="user photo">
           <h3 class="user-card__name">Таня Фирсова</h3>
           <label class="user-card__likes-label" for="first-user-likes">
-            <input checked class="user-card__likes-input" type="checkbox" id="first-user-likes" name="like-plus" >
-            <span class="user-card__likes like-active"></span>
+            <input checked class="user-card__likes-input" type="checkbox" id="first-user-likes" name="like-plus">
+            <span class="user-card__likes"></span>
             1,5 М
           </label>
           <p class="user-card__tag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
@@ -876,7 +876,7 @@
           <img class="user-card__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="user photo">
           <h3 class="user-card__name">Петя Демин</h3>
           <label class="user-card__likes-label" for="second-user-likes">
-            <input checked class="user-card__likes-input" type="checkbox" id="second-user-likes" name="like-plus" >
+            <input class="user-card__likes-input" type="checkbox" id="second-user-likes" name="like-plus" >
             <span class="user-card__likes like-active"></span>
             1500
           </label>
@@ -912,7 +912,7 @@
           <img class="user-card__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="user photo">
           <h3 class="user-card__name">Марк Смолов</h3>
           <label class="user-card__likes-label" for="three-user-likes">
-            <input checked class="user-card__likes-input" type="checkbox" id="three-user-likes" name="like-plus" >
+            <input class="user-card__likes-input" type="checkbox" id="three-user-likes" name="like-plus">
             <span class="user-card__likes like-active"></span>
             170
           </label>
@@ -948,11 +948,11 @@
           </div>
           <button class="user-card__btn" type="button">Позвать!</button>
         </li>
-        <li class="companion-top__list-item user-card online">
+        <li class="companion-top__list-item user-card user-card--status-online">
           <img class="user-card__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="user photo">
           <h3 class="user-card__name">Лариса Рогова</h3>
           <label class="user-card__likes-label" for="four-user-likes">
-            <input checked class="user-card__likes-input" type="checkbox" id="four-user-likes" name="like-plus" >
+            <input class="user-card__likes-input" type="checkbox" id="four-user-likes" name="like-plus" >
             <span class="user-card__likes like-active"></span>
             23
           </label>
