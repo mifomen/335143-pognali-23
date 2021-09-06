@@ -93,3 +93,26 @@ if (document.querySelector(".subscribe__form-button")) {
     }
   })
 }
+
+
+if (document.querySelector(".js-close-menu")) {
+
+  let CloseBtn = document.querySelector(".js-close-menu");
+  CloseBtn.addEventListener("click", function () {
+    document.querySelector(".header__menu").classList.toggle("header__menu--closed")
+  })
+
+}
+
+if (document.querySelector(".js-open-menu")) {
+
+  let OpenBtn = document.querySelector(".js-open-menu");
+  OpenBtn.addEventListener("click", function () {
+  document.querySelector(".header__menu").classList.toggle("header__menu--closed")
+
+
+
+  })
+
+}
+
