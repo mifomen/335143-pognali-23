@@ -109,10 +109,5 @@ if (document.querySelector(".js-open-menu")) {
   let OpenBtn = document.querySelector(".js-open-menu");
   OpenBtn.addEventListener("click", function () {
   document.querySelector(".header__menu").classList.toggle("header__menu--closed")
-
-
-
   })
-
 }
-

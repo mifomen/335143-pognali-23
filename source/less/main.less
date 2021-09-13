@@ -7,8 +7,26 @@
 .main-plan {
   padding: 25px 25px 25px 26px;
   color: var(--basic-blue);
-  background-color: var(--blue);
+  // background-color: var(--blue);
   counter-reset: section;
+  background: linear-gradient(180deg, var(--basic_blue) 28%, var(--blue) 28%);
+  width: 100%;
+  box-sizing: border-box;
+
+  @media @tablet {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    // display: grid;
+    // grid-template-rows: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+    padding: 25px 5.2% 0 5.2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+  }
 }
 
 .main-plan__tourism {
@@ -18,63 +36,120 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
-  padding: 22px 25px 0 22px;
+  padding: 22px 25px 41px 22px;
   background-color: var(--step-one-bg-color);
-  padding-bottom: 21px;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  &::before {
+    color: var(--white);
+    position: absolute;
+    right: 21px;
+    top: 20px;
+    counter-increment: section;
+    content: counter(section);
+
+    @media @tablet {
+      top: auto;
+      left: 34px;
+      bottom: 24px;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  @media @tablet {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 31px 31px 61px;
+    box-sizing: border-box;
+    width: 50%;
+    margin: 0;
+  }
 }
 
-.tourism-step-one {
+.main-plan__tourism--step-one {
+  z-index: 3;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 
-  &::after {
-    color: var(--white);
-    position: absolute;
-    right: 21px;
-    top: 20px;
-    counter-increment: section;
-    content: counter(section);
+  @media @tablet {
+    margin-top: 0;
+    border-radius: 0;
+    border-top-left-radius: 15px;
+
+    &::after {
+      content: "";
+      background-color: var(--step-one-bg-color);
+      display: block;
+      position: absolute;
+      right: -15px;
+      width: 30px;
+      height: 100%;
+      top: 0;
+    }
   }
 }
 
-.tourism-step-two {
+.main-plan__tourism--step-two {
+  margin-top: -18px;
   background-color: var(--step-two-bg-color);
+  z-index: 4;
 
-  &::after {
-    color: var(--white);
-    position: absolute;
-    right: 21px;
-    top: 20px;
-    counter-increment: section;
-    content: counter(section);
+
+  @media @tablet {
+    margin-top: 0;
+    border-radius: 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-left: -35%;
   }
 }
 
-.tourism-step-three {
+.main-plan__tourism--step-three {
+  margin-top: -20px;
   background-color: var(--special_yellow_dark);
+  z-index: 5;
+  padding-top: 27px;
 
-  &::after {
-    color: var(--white);
-    position: absolute;
-    right: 21px;
-    top: 20px;
-    counter-increment: section;
-    content: counter(section);
+  @media @tablet {
+    margin-top: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 15px;
+    width: 50%;
+
+    &::after {
+      content: "";
+      background-color: var(--special_yellow_dark);
+      position: absolute;
+      right: -15px;
+      width: 30px;
+      display: block;
+      height: 100%;
+      top: 0;
+    }
   }
 }
 
-.tourism-step-four {
+.main-plan__tourism--step-four {
   background-color: var(--basic_yellow);
-  padding-top: 25px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  z-index: 6;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-top: -20px;
+  padding-top: 27px;
+  padding-bottom: 18px;
 
-  &::after {
-    color: var(--white);
-    position: absolute;
-    right: 21px;
-    top: 20px;
-    counter-increment: section;
-    content: counter(section);
+  @media @tablet {
+
+    margin-top: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 }

@@ -1,20 +1,17 @@
 .header {
+  width: 100%;
   font-family: var(--basic-font);
   margin: 0 auto;
-  padding: 19px 0px 0 0px;
+  padding: 19px 0 0 0;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: var(--blue);
+  background-color: var(--basic_blue);
 
-  // background-color: var(--basic_blue);
-  // padding: 30px 20px 0 27px;
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // position: relative;
-
+  @media @tablet {
+    background-color: var(--bg-header-tablet);
+  }
 }
 
 
@@ -79,4 +76,8 @@
   100% {
     transform: translateY(0) scale(1);
   }
+}
+
+.header__menu-link-phone {
+  display: none;
 }

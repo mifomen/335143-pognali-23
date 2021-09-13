@@ -6,6 +6,7 @@
   z-index: 4;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+  width: 100%;
 
   &::before {
     display: block;
@@ -16,9 +17,13 @@
     width: 100%;
     position: absolute;
     z-index: 1;
-    top: -40px;
+    top: -35px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media @tablet {
+      // height: 150px;
+    }
   }
 }
 
