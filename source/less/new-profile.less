@@ -1,7 +1,7 @@
 .new-profile {
   padding: 37px 25px 0 49px;
   position: relative;
-  background-color: var(--grey);
+  background-color: var(--grey-3);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   z-index: 2;
@@ -32,6 +32,14 @@
   }
 }
 
+@media @tablet {
+  .new-profile--bg-tablet {
+    background-size: 198px;
+    background-repeat: no-repeat;
+    background-position: 530px 150px;
+    background-image: url("../img/bisness-bg-tablet.png");
+  }
+}
 .new-profile__add {
   padding: 0;
   margin: 14px 0 0 0;
@@ -157,7 +165,7 @@
   color: var(--color-link);
   text-decoration: none;
   display: block;
-  margin: 44px 0 38px 0;
+  margin: 42px 0 38px 0;
   position: relative;
 
   &:hover {

@@ -11,7 +11,13 @@ function initMap() {
     map,
     title: "Мы здесь!",
     // content:"<h1 class="blog-content-link">mifomen</h1>",
+
     icon: "img/pin-on-map.svg",
+    //   url:
+    //   scaledSize: (window.isMobile)
+    //           ? new google.maps.Size(20, 34)
+    //           : new google.maps.Size(40, 68)
+    // }
     draggable: false
   });
 
@@ -96,13 +102,14 @@ if (document.querySelector(".subscribe__form-button")) {
 
 
 if (document.querySelector(".js-close-menu")) {
-
   let CloseBtn = document.querySelector(".js-close-menu");
   CloseBtn.addEventListener("click", function () {
-    document.querySelector(".header__menu").classList.toggle("header__menu--closed")
+    document.querySelector(".header").classList.toggle("header__nav-menu--opened")
   })
 
 }
+
+
 
 if (document.querySelector(".js-open-menu")) {
 

@@ -12,6 +12,10 @@
   width: 84%;
   padding-top: 20px;
   // min-height: 443px;
+
+  @media @tablet {
+    width: 90%;
+  }
 }
 
 @keyframes modal-appearance {
@@ -34,12 +38,24 @@
   color: var(--special_orange);
   padding: 0;
   margin: 9px auto 20px auto;
+
+  @media @tablet {
+    margin-top: 40px;
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 49px;
+  }
 }
 
 .business-tariffs__list {
   margin: 0;
   list-style: none;
   padding: 5px 25px 0 25px;
+
+  @media @tablet {
+    padding-left: 13%;
+    padding-right: 13.4%;
+  }
 }
 
 .business-tariffs__item {
@@ -60,6 +76,16 @@
     height: 1px;
     opacity: 0.05;
     background-color: var(--black);
+
+    @media @tablet {
+      top: -5px;
+    }
+  }
+
+  @media @tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 15px;
   }
 }
 
@@ -76,6 +102,10 @@
     opacity: 0.05;
     background-color: var(--black);
   }
+
+  @media @tablet {
+    margin-bottom: 55px;
+  }
 }
 
 .business-tariffs__text {
@@ -83,6 +113,11 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+
+  @media @tablet {
+    font-size: 22px;
+    line-height: 28px;
+  }
 }
 
 .business-tariffs__btn {
@@ -109,5 +144,13 @@
   &:focus {
     color: var(--basic_blue_light-opacity-3);
     background-color: var(--special_white);
+  }
+
+  @media @tablet {
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 35px;
+    padding-bottom: 41px;
+    text-transform: none;
   }
 }
