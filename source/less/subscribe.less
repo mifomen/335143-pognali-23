@@ -65,7 +65,7 @@
     width: 100%;
     font-size: 28px;
     line-height: 32px;
-    margin-bottom: 10%;
+    margin-bottom: 9.2%;
   }
 }
 
@@ -100,6 +100,7 @@
   @media @tablet {
     width: 86%;
     border-radius: 20px;
+    margin-bottom: 8%;
   }
 }
 
@@ -189,6 +190,10 @@
     font-size: 24px;
     line-height: 24px;
     border-radius: 30px;
+    padding-left: 33px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    height: 75px;
   }
 }
 
@@ -218,6 +223,20 @@
     border-left: 13px solid var(--basic_blue_light-2);
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
+
+    @media @tablet {
+      top: 30px;
+      right: 30px;
+    }
+  }
+
+  @media @tablet {
+    width: 80px;
+    border: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 }
 
@@ -230,6 +249,26 @@
   letter-spacing: 0.01em;
   color: var(--white);
   margin: 0 2px 19px 0;
+
+  @media @tablet {
+    font-size: 28px;
+    line-height: 30px;
+    padding-left: 5px;
+    margin-bottom: 6%;
+  }
+}
+
+.subscribe__questions-br--tablet {
+  display: block;
+
+  @media @tablet {
+    display: none;
+    // display: block;
+    // content: " ";
+    // width: 1px;
+    // clear: both;
+    // margin-right: 25px;
+  }
 }
 
 .subscribe__feedback-icon {
@@ -240,6 +279,12 @@
   height: 45px;
   background-color: var(--bg-btn-feedback);
   position: relative;
+
+  @media @tablet {
+    width: 68px;
+    height: 68px;
+    margin-right: 20px;
+  }
 }
 
 .subscribe__feedback-svg {
@@ -254,10 +299,20 @@
 
 .subscribe__feedback-svg__tel {
   height: 17px;
+
+  @media @tablet {
+    width: 27px;
+    height: 26px;
+  }
 }
 
 .subscribe__feedback-svg__email {
   height: 13px;
+
+  @media @tablet {
+    width: 27px;
+    height: 19px;
+  }
 }
 
 .subscribe__feedback-svg__path {
@@ -277,6 +332,12 @@
   width: 100%;
   list-style: none;
   padding: 0;
+
+  @media @tablet {
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-bottom: 8%;
+  }
 }
 
 .subscribe__feedback-item {
@@ -296,4 +357,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media @tablet {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
