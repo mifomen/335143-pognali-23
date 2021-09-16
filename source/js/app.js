@@ -98,8 +98,8 @@ if (document.querySelector(".subscribe__form-button")) {
 }
 
 
-if (document.querySelector(".js-close-menu")) {
-  let CloseBtn = document.querySelector(".js-close-menu");
+if (document.querySelector(".js-open-menu")) {
+  let CloseBtn = document.querySelector(".js-open-menu");
   CloseBtn.addEventListener("click", function () {
     document.querySelector(".header").classList.toggle("header__nav-menu--opened")
   })
