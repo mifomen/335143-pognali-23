@@ -30,15 +30,12 @@ function initMap() {
 window.addEventListener('scroll', function() {
   // document.querySelector('.desk-about-us__title').innerHTML = pageYOffset + 'px';
   let header = document.querySelector('.header');
-  let headerBtn = document.querySelector('.header__button');
   // console.log(pageYOffset);
-  if(pageYOffset >= 60){
-    header.classList.add('header--white-theme');
-    headerBtn.classList.add('header__button--white-theme');
+  if(pageYOffset >= 80){
+    header.classList.add('header__nav-menu--scrolled');
 
   } else {
-    header.classList.remove('header--white-theme');
-    headerBtn.classList.remove('header__button--white-theme');
+    header.classList.remove('header__nav-menu--scrolled');
 
   }
 });
