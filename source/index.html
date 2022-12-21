@@ -4,47 +4,136 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="img/favicon.png">
   <link rel="icon" href="img/favicon/icon-main.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/152.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2">
 </head>
 <body class="page">
-  <header class="header page__header">
-    <img class="header__title" src="img/logo_mobile.svg" alt="logo" width="96" height="15">
-    <h1 class="visually-hidden">Погнали?</h1>
-    <button class="header__button">Открыть меню</button>
+  <svg style="display: none" class="main-intro-svg">
+    <symbol id="airplane" viewBox="0 0 21 23" fill="currentColor">
+      <g clip-path="url(#clip1)">
+        <path d="M16.8 2c-.7.3-1.5.4-1.7 1L12.9 7 1.6 9.8l-.4 1.3 8.6.9-1.4 3.6-3.3.8-.8 1.4 2.3.3.3 1.1c.1.4.5.7.9.6l1-.2 1.4 2.1.8-1.4-.8-3.5 2.4-3 4.5 8 .9-1.1-2.8-12 2.6-4c.3-.4 0-1.2-.1-2-.1-.4-.6-.7-1-.6z" fill="#101D41"/>
+      </g>
+      <defs>
+        <clipPath id="clip1">
+          <path fill="#fff" transform="translate(0 1)" d="M0 0h20.8v21.1H0z"/>
+        </clipPath>
+      </defs>
+    </symbol>
+    <symbol id="bus" viewBox="0 0 18 21" fill="currentColor">
+      <g clip-path="url(#clip0)">
+        <path d="M4.3 14c0-.4-.1-.8-.4-1-.3-.3-.6-.4-1-.4s-.7.1-1 .4c-.3.2-.4.6-.4 1 0 .3.1.7.4 1 .3.2.6.3 1 .3s.7-.1 1-.4c.3-.2.4-.6.4-1zm11.4 0c0-.4-.1-.8-.4-1-.3-.3-.6-.4-1-.4s-.8.1-1 .4c-.3.2-.4.6-.4 1 0 .3.1.7.4 1 .2.2.6.3 1 .3s.7-.1 1-.4c.3-.2.4-.6.4-1zm-.5-4.3l-.8-4.1c0-.2-.1-.3-.3-.4a.7.7 0 00-.4-.2H3.5c-.2 0-.3 0-.4.2-.2 0-.3.2-.3.4L2 9.7c0 .2 0 .4.2.6l.5.2h11.8c.2 0 .4 0 .5-.2.2-.2.2-.4.2-.6zm-2.5-6.6s0-.2-.2-.3a.5.5 0 00-.4-.2h-7c-.2 0-.3 0-.4.2l-.2.3c0 .2 0 .3.2.4l.4.2h7c.2 0 .3 0 .4-.2l.2-.4zM17 11v6.5h-1.4v1.3c0 .4-.1.8-.4 1-.3.3-.6.4-1 .4s-.8-.1-1-.4c-.3-.2-.4-.6-.4-1v-1.3H4.3v1.3c0 .4-.1.8-.4 1-.3.3-.6.4-1 .4s-.7-.1-1-.4c-.3-.2-.4-.6-.4-1v-1.3H.1v-6.5c0-.8 0-1.6.3-2.4l1.1-4.8c0-.6.4-1 1-1.5.7-.4 1.6-.7 2.6-1a17.3 17.3 0 017 0c1 .3 1.9.6 2.5 1 .7.4 1 1 1.1 1.5l1.2 4.8.2 2.4z" fill="#1D2E5B"/>
+      </g>
+      <defs>
+        <clipPath id="clip0">
+          <path fill="#fff" transform="translate(0 1)" d="M0 0h17v19.2H0z"/>
+        </clipPath>
+      </defs>
+    </symbol>
+    <symbol id="bicycle" viewBox="0 0 24 21" fill="currentColor">
+      <path d="M18.3 21a4.2 4.2 0 01-4-2.7 4.4 4.4 0 011-4.7 4.2 4.2 0 017.3 3c0 1.2-.5 2.3-1.3 3.1-.8.8-1.9 1.3-3 1.3zm0-7.1a2.7 2.7 0 00-2.6 1.7 2.8 2.8 0 00.6 3 2.8 2.8 0 004.8-2 2.8 2.8 0 00-2.8-2.8zM6.1 21a4.2 4.2 0 01-4-2.7 4.4 4.4 0 011-4.7 4.2 4.2 0 017.3 3c0 1.2-.5 2.3-1.3 3.1-.8.8-1.9 1.3-3 1.3zm0-7.1a2.7 2.7 0 00-2.6 1.7 2.8 2.8 0 00.6 3 2.8 2.8 0 004.8-2A2.8 2.8 0 006 13.9zM15.2 6a1.5 1.5 0 001.3-1l.1-.5a1.5 1.5 0 00-.9-1.4l-.5-.1a1.5 1.5 0 00-1.4 1 1.5 1.5 0 00.8 1.9l.6.1z" fill="#1D2E5B"/>
+      <path d="M17.4 9h-2a.2.2 0 01-.2-.1l-1.5-2.7a1.4 1.4 0 00-1-.8 1.4 1.4 0 00-1.3.4L8.2 9.1c-.3.3-.4.7-.4 1 0 .9.6 1.2.8 1.3a146.3 146.3 0 012.9 1.8v3.3c0 .4.3.7.7.7a.7.7 0 00.7-.4v-4.3a.8.8 0 00-.3-.6L11 10.6a.2.2 0 010-.1.2.2 0 010-.2l2-2a.2.2 0 01.2-.1l1 2a.7.7 0 00.7.3h2.6a.7.7 0 00.5-.2.8.8 0 00-.5-1.3z" fill="#1D2E5B"/>
+    </symbol>
+    <symbol id="foot" viewBox="0 0 21 24" fill="currentColor">
+      <path d="M15 5.8c1 0 1.7-.9 1.7-2 0-1-.8-1.9-1.7-1.9-1 0-1.7.9-1.7 2 0 1 .7 1.9 1.7 1.9zM14 10.5c.1.4.4.6.7.8h1l3-.8-.5-1.8-2.8.8-1.2-2c-.3-.4-.7-.7-1.1-.8l-3.3-.8c-.4 0-.8 0-1.1.2-.4.2-.6.5-.8.8l-1.4 3.2L8 11l1.4-3.2 1.7.4-4.4 8.1H3v2h3.8c.6 0 1.2-.4 1.5-1l1.7-3 4.4 1 1.6 5.2 1.6-.6-1.5-5.3a2 2 0 00-.5-.8l-.8-.5-2.7-.5 1.6-2.9.3.6z" fill="#1D2E5B"/>
+    </symbol>
+    <symbol id="telephone" viewBox="0 0 17 15" width="17" height="15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5.09C5.7.09 2.9.56 1.88 1.5 1.04 2.28.76 3.66.66 4.54l-.01.12c0 .34.3.62.65.62l2.57-.2h.07c.35-.02.64-.29.64-.63V3.24c0-.38.32-.68.72-.68h6.4c.4 0 .72.3.72.68v1.21c0 .34.29.61.64.62l.07.01 2.57.2c.36 0 .65-.28.65-.62l-.01-.12c-.1-.88-.38-2.26-1.22-3.04C14.1.56 11.3.1 8.5.1zm0 8.03c-.72 0-1.3.55-1.3 1.23 0 .69.58 1.24 1.3 1.24.72 0 1.3-.55 1.3-1.24 0-.68-.58-1.23-1.3-1.23zm-.98-2.78v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77l-4.4 4.45c-.31.28-.5.67-.5 1.1v1.24c0 .69.58 1.24 1.3 1.24h.33v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h8.5v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h.32c.73 0 1.31-.55 1.31-1.24V10.9c0-.43-.19-.82-.5-1.1l-4.4-4.45v-.77c0-.43-.37-.78-.82-.78a.8.8 0 00-.82.78v.77H7.52zm.98 1.54c1.45 0 2.62 1.1 2.62 2.47a2.55 2.55 0 01-2.62 2.47 2.55 2.55 0 01-2.62-2.47A2.55 2.55 0 018.5 6.88z" fill="#FFD74B"/>
+    </symbol>
+    <symbol id="icon-telephone" class="header__menu-svg" viewBox="0 0 17 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5.09C5.7.09 2.9.56 1.88 1.5 1.04 2.28.76 3.66.66 4.54l-.01.12c0 .34.3.62.65.62l2.57-.2h.07c.35-.02.64-.29.64-.63V3.24c0-.38.32-.68.72-.68h6.4c.4 0 .72.3.72.68v1.21c0 .34.29.61.64.62l.07.01 2.57.2c.36 0 .65-.28.65-.62l-.01-.12c-.1-.88-.38-2.26-1.22-3.04C14.1.56 11.3.1 8.5.1zm0 8.03c-.72 0-1.3.55-1.3 1.23 0 .69.58 1.24 1.3 1.24.72 0 1.3-.55 1.3-1.24 0-.68-.58-1.23-1.3-1.23zm-.98-2.78v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77l-4.4 4.45c-.31.28-.5.67-.5 1.1v1.24c0 .69.58 1.24 1.3 1.24h.33v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h8.5v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h.32c.73 0 1.31-.55 1.31-1.24V10.9c0-.43-.19-.82-.5-1.1l-4.4-4.45v-.77c0-.43-.37-.78-.82-.78a.8.8 0 00-.82.78v.77H7.52zm.98 1.54c1.45 0 2.62 1.1 2.62 2.47a2.55 2.55 0 01-2.62 2.47 2.55 2.55 0 01-2.62-2.47A2.55 2.55 0 018.5 6.88z" fill="#FFD74B"/>
+    </symbol>
+<!--     <symbol id="icon-mail" class="header__menu-svg" viewBox="0 0 17 15" width="17" height="15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.14 10.47L11.8 6.5l4.33-3.97-.6-.63-6.29 5.77-6.3-5.77-.59.63L6.7 6.5l-4.33 3.97.6.63 4.37-4.01 1.92 1.75 1.92-1.75 4.38 4 .59-.62zM1.58.25C.77.25.1.95.1 1.81v9.38c0 .86.65 1.56 1.47 1.56h15.34c.81 0 1.47-.7 1.47-1.56 -->V1.81c0-.86-.65-1.56-1.47-1.56H1.58z" fill="#FFD74B"/>
+    </symbol>
+    <symbol id="icon-facebook" class="svg" viewBox="0 0 11 21" width="11" height="21" fill="currentColor"  aria-label="иконка facebook">
+      <path  class="svg__path" d="M7.488 20.77H2.129V11.25H0V6.544h2.066c-.157-2.132.236-3.69 1.195-4.752A4.882 4.882 0 014.896.686 5.15 5.15 0 016.867.294h3.756v4.538H7.669a4.554 4.554 0 00-.197 1.712h3.143v4.707H7.472l.016 9.519zm-4.172-1.107h2.97v-9.518h3.143V7.673H6.286v-.56c0-1.477 0-2.797.785-3.292l.15-.096h2.208V1.401h-2.53a3.876 3.876 0 00-1.497.28c-.472.19-.897.472-1.246.827-.785.907-1.107 2.427-.864 4.53l.079.613H1.179v2.494h2.137v9.518z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-vk" class="svg" viewBox="0 0 23 12" width="23" height="12" fill="currentColor" aria-label="иконка vkontakte">
+      <path class="svg__path" d="M17.766 11.854a3.017 3.017 0 01-1.543-.465 7.53 7.53 0 01-1.32-1.129c-.327-.324-.869-.87-1.076-.87-.208 0-.356.679-.349 1.158.003.331-.122.65-.349.893-.258.21-.573.338-.905.369H10.8a8.424 8.424 0 01-5.513-2.214C2.557 7.11.212 2.358.116 2.152A.984.984 0 01.227 1.06C.51.825.868.7 1.237.705H4.352c.25.037.49.125.704.259.202.134.363.32.467.538.32.681.687 1.34 1.099 1.97.971 1.476 1.402 1.815 1.558 1.89a5.96 5.96 0 00.14-2.118 1.982 1.982 0 00-.155-.945.99.99 0 00-.572-.214l-.541-.509c-.104-.487.438-.907.816-1.07a6.481 6.481 0 012.337-.28h.527a6.795 6.795 0 011.595.147c1.261.266 1.217 1.277 1.165 2.443 0 .34-.037.737-.037 1.195v.354c-.03.321-.007.645.067.96a6.718 6.718 0 001.535-1.83c.43-.659.807-1.35 1.128-2.067a1.168 1.168 0 011.187-.7h3.176c.093-.01.188-.01.282 0 .742 0 1.18.214 1.357.627.178.413.127 1.225-1.75 3.401l-.742.834c-.36.347-.67.742-.92 1.173.28.318.6.6.95.841A10.542 10.542 0 0121.95 9.87a1.177 1.177 0 01.193 1.24 1.705 1.705 0 01-1.395.738l-2.812.037-.17-.03zm-3.94-3.571c.668 0 1.247.583 1.863 1.195.333.362.706.683 1.113.96.308.203.67.31 1.039.31h.074l2.82-.037c.138-.008.274-.043.4-.104l-.074-.118a9.778 9.778 0 00-1.989-2.007c-.883-.738-1.335-1.084-1.387-1.653-.052-.568.363-1.062 1.194-2l.742-.818a7.916 7.916 0 001.521-2.177 4.22 4.22 0 00-.497 0h-3.242a.41.41 0 00-.178 0A15.093 15.093 0 0116 4.084c-1.403 2.081-2.063 2.362-2.53 2.362a.887.887 0 01-.416-.103c-.742-.421-.742-1.358-.697-2.037V3.99c0-.48 0-.893.037-1.247.06-1.24 0-1.247-.282-1.313a6.386 6.386 0 00-1.38-.119h-.512a9.699 9.699 0 00-1.41.074c.071.052.134.114.186.185a2.8 2.8 0 01.438 1.608c.096 1.218.044 2.804-.742 3.188-.14.064-.292.097-.446.096-.69 0-1.372-.65-2.537-2.406a17.253 17.253 0 01-1.195-2.103l-.059-.073a.901.901 0 00-.237-.082h-3.02c.438.9 2.515 4.885 4.837 6.973a7.44 7.44 0 004.764 1.94h1.372a.743.743 0 00.2-.073v-.067c0-.199 0-1.918 1.173-2.213.09-.036.185-.06.282-.074z" fill="currentColor"/>
+    </symbol>
+    <symbol class="svg" viewBox="0 0 24 24" aria-label="иконка instagram">
+      <path class="svg__path" d="M17.28 2.4a4.33 4.33 0 014.32 4.32v10.56a4.33 4.33 0 01-4.32 4.32H6.72a4.33 4.33 0 01-4.31-4.32V6.72A4.33 4.33 0 016.72 2.4h10.56zm0-1.44H6.72A5.76 5.76 0 00.96 6.72v10.56a5.76 5.76 0 005.76 5.76h10.56a5.76 5.76 0 005.76-5.76V6.72A5.76 5.76 0 0017.28.96z" fill="currentColor"/>
+      <path class="svg__path" d="M12.01 7.756a4.253 4.253 0 11-4.254 4.253 4.244 4.244 0 014.253-4.253zm0-1.44a5.693 5.693 0 105.682 5.693 5.681 5.681 0 00-5.683-5.693zM17.904 7.413a1.286 1.286 0 100-2.573 1.286 1.286 0 000 2.573z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-phone" class="subscribe__feedback-svg subscribe__feedback-svg__tel" viewBox="0 0 19 17" width="19" height="17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path class="subscribe__feedback-svg__path" fill-rule="evenodd" clip-rule="evenodd" d="M9.5 1.09c-2.8 0-5.6.47-6.62 1.41-.84.78-1.12 2.16-1.22 3.04l-.01.12c0 .34.3.62.65.62l2.57-.2h.07c.35-.02.64-.29.64-.63V4.24c0-.38.32-.68.72-.68h6.4c.4 0 .72.3.72.68v1.21c0 .34.29.61.64.62l.07.01 2.57.2c.36 0 .65-.28.65-.62l-.01-.12c-.1-.88-.38-2.26-1.22-3.04C15.1 1.56 12.3 1.1 9.5 1.1zm0 8.03c-.72 0-1.3.55-1.3 1.23 0 .69.58 1.24 1.3 1.24.72 0 1.3-.55 1.3-1.24 0-.68-.58-1.23-1.3-1.23zm-.98-2.78v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77l-4.4 4.45c-.31.28-.5.67-.5 1.1v1.24c0 .69.58 1.24 1.3 1.24h.33v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h8.5v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h.32c.73 0 1.31-.55 1.31-1.24V11.9c0-.43-.19-.82-.5-1.1l-4.4-4.45v-.77c0-.43-.37-.78-.82-.78a.8.8 0 00-.82.78v.77H8.52zm.98 1.54c1.45 0 2.62 1.1 2.62 2.47a2.55 2.55 0 01-2.62 2.47 2.55 2.55 0 01-2.62-2.47A2.55 2.55 0 019.5 7.88z" fill="currentColor"/>
+    </symbol>
+    <svg id="icon-mail" class="subscribe__feedback-svg subscribe__feedback-svg__email" viewBox="0 0 19 13" width="19" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path class="subscribe__feedback-svg__path" fill-rule="evenodd" clip-rule="evenodd" d="M16.14 10.47L11.8 6.5l4.33-3.97-.6-.63-6.29 5.77-6.3-5.77-.59.63L6.7 6.5l-4.33 3.97.6.63 4.37-4.01 1.92 1.75 1.92-1.75 4.38 4 .59-.62zM1.58.25C.77.25.1.95.1 1.81v9.38c0 .86.65 1.56 1.47 1.56h15.34c.81 0 1.47-.7 1.47-1.56V1.81c0-.86-.65-1.56-1.47-1.56H1.58z" fill="currentColor"/>
+    </svg>
+  </svg>
+  <header class="header header__nav-menu--opened page__header ">
+    <nav class="nav-menu nav-menu--style-index">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-white-desktop@1x.png 1x, img/logo-white-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-white-tablet@1x.png 1x, img/logo-white-tablet@2x.png 2x">
+        <img class="nav-menu__logo" src="img/logo-white-mobile.svg" alt="logo" width="96" height="15">
+      </picture>
+      <button class="nav-menu__button js-open-menu">Открыть меню</button>
+      <h3 class="nav-menu__title">
+        <a class="nav-menu__title-link" href="#">О сервисе</a>
+        <a class="nav-menu__title-link" href="#">Направления</a>
+        <a class="nav-menu__title-link" href="#">Попутчики</a>
+      </h3>
+      <a class="nav-menu__link nav-menu__link--login" href="#">авторизация</a>
+      <div class="nav-menu__link__wrapper">
+        <a class="nav-menu__link nav-menu__link--phone" href="tel:88005558628">8 800 555-86-28</a>
+        <a class="nav-menu__link nav-menu__link--mail" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <ul class="nav-menu__social">
+        <li class="nav-menu__social-item">
+          <a class="nav-menu__social-link nav-menu__social-link--facebook" href="#" aria-label="наша странциа на facebook"></a>
+        </li>
+        <li class="nav-menu__social-item">
+          <a class="nav-menu__social-link nav-menu__social-link--vkontakte" href="#" aria-label="наша странциа на vkontakte"></a>
+        </li>
+        <li class="nav-menu__social-item nav-menu__social-item--last">
+          <a class="nav-menu__social-link nav-menu__social-link--instagram" href="#" aria-label="наша странциа на instagram"></a>
+        </li>
+      </ul>
+    </nav>
+    <section class="nav-menu__section nav-menu__section--background">
+      <h2 class="nav-menu__lead">
+        В путешествие с крутыми попутчиками!
+      </h2>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/traveller-illustration-desktop@1x.png 1x, img/traveller-illustration-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/traveller-illustration-tablet@1x.png 1x, img/traveller-illustration-tablet@2x.png 2x">
+        <img class="nav-menu__img" src="img/traveller-illustration-mobile@1x.png" srcset="img/traveller-illustration-mobile@2x.png 2x" alt="traveller illustration" width="192" height="255">
+      </picture>
+      <ul class="nav-menu__contact-list">
+        <li class="nav-menu__contact-item"><a class="nav-menu__contact-link nav-menu__contact-link--telephone" href="tel:+88005558628">Позвонить по телефону</a></li>
+        <li class="nav-menu__contact-item"><a class="nav-menu__contact-link nav-menu__contact-link--mail" href="email!">написать нам на почту</a></li>
+        <li class="nav-menu__contact-item"><a class="nav-menu__contact-link nav-menu__contact-link--login" href="auto.html">Авторизация</a></li>
+      </ul>
+      <div class="main-intro__feedback-list">
+        <blockquote class="main-intro__feedback-item main-intro__feedback-msg">«Лучшее приложение, что я видел в жизни!»</blockquote>
+        <cite class="main-intro__feedback-item main-intro__feedback-author">Мурат Эльтазин<br > главный редактор<br class="main-intro__br"> газеты <br class="main-intro__br--four"> «гаджетлайф»</cite>
+      </div>
+      <div class="main-plan">
+        <h2 class="visually-hidden">Как работает наш сервис!</h2>
+        <p class="main-plan__tourism main-plan__tourism--step-one">Выберите<br>направление</p>
+        <p class="main-plan__tourism main-plan__tourism--step-two">Изучите идеи<br>путешественников</p>
+        <p class="main-plan__tourism main-plan__tourism--step-three">Находите тех,<br>кто похож на вас</p>
+        <p class="main-plan__tourism main-plan__tourism--step-four">Путешествуйте<br>вместе!</p>
+      </div>
+    </section>
   </header>
-  <main class="main page__main">
-    <h1 class="visually-hidden">Как работает наш сервис, попутчики карта как подобрать</h1>
-    <section class="main-intro">
-      <h2 class="visually-hidden">Путишествуй с надежными людьми!</h2>
-      <h3 class="main-intro__text">В путешествие с крутыми попутчиками!</h3>
-      <a href="tel:+88005558628" class="main-intro__link tel-link"></a>
-      <a href="email!" class="main-intro__link email-link"></a>
-      <a href="auto.html" class="main-intro__link login-link">Авторизация</a>
-      <div class="main-intro__feedback-wrapper">
-        <p class="main-intro__feedback-msg">«Лучшее приложение, что я видел в жизни!»</p>
-        <p class="main-intro__feedback-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
-      </div>
-
-    </section>
-
-
-    <section class="main-plan">
-      <h2 class="visually-hidden">Как работает наш сервис!</h2>
-      <p class="main-plan__tourism tourism-step-one">Выберите<br>направление</p>
-      <p class="main-plan__tourism tourism-step-two">Изучите идеи<br>путешественников</p>
-      <p class="main-plan__tourism tourism-step-three">Находите тех,<br>кто похож на вас</p>
-      <p class="main-plan__tourism tourism-step-four">Путешествуйте<br>вместе!</p>
-    </section>
+<main class="main-intro page__main">
+  <h1 class="visually-hidden">Погнали?</h1>
     <section class="desk-about-us">
-      <div class="desk-about-us__wrapper">
         <h2 class="desk-about-us__title">О сервисе</h2>
-        <p class="desk-about-us__info chapter-one">Любое путешествие веселее<br> с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="desk-about-us__info chapter-two">А если найдете кого-то близкого по духу  &#8212; скорее зовите в совместный трип!</p>
-      </div>
+        <p class="desk-about-us__info desk-about-us__info--chapter-one">Любое путешествие веселее<br class="desk-about-us__info--chapter-one-mobile"> с попутчиками, которые на одной волне <br class="desk-about-us__info--chapter-one-tablet"> с тобой! Делитесь своими идеями путешествий <br class="desk-about-us__info--chapter-one-tablet"> и черпайте вдохновение <br class="desk-about-us__info--chapter-one-tablet"> в чужих.</p>
+        <p class="desk-about-us__info desk-about-us__info--chapter-two">А если найдете кого-то близкого по духу  &#8212; скорее зовите в совместный трип!</p>
+        <a href="#" class="desk-about-us__button" type="button">Подробнее</a>
     </section>
     <section class="directions">
       <h2 class="visually-hidden">Направления для поездок</h2>
@@ -52,152 +141,256 @@
       <p class="directions__intro">Мы не продаем туры<br> и ничего не рекламируем.<br>Люди сами пишут о странах, куда хотели бы отправиться<br> и чем можно там заняться.</p>
       <ul class="directions-list">
         <li class="directions-list__item first-direction">
-          <img class="directions-list__item-country" src="https://via.placeholder.com/270x110" alt="background-tailand" width="270" height="110">
+          <img class="directions-list__item-country" src="img/thailand-bg-mobile@1x.jpg" srcset="img/thailand-bg-mobile@2x.jpg 2x" alt="background-tailand" width="270" height="110">
           <div class="directions-list__item-wrapper">
-            <img class="directions-list__item-img" src="https://via.placeholder.com/35x24" alt="pic1" width="35" height="24">
+            <img class="directions-list__item-img" src="img/thailand-flag-mobile@1x.png" srcset="img/thailand-flag-mobile@2x.png 2x" alt="tailand-flag" width="35" height="24">
             <h3 class="directions-list__item-title">Таиланд</h3>
             <p class="directions-list__item-tagline">Джунгли зовут</p>
             <p class="directions-list__item-counter">18321</p>
           </div>
         </li>
         <li class="directions-list__item first-direction">
-          <img class="directions-list__item-country" src="https://via.placeholder.com/270x110" alt="background-france" width="270" height="110">
+          <img class="directions-list__item-country" src="img/france-bg-mobile@1x.png" srcset="img/france-bg-mobile@2x.png 2x" alt="background-france" width="270" height="110">
           <div class="directions-list__item-wrapper">
-            <img class="directions-list__item-img" src="https://via.placeholder.com/35x24" alt="pic1" width="35" height="24">
+            <img class="directions-list__item-img" src="img/france-flag-mobile@1x.png" srcset="img/france-flag-mobile@2x.png 2x" alt="france-flag" width="35" height="24">
             <h3 class="directions-list__item-title">Франция</h3>
             <p class="directions-list__item-tagline">Трэ бьен, манифик!</p>
             <p class="directions-list__item-counter">12518</p>
           </div>
         </li>
         <li class="directions-list__item first-direction">
-          <img class="directions-list__item-country" src="https://via.placeholder.com/270x110" alt="background-czech" width="270" height="110">
+          <img class="directions-list__item-country" src="img/czech-bg-mobile@1x.png" srcset="img/czech-bg-mobile@2x.png 2x" alt="background-czech" width="270" height="110">
           <div class="directions-list__item-wrapper">
-            <img class="directions-list__item-img" src="https://via.placeholder.com/35x24" alt="pic1" width="35" height="24">
+            <img class="directions-list__item-img" src="img/czech-flag-mobile@1x.png" srcset="img/czech-flag-mobile@2x.png 2x" alt="czech-flag" width="35" height="24">
             <h3 class="directions-list__item-title">Чехия</h3>
             <p class="directions-list__item-tagline">Закоулки старой Европы</p>
             <p class="directions-list__item-counter">5326</p>
           </div>
         </li>
       </ul>
-      <button class="directions__btn">Показать все</button>
+      <a href="form.html" class="directions__link">Показать все</a>
     </section>
     <section class="about-companions">
       <h2 class="visually-hidden">Попутчики в дорогу!</h2>
       <h3 class="about-companions__title">Попутчики</h3>
-      <p class="about-companions__call">Все мы индивидуальны и у<br> каждого свой взгляд на<br> идеальный отдых. Одному<br> нужен пляж и коктейль, а<br> другому маршрут для хайкинга.</p>
-      <p class="about-companions__call-is-easy">Теперь можно легко найти единомышленников!</p>
+      <p class="about-companions__call">Все мы индивидуальны и у<br class="about-companions__call-br-mobile"> каждого свой взгляд на<br class="about-companions__call-br-mobile"> идеальный отдых. Одному<br class="about-companions__call-br-mobile"> нужен пляж и коктейль,<br class="about-companions__call-br-tablet"> а<br class="about-companions__call-br-mobile"> другому маршрут для хайкинга.</p>
+      <p class="about-companions__call-is-easy">Теперь можно легко <br class="about-companions__call-is-easy-br">найти единомышленников!</p>
       <ul class="about-companions__list">
         <li class="about-companions__item">
-          <img class="about-companions__item-img" src="https://via.placeholder.com/270x270" width="270" height="270"  alt="фото компаньена Тани">
-          <p class="about-companions__item-level">
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/user-1-tablet@1x.webp 1x, img/user-1-tablet@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/user-1-desktop@1x.jpg 1x, img/user-1-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/user-1-tablet@1x.jpg 1x, img/user-1-tablet@2x.jpg 2x">
+            <img class="about-companions__item-img" src="img/user-1-mobile@1x.jpg" srcset="img/user-1-mobile@2x.jpg 2x" alt="фото компаньена Тани" width="270" height="270">
+          </picture>
+          <p class="about-companions__item-level about-companions__item-level-99">
             <span class="about-companions__item-level-number">99</span>
             <span class="about-companions__item-level-text">level</span>
           </p>
           <div class="about-companions__item-country-visited">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-one" alt="pic1-country-one" width="35" height="25">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-two" alt="pic1-country-two" width="35" height="25">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-three" alt="pic1-country-three" width="35" height="25">
+            <img class="about-companions__item-country-visited-img country-one" src="img/sri-lanka-flag-mobile@1x.png" srcset="img/sri-lanka-flag-mobile@2x.png 2x" alt="picture-country-two" width="35" height="25">
+            <img class="about-companions__item-country-visited-img country-one" src="img/thailand-flag-mobile@1x.png" srcset="img/thailand-flag-mobile@2x.png 2x" alt="thailand-flag" width="35" height="25">
+            <img class="about-companions__item-country-visited-img country-one" src="img/seychelles-flag-mobile@1x.png" srcset="img/seychelles-flag-mobile@2x.png 2x" alt="seychelles-flag" width="35" height="25">
           </div>
-          <h4 class="about-companions__item-name">Таня Фирсова</h4>
+          <a href="#" class="about-companions__item-name">Таня Фирсова</a>
           <span class="about-companions__item-tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</span>
-          <div class="about-companions__item-ways-of-travel">
-            <img class="about-companions__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/20x21" alt="plane" width="21" height="21">
-            <img class="about-companions__item-ways-of-travel-image" src="https://via.placeholder.com/17x19" alt="car" width="17" height="19">
-            <img class="about-companions__item-ways-of-travel-image" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
-            <img class="about-companions__item-ways-of-travel-image" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
-          </div>
+          <ul class="about-companions__item-ways-of-travel-list">
+            <li class="about-companions__item-ways-of-travel-item">
+              <svg class="about-companions__item-ways-of-travel-image active-way-img" width="21" height="21">
+                <use xlink:href="#airplane"></use>
+              </svg>
+            </li>
+            <li class="about-companions__item-ways-of-travel-item about-companions__item-ways-of-travel-item--inactive">
+              <svg class="about-companions__item-ways-of-travel-image active-way-img" width="17" height="19">
+                <use xlink:href="#bus"></use>
+              </svg>
+            </li>
+            <li class="about-companions__item-ways-of-travel-item about-companions__item-ways-of-travel-item--inactive">
+                <svg class="about-companions__item-ways-of-travel-image active-way-img" width="23" height="24">
+                <use xlink:href="#bicycle"></use>
+              </svg>
+            </li>
+            <li class="about-companions__item-ways-of-travel-item about-companions__item-ways-of-travel-item--inactive">
+              <svg class="about-companions__item-ways-of-travel-image active-way-img" width="21" height="24">
+                <use xlink:href="#foot"></use>
+              </svg>
+            </li>
+          </ul>
         </li>
         <li class="about-companions__item">
-          <img class="about-companions__item-img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="фото компаньена Пети">
-          <p class="about-companions__item-level">
-            <span class="about-companions__item-level-number">80</span>
-            <span class="about-companions__item-level-text">level</span>
-          </p>
-          <div class="about-companions__item-country-visited two-country">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-one" alt="pic1-country-one" width="35" height="25">
-            <img src="https://via.placeholder.com/35x25" class="about-companions__item-country-visited-img country-two" alt="pic1-country-two" width="35" height="25">
-          </div>
-          <h4 class="about-companions__item-name">Петя Демин</h4>
-          <span class="about-companions__item-tags">#бургер #бар #футбол #концерт #крафт</span>
-          <div class="about-companions__item-ways-of-travel">
-            <img class="about-companions__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/20x21" alt="plane" width="21" height="21">
-            <img class="about-companions__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/17x19" alt="car" width="17" height="19">
-            <img class="about-companions__item-ways-of-travel-image" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
-            <img class="about-companions__item-ways-of-travel-imageactive-way-img" src="https://via.placeholder.com/20x23" alt="bicycle" width="21" height="23">
-          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/user-2-tablet@1x.webp 1x, img/user-2-tablet@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/user-2-desktop@1x.jpg 1x, img/user-2-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/user-2-tablet@1x.jpg 1x, img/user-2-tablet@2x.jpg 2x">
+            <img class="about-companions__item-img" src="img/user-2-mobile@1x.jpg" srcset="img/user-2-mobile@2x.jpg 2x" alt="фото компаньена Пети" width="270" height="270">
+          </picture>
+          <p class="about-companions__item-level about-companions__item-level-80">
+          <span class="about-companions__item-level-number about-companions__item-level-number--second-user">80</span>
+          <span class="about-companions__item-level-text">level</span>
+        </p>
+        <div class="about-companions__item-country-visited two-country">
+          <img class="about-companions__item-country-visited-img country-one" src="img/belgium-flag-mobile@1x.png" srcset="img/belgium-flag-mobile@2x.png 2x" alt="belgium-flag" width="35" height="25">
+          <img class="about-companions__item-country-visited-img country-one" src="img/czech-flag-mobile@1x.png" srcset="img/czech-flag-mobile@2x.png 2x" alt="czech-flag" width="35" height="25">
+        </div>
+        <a href="#" class="about-companions__item-name about-companions__item-name--second-user about-companions__item-name--online">Петя Демин</a>
+        <span class="about-companions__item-tags">#бургер #бар #футбол #концерт #крафт</span>
+        <ul class="about-companions__item-ways-of-travel-list">
+          <li class="about-companions__item-ways-of-travel-item">
+            <svg class="about-companions__item-ways-of-travel-image" width="19" height="21">
+              <use xlink:href="#airplane"></use>
+            </svg>
+          </li>
+          <li class="about-companions__item-ways-of-travel-item">
+            <svg class="about-companions__item-ways-of-travel-image" width="19" height="21">
+              <use xlink:href="#bus"></use>
+            </svg>
+          </li>
+          <li class="about-companions__item-ways-of-travel-item about-companions__item-ways-of-travel-item--inactive">
+            <svg class="about-companions__item-ways-of-travel-image" width="24" height="21">
+            <use xlink:href="#bicycle"></use>
+          </svg>
+        </li>
+        <li class="about-companions__item-ways-of-travel-item">
+          <svg class="about-companions__item-ways-of-travel-image" width="19" height="21">
+            <use xlink:href="#foot"></use>
+          </svg>
         </li>
       </ul>
-      <button class="about-companions__btn">Показать всех</button>
+      </li>
+      </ul>
+      <a href="catalog.html" class="about-companions__link">Показать всех</a>
     </section>
-    <section class="new-profile">
+    <section class="new-profile new-profile--bg-tablet">
       <h2 class="visually-hidden">Создайте свой профиль</h2>
       <p class="new-profile__add">Добавьте свой профиль</p>
-      <img class="new-profile__add-icon value-rubli" src="https://via.placeholder.com/100x100" alt="icon-avatar" height="100" width="100">
+      <img class="new-profile__add-icon value-rubli" src="img/rates@1x.png" srcset="img/rates@2x.png 2x" alt="icon-avatar" height="100" width="100">
       <ul class="new-profile__offers-list">
         <li class="new-profile__offers-list-item number-one">
-          Базовое размещение<span class="new-profile__offers-list-item-price">Бесплатно</span>
+          Базовое размещение<span class="new-profile__offers-list-item-price ">Бесплатно</span>
         </li>
         <li class="new-profile__offers-list-item number-two">
-          Вывод на первых позициях<span class="new-profile__offers-list-item-price">99 руб./мес</span>
+          Вывод на первых позициях<span class="new-profile__offers-list-item-price ">99 руб./мес</span>
         </li>
         <li class="new-profile__offers-list-item number-three">
-          Кастомный цвет карточки<span class="new-profile__offers-list-item-price">59 руб./мес</span>
+          Кастомный цвет карточки<span class="new-profile__offers-list-item-price number-three">59 руб./мес</span>
         </li>
       </ul>
-      <a class="new-profile__offers-see-all" href="blank.html">Показать тарифы для бизнеса</a>
+      <a class="new-profile__offers-see-all js-business-tariffs-open" href="business-tariffs.html">Показать тарифы для бизнеса</a>
+      <div class="business-tariffs js-modal-window">
+        <h2 class="business-tariffs__title">Бизнес-тарифы</h2>
+        <ul class="business-tariffs__list">
+          <li class="business-tariffs__item">
+            <span class="business-tariffs__text business-tariffs__text--one">Реклама у блоггера</span>
+            <span class="business-tariffs__text business-tariffs__text--two">300 000 руб./пост</span>
+          </li>
+          <li class="business-tariffs__item">
+            <span class="business-tariffs__text business-tariffs__text--one">Накрутка подписчиков</span>
+            <span class="business-tariffs__text business-tariffs__text--two">от 1 руб./шт.</span>
+          </li>
+          <li class="business-tariffs__item">
+            <span class="business-tariffs__text business-tariffs__text--one">Лайки от ботов</span>
+            <span class="business-tariffs__text business-tariffs__text--two">от 20 коп./лайк</span>
+          </li>
+          <li class="business-tariffs__item business-tariffs__item--last">
+            <span class="business-tariffs__text business-tariffs__text--one">Ваш продакт-плейсмент</span>
+            <span class="business-tariffs__text business-tariffs__text--two">Индивидуально</span>
+          </li>
+        </ul>
+        <button class="business-tariffs__btn js-business-tariffs-close" type="button">Закрыть окно</button>
+      </div>
     </section>
     <section class="subscribe">
       <h2 class="subscribe__title">Заинтересовались?</h2>
-      <p class="subscribe__info">Зарегистрируйтесь,<br> это быстро и бесплатно!<br>Уже зарегистрированы? Тогда<br> скорее <a  class="subscribe__info-link" href="blank.html">авторизуйтесь</a>.</p>
+      <p class="subscribe__info">Зарегистрируйтесь,<br class="subscribe__info-br--mobile"> это быстро и бесплатно!  <br class="subscribe__info-br--mobile">Уже зарегистрированы? Тогда<br class="subscribe__info-br--mobile"> скорее <a  class="subscribe__info-link" href="blank.html">авторизуйтесь</a>.</p>
       <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
         <label class="subscribe__form-label" for="subscribe__form-email">
           <input class="subscribe__form-email" type="text" name="subscribe__form-email" id="subscribe__form-email" placeholder="E-mail" required>
         </label>
         <button class="subscribe__form-button">Enter</button>
       </form>
-      <p class="subscribe__questions">Остались вопросы?<br>Мы с радостью на них ответим!</p>
+      <p class="subscribe__questions">Остались вопросы?  <br  class="subscribe__questions-br--tablet">  Мы с радостью на них ответим!</p>
       <ul class="subscribe__feedback-list">
         <li class="subscribe__feedback-item">
-          <img class="subscribe__feedback-img" src="https://via.placeholder.com/45x45" width="45" height="45" alt="telephone-icon">
-          <a class="subscribe__feedback-link" href="tel:88005558628">8 800 555-86-28</a>
+          <a class="subscribe__feedback-link" href="tel:88005558628">
+            <div class="subscribe__feedback-icon">
+              <svg class="subscribe__feedback-svg subscribe__feedback-svg__tel" viewBox="0 0 19 17" width="19" height="17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path class="subscribe__feedback-svg__path" fill-rule="evenodd" clip-rule="evenodd" d="M9.5 1.09c-2.8 0-5.6.47-6.62 1.41-.84.78-1.12 2.16-1.22 3.04l-.01.12c0 .34.3.62.65.62l2.57-.2h.07c.35-.02.64-.29.64-.63V4.24c0-.38.32-.68.72-.68h6.4c.4 0 .72.3.72.68v1.21c0 .34.29.61.64.62l.07.01 2.57.2c.36 0 .65-.28.65-.62l-.01-.12c-.1-.88-.38-2.26-1.22-3.04C15.1 1.56 12.3 1.1 9.5 1.1zm0 8.03c-.72 0-1.3.55-1.3 1.23 0 .69.58 1.24 1.3 1.24.72 0 1.3-.55 1.3-1.24 0-.68-.58-1.23-1.3-1.23zm-.98-2.78v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77l-4.4 4.45c-.31.28-.5.67-.5 1.1v1.24c0 .69.58 1.24 1.3 1.24h.33v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h8.5v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h.32c.73 0 1.31-.55 1.31-1.24V11.9c0-.43-.19-.82-.5-1.1l-4.4-4.45v-.77c0-.43-.37-.78-.82-.78a.8.8 0 00-.82.78v.77H8.52zm.98 1.54c1.45 0 2.62 1.1 2.62 2.47a2.55 2.55 0 01-2.62 2.47 2.55 2.55 0 01-2.62-2.47A2.55 2.55 0 019.5 7.88z" fill="currentColor"/>
+              </svg>
+            </div>
+          8 800 555-86-28</a>
         </li>
         <li class="subscribe__feedback-item">
-          <img class="subscribe__feedback-img" src="https://via.placeholder.com/45x45" width="45" height="45" alt="telephone-icon">
-          <a class="subscribe__feedback-link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a class="subscribe__feedback-link" href="mail@htmlacademy.ru">
+            <div class="subscribe__feedback-icon">
+              <svg class="subscribe__feedback-svg subscribe__feedback-svg__email" viewBox="0 0 19 13" width="19" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path class="subscribe__feedback-svg__path" fill-rule="evenodd" clip-rule="evenodd" d="M16.14 10.47L11.8 6.5l4.33-3.97-.6-.63-6.29 5.77-6.3-5.77-.59.63L6.7 6.5l-4.33 3.97.6.63 4.37-4.01 1.92 1.75 1.92-1.75 4.38 4 .59-.62zM1.58.25C.77.25.1.95.1 1.81v9.38c0 .86.65 1.56 1.47 1.56h15.34c.81 0 1.47-.7 1.47-1.56V1.81c0-.86-.65-1.56-1.47-1.56H1.58z" fill="currentColor"/>
+              </svg>
+            </div>
+          mail@htmlacademy.ru</a>
         </li>
       </ul>
     </section>
     <section class="address">
-      <h2 class="visually-hidden">Наш адресс</h2>
-      <p class="address__text">ул. Большая<br> Конюшенная, 19/8</p>
-      <a class="address__login-link" href="blank.html">Проложить маршрут</a>
-      <div class="address__map-block">
-        <div id="address__map-block-google" class="address__map-block-google"></div>
-        <img class="visually-hidden1 address__map" src="https://via.placeholder.com/320x424" width="320" height="424" alt="Маркер на карте нашей организации">
+      <h2 class="visually-hidden">Наш адрес</h2>
+      <div class="address__svg">
+        <svg class="address__svg--inner " viewBox="0 0 21 21" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="address__svg--path" d="M10.5 0a7.876 7.876 0 00-7.875 7.875c0 5.058 3.803 7.27 4.644 8.279C9.29 18.577 9.403 21 10.5 21s1.211-2.423 3.23-4.846c.841-1.01 4.645-3.22 4.645-8.279A7.876 7.876 0 0010.5 0zm0 13.125a5.25 5.25 0 110-10.5 5.25 5.25 0 010 10.5zm0-7.875a2.626 2.626 0 000 5.25 2.626 2.626 0 000-5.25z" fill="currentColor"/>
+          <circle cx="10.5" cy="7.875" fill="currentColor" r=".875"/>
+        </svg>
       </div>
+      <p class="address__text">ул. Большая Конюшенная, 19/8</p>
+      <a class="address__login-link" href="https://maps.google.com?saddr=Current+Location&daddr=59.938673,30.323155">Проложить маршрут</a>
+    </section>
+    <section class="map">
+      <h2 class="visually-hidden">Карта, чтобы нас найти!</h2>
+      <div id="js-google-map" class="map__google"></div>
+      <picture>
+        <source media="(min-width: 768px)" srcset="https://via.placeholder.com/768x581">
+          <source media="(min-width: 1440px)" srcset="https://via.placeholder.com/1440x584">
+        <img class="js-hide-map map__img" src="https://via.placeholder.com/320x424" width="320" height="424" alt="Маркер на карте нашей организации">
+      </picture>
     </section>
   </main>
   <footer class="footer page__footer">
-    <h2 class="footer__title">Погнали?</h2>
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/logo-black-desktop@1x.png 1x, img/logo-black-desktop@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="img/logo-black-tablet@1x.png 1x, img/logo-black-tablet@2x.png 2x">
+      <img class="footer__logo" src="img/logo-black-mobile.svg" alt="logo" width="96" height="15">
+    </picture>
     <ul class="footer__social-list">
       <li class="footer__social-item">
-        <h3 class="visually-hidden">Наша страница на facebook</h3>
-        <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="facebook">
+        <a href="#"  class="footer__social-link" aria-label="Наша страница на facebook">
+          <h3 class="visually-hidden">Наша страница на facebook</h3>
+          <svg class="footer__svg footer__svg--facebook" viewBox="0 0 11 21" width="11" height="21" fill="currentColor"  aria-label="иконка facebook">
+            <path  class="svg__path" d="M7.488 20.77H2.129V11.25H0V6.544h2.066c-.157-2.132.236-3.69 1.195-4.752A4.882 4.882 0 014.896.686 5.15 5.15 0 016.867.294h3.756v4.538H7.669a4.554 4.554 0 00-.197 1.712h3.143v4.707H7.472l.016 9.519zm-4.172-1.107h2.97v-9.518h3.143V7.673H6.286v-.56c0-1.477 0-2.797.785-3.292l.15-.096h2.208V1.401h-2.53a3.876 3.876 0 00-1.497.28c-.472.19-.897.472-1.246.827-.785.907-1.107 2.427-.864 4.53l.079.613H1.179v2.494h2.137v9.518z" fill="currentColor"/>
+          </svg>
+        </a>
       </li>
       <li class="footer__social-item">
-        <h3 class="visually-hidden">Наша страница во vkontakte</h3>
-        <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="vkontakte">
+        <a href="#"  class="footer__social-link" aria-label="Наша страница во vkontakte">
+          <h3 class="visually-hidden">Наша страница в vkontakte</h3>
+          <svg class="footer__svg footer__svg--vkontakte" viewBox="0 0 23 12" width="23" height="12" fill="currentColor" aria-label="иконка vkontakte">
+            <path class="svg__path" d="M17.766 11.854a3.017 3.017 0 01-1.543-.465 7.53 7.53 0 01-1.32-1.129c-.327-.324-.869-.87-1.076-.87-.208 0-.356.679-.349 1.158.003.331-.122.65-.349.893-.258.21-.573.338-.905.369H10.8a8.424 8.424 0 01-5.513-2.214C2.557 7.11.212 2.358.116 2.152A.984.984 0 01.227 1.06C.51.825.868.7 1.237.705H4.352c.25.037.49.125.704.259.202.134.363.32.467.538.32.681.687 1.34 1.099 1.97.971 1.476 1.402 1.815 1.558 1.89a5.96 5.96 0 00.14-2.118 1.982 1.982 0 00-.155-.945.99.99 0 00-.572-.214l-.541-.509c-.104-.487.438-.907.816-1.07a6.481 6.481 0 012.337-.28h.527a6.795 6.795 0 011.595.147c1.261.266 1.217 1.277 1.165 2.443 0 .34-.037.737-.037 1.195v.354c-.03.321-.007.645.067.96a6.718 6.718 0 001.535-1.83c.43-.659.807-1.35 1.128-2.067a1.168 1.168 0 011.187-.7h3.176c.093-.01.188-.01.282 0 .742 0 1.18.214 1.357.627.178.413.127 1.225-1.75 3.401l-.742.834c-.36.347-.67.742-.92 1.173.28.318.6.6.95.841A10.542 10.542 0 0121.95 9.87a1.177 1.177 0 01.193 1.24 1.705 1.705 0 01-1.395.738l-2.812.037-.17-.03zm-3.94-3.571c.668 0 1.247.583 1.863 1.195.333.362.706.683 1.113.96.308.203.67.31 1.039.31h.074l2.82-.037c.138-.008.274-.043.4-.104l-.074-.118a9.778 9.778 0 00-1.989-2.007c-.883-.738-1.335-1.084-1.387-1.653-.052-.568.363-1.062 1.194-2l.742-.818a7.916 7.916 0 001.521-2.177 4.22 4.22 0 00-.497 0h-3.242a.41.41 0 00-.178 0A15.093 15.093 0 0116 4.084c-1.403 2.081-2.063 2.362-2.53 2.362a.887.887 0 01-.416-.103c-.742-.421-.742-1.358-.697-2.037V3.99c0-.48 0-.893.037-1.247.06-1.24 0-1.247-.282-1.313a6.386 6.386 0 00-1.38-.119h-.512a9.699 9.699 0 00-1.41.074c.071.052.134.114.186.185a2.8 2.8 0 01.438 1.608c.096 1.218.044 2.804-.742 3.188-.14.064-.292.097-.446.096-.69 0-1.372-.65-2.537-2.406a17.253 17.253 0 01-1.195-2.103l-.059-.073a.901.901 0 00-.237-.082h-3.02c.438.9 2.515 4.885 4.837 6.973a7.44 7.44 0 004.764 1.94h1.372a.743.743 0 00.2-.073v-.067c0-.199 0-1.918 1.173-2.213.09-.036.185-.06.282-.074z" fill="currentColor"/>
+          </svg>
+        </a>
       </li>
       <li class="footer__social-item">
-        <h3 class="visually-hidden">Наша страница в instagram</h3>
-        <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="instagram">
+        <a class="footer__social-link" href="#" aria-label="Наша страница во instagram">
+          <h3 class="visually-hidden">Наша страница в instagram</h3>
+          <svg class="footer__svg footer__svg--instagram" viewBox="0 0 24 24" aria-label="иконка instagram">
+            <path class="svg__path" d="M17.28 2.4a4.33 4.33 0 014.32 4.32v10.56a4.33 4.33 0 01-4.32 4.32H6.72a4.33 4.33 0 01-4.31-4.32V6.72A4.33 4.33 0 016.72 2.4h10.56zm0-1.44H6.72A5.76 5.76 0 00.96 6.72v10.56a5.76 5.76 0 005.76 5.76h10.56a5.76 5.76 0 005.76-5.76V6.72A5.76 5.76 0 0017.28.96z" fill="currentColor"/>
+            <path class="svg__path" d="M12.01 7.756a4.253 4.253 0 11-4.254 4.253 4.244 4.244 0 014.253-4.253zm0-1.44a5.693 5.693 0 105.682 5.693 5.681 5.681 0 00-5.683-5.693zM17.904 7.413a1.286 1.286 0 100-2.573 1.286 1.286 0 000 2.573z" fill="currentColor"/>
+          </svg>
+        </a>
       </li>
     </ul>
-    <span class="footer__authors">Разработано</span>
-    <a class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
-      <h3 class="visually-hidden">логотип htmlacademy и переход на наш курс адаптивной верстке</h3>
-      <img class="footer__authors-logo" src="https://via.placeholder.com/27x33" width="27"  height="33" alt="htmlacademy-icon">
-    </a>
+    <div class="footer__authors">
+      <span class="footer__authors-text">Разработано</span>
+      <a class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <h3 class="visually-hidden">логотип htmlacademy и переход на наш курс адаптивной верстке</h3>
+        <img class="footer__authors-logo" src="img/htmlacademy-logo.svg" width="27"  height="33" alt="htmlacademy-icon">
+      </a>
+    </div>
   </footer>
   <script src="js/app.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdh9DoiVSsIkmBxD_GcAHduSPQbHLYKbs&callback=initMap&libraries=&v=weekly" async></script>

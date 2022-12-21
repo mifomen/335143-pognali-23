@@ -12,13 +12,17 @@
 </head>
 <body class="page">
   <header class="header page__header">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/logo-white-desktop@1x.png 1x, img/logo-white-desktop@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="img/logo-white-tablet@1x.png 1x, img/logo-white-tablet@2x.png 2x">
+      <img class="header__logo" src="img/logo-white-mobile.svg" alt="logo" width="96" height="15">
+    </picture>
     <h1 class="visually-hidden">Погнали?</h1>
-    <img class="header__title" src="img/logo_mobile.svg" alt="logo" width="96" height="15">
     <button class="header__button">Открыть меню</button>
   </header>
   <main class="main page__main">
     <h1 class="visually-hidden">Статистика и редактирование вашего профиля</h1>
-    <section class="main-intro form-style">
+    <section class="main-intro main-intro--form-page">
       <h2 class="main-intro__title">Направления</h2>
     </section>
     <section class="profile-card">
@@ -29,7 +33,10 @@
       </p>
       <img class="profile-card__avatar" src="https://via.placeholder.com/100x100" alt="plane" width="100" height="100">
       <button class="profile-card__change-photo" type="button">Сменить фото</button>
-      <span class="profile-card__tags">#бургер #бар #футбол #концерт #крафт</span>
+      <div class="profile-card__tags-wrapper">
+        <p class="profile-card__tags-lead">тэги</p>
+        <textarea class="profile-card__tags-area">#бургер #бар #футбол #концерт #крафт</textarea>
+      </div>
       <div class="profile-card__item-ways-of-travel">
         <img class="profile-card__item-ways-of-travel-image active-way-img" src="https://via.placeholder.com/33x33" alt="plane" width="33" height="33">
         <img class="profile-card__item-ways-of-travel-image" src="https://via.placeholder.com/33x33" alt="car" width="33" height="33">
@@ -45,21 +52,21 @@
           <!-- <span class="my-plans__number"></span> -->
           <p class="my-plans__country">Франция, Италия</p>
           <p class="my-plans__people">3 попутчика</p>
-          <p class="my-plans__date">26 мар —- 29 мар</p>
+          <p class="my-plans__date">26 мар &#8212; 29 мар</p>
           <button type="button" class="my-plans__btn change-plan">изменить</button>
         </li>
         <li class="my-plans__item">
           <!-- <span class="my-plans__number">2.</span> -->
           <p class="my-plans__country">Таиланд, Индонезия</p>
           <p class="my-plans__people">1 попутчик</p>
-          <p class="my-plans__date">1 июл —- 15 июл</p>
+          <p class="my-plans__date">1 июл — 15 июл</p>
           <button type="button" class="my-plans__btn change-plan">изменить</button>
         </li>
       </ul>
     </section>
     <section class="new-plan">
       <h2 class="visually-hidden">Создай свой план отдыха и найдешь попутчиков</h2>
-      <h2 class="new-plan__title">Добавить план:</h3>
+      <h3 class="new-plan__title">Добавить план:</h3>
         <form class="new-plan__form form-of-journey" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-of-journey__step step-one journey">
             <h2 class="form-of-journey__title">Шаг 1.<span class="new-plan__title-lead">Даты пребывания</span></h2>
@@ -172,7 +179,7 @@
             <h3 class="form-of-journey__title step-two-title">Шаг 2.<span class="form-of-journey__title-lead">Маршрут</span></h3>
             <p class="form-of-journey__lead">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
             <div class="choose-country first-country">
-              <label class="choose-country__name-label" for="three-country__name">
+              <label class="choose-country__name-label" for="first-country__name">
                 <select class="choose-country__name" name="first-country" id="first-country__name">
                   <option selected value="Босния и герцеговина">Босния и герцеговина</option>
                   <option value="">2Босния и герцеговина</option>
@@ -186,7 +193,7 @@
               </div>
             </div>
             <div class="choose-country second-country">
-              <label class="choose-country__name-label" for="three-country__name">
+              <label class="choose-country__name-label" for="second-country__name">
                 <select class="choose-country__name" name="second-country" id="second-country__name">
                   <option value="">Чехия</option>
                 </select>
@@ -232,26 +239,43 @@
       </section>
     </main>
     <footer class="footer page__footer form-page">
-      <h2 class="footer__title">Погнали?</h2>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-black-desktop@1x.png 1x, img/logo-black-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-black-tablet@1x.png 1x, img/logo-black-tablet@2x.png 2x">
+        <img class="footer__title" src="img/logo-black-mobile.svg" alt="logo" width="96" height="15">
+      </picture>
       <ul class="footer__social-list">
         <li class="footer__social-item">
-          <h3 class="visually-hidden">Наша страница на facebook</h3>
-          <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="facebook">
+          <a href="#"  class="footer__social-link" aria-label="Наша страница на facebook">
+            <h3 class="visually-hidden">Наша страница на facebook</h3>
+            <svg class="svg" viewBox="0 0 11 21" width="11" height="21" fill="currentColor"  aria-label="иконка facebook">
+              <path  class="svg__path" d="M7.488 20.77H2.129V11.25H0V6.544h2.066c-.157-2.132.236-3.69 1.195-4.752A4.882 4.882 0 014.896.686 5.15 5.15 0 016.867.294h3.756v4.538H7.669a4.554 4.554 0 00-.197 1.712h3.143v4.707H7.472l.016 9.519zm-4.172-1.107h2.97v-9.518h3.143V7.673H6.286v-.56c0-1.477 0-2.797.785-3.292l.15-.096h2.208V1.401h-2.53a3.876 3.876 0 00-1.497.28c-.472.19-.897.472-1.246.827-.785.907-1.107 2.427-.864 4.53l.079.613H1.179v2.494h2.137v9.518z" fill="currentColor"/>
+            </svg>
+          </a>
         </li>
         <li class="footer__social-item">
-          <h3 class="visually-hidden">Наша страница во vkontakte</h3>
-          <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="vkontakte">
+          <a href="#"  class="footer__social-link" aria-label="Наша страница во vkontakte">
+            <h3 class="visually-hidden">Наша страница в vkontakte</h3>
+            <svg class="svg" viewBox="0 0 23 12" width="23" height="12" fill="currentColor" aria-label="иконка vkontakte">
+              <path class="svg__path" d="M17.766 11.854a3.017 3.017 0 01-1.543-.465 7.53 7.53 0 01-1.32-1.129c-.327-.324-.869-.87-1.076-.87-.208 0-.356.679-.349 1.158.003.331-.122.65-.349.893-.258.21-.573.338-.905.369H10.8a8.424 8.424 0 01-5.513-2.214C2.557 7.11.212 2.358.116 2.152A.984.984 0 01.227 1.06C.51.825.868.7 1.237.705H4.352c.25.037.49.125.704.259.202.134.363.32.467.538.32.681.687 1.34 1.099 1.97.971 1.476 1.402 1.815 1.558 1.89a5.96 5.96 0 00.14-2.118 1.982 1.982 0 00-.155-.945.99.99 0 00-.572-.214l-.541-.509c-.104-.487.438-.907.816-1.07a6.481 6.481 0 012.337-.28h.527a6.795 6.795 0 011.595.147c1.261.266 1.217 1.277 1.165 2.443 0 .34-.037.737-.037 1.195v.354c-.03.321-.007.645.067.96a6.718 6.718 0 001.535-1.83c.43-.659.807-1.35 1.128-2.067a1.168 1.168 0 011.187-.7h3.176c.093-.01.188-.01.282 0 .742 0 1.18.214 1.357.627.178.413.127 1.225-1.75 3.401l-.742.834c-.36.347-.67.742-.92 1.173.28.318.6.6.95.841A10.542 10.542 0 0121.95 9.87a1.177 1.177 0 01.193 1.24 1.705 1.705 0 01-1.395.738l-2.812.037-.17-.03zm-3.94-3.571c.668 0 1.247.583 1.863 1.195.333.362.706.683 1.113.96.308.203.67.31 1.039.31h.074l2.82-.037c.138-.008.274-.043.4-.104l-.074-.118a9.778 9.778 0 00-1.989-2.007c-.883-.738-1.335-1.084-1.387-1.653-.052-.568.363-1.062 1.194-2l.742-.818a7.916 7.916 0 001.521-2.177 4.22 4.22 0 00-.497 0h-3.242a.41.41 0 00-.178 0A15.093 15.093 0 0116 4.084c-1.403 2.081-2.063 2.362-2.53 2.362a.887.887 0 01-.416-.103c-.742-.421-.742-1.358-.697-2.037V3.99c0-.48 0-.893.037-1.247.06-1.24 0-1.247-.282-1.313a6.386 6.386 0 00-1.38-.119h-.512a9.699 9.699 0 00-1.41.074c.071.052.134.114.186.185a2.8 2.8 0 01.438 1.608c.096 1.218.044 2.804-.742 3.188-.14.064-.292.097-.446.096-.69 0-1.372-.65-2.537-2.406a17.253 17.253 0 01-1.195-2.103l-.059-.073a.901.901 0 00-.237-.082h-3.02c.438.9 2.515 4.885 4.837 6.973a7.44 7.44 0 004.764 1.94h1.372a.743.743 0 00.2-.073v-.067c0-.199 0-1.918 1.173-2.213.09-.036.185-.06.282-.074z" fill="currentColor"/>
+            </svg>
+          </a>
         </li>
         <li class="footer__social-item">
-          <h3 class="visually-hidden">Наша страница в instagram</h3>
-          <img class="footer__social-item-img" src="https://via.placeholder.com/45x45" alt="instagram">
+          <a class="footer__social-link" href="#" aria-label="Наша страница во instagram">
+            <h3 class="visually-hidden">Наша страница в instagram</h3>
+            <svg class="svg" viewBox="0 0 24 24" aria-label="иконка instagram">
+              <path class="svg__path" d="M17.28 2.4a4.33 4.33 0 014.32 4.32v10.56a4.33 4.33 0 01-4.32 4.32H6.72a4.33 4.33 0 01-4.31-4.32V6.72A4.33 4.33 0 016.72 2.4h10.56zm0-1.44H6.72A5.76 5.76 0 00.96 6.72v10.56a5.76 5.76 0 005.76 5.76h10.56a5.76 5.76 0 005.76-5.76V6.72A5.76 5.76 0 0017.28.96z" fill="currentColor"/>
+              <path class="svg__path" d="M12.01 7.756a4.253 4.253 0 11-4.254 4.253 4.244 4.244 0 014.253-4.253zm0-1.44a5.693 5.693 0 105.682 5.693 5.681 5.681 0 00-5.683-5.693zM17.904 7.413a1.286 1.286 0 100-2.573 1.286 1.286 0 000 2.573z" fill="currentColor"/>
+            </svg>
+          </a>
         </li>
       </ul>
-      <span class="footer__authors">Разработано</span>
-      <a class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <h3 class="visually-hidden">логотип htmlacademy и переход на наш курс адаптивной верстке</h3>
-        <img class="footer__authors-logo" src="https://via.placeholder.com/27x33" width="27"  height="33" alt="htmlacademy-icon">
-      </a>
-    </footer>
-  </body>
-  </html>
+    <span class="footer__authors">Разработано</span>
+    <a class="footer__authors-link" href="https://htmlacademy.ru/intensive/adaptive">
+      <h3 class="visually-hidden">логотип htmlacademy и переход на наш курс адаптивной верстке</h3>
+      <img class="footer__authors-logo" src="img/htmlacademy-logo.svg" width="27"  height="33" alt="htmlacademy-icon">
+    </a>
+  </footer>
+</body>
+</html>

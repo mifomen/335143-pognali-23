@@ -20,77 +20,77 @@
     z-index: 5;
     background-color: var(--bg-grey);
   }
+}
 
-  &__title {
-    margin: 0;
-    padding: 0;
-    color: var(--basic_blue_light-2);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 24px;
-    margin-bottom: 31px;
+.my-plans__title {
+  margin: 0;
+  padding: 0;
+  color: var(--basic_blue_light-2);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 31px;
+}
+
+.my-plans__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.my-plans__item {
+  background-color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 22px 24px 24px 23px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  counter-reset: section;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: var(--basic_blue_light-2);
+}
+
+.my-plans__country {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 20px;
+
+  &::before {
+    counter-increment: section;
+    content: counter(section) ".";
+    margin-right: 4px;
   }
+}
 
-  &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+.my-plans__people,
+.my-plans__date {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
 
-  &__item {
-    background-color: var(--white);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 22px 24px 24px 23px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    counter-reset: section;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    color: var(--basic_blue_light-2);
-  }
+.my-plans__date {
+  margin-bottom: 20px;
+}
 
-  &__country {
-    margin: 0;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 16px;
-    margin-bottom: 20px;
-
-    &::before {
-      counter-increment: section;
-      content: counter(section) ".";
-      margin-right: 4px;
-    }
-  }
-
-  &__people,
-  &__date {
-    margin: 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
-
-  &__date {
-    margin-bottom: 20px;
-  }
-
-  &__btn {
-    font-family: var(--basic-font);
-    background-color: transparent;
-    border: none;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
-    color: var(--black);
-    opacity: 0.3;
-    text-transform: uppercase;
-  }
+.my-plans__btn {
+  font-family: var(--basic-font);
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--black);
+  opacity: 0.3;
+  text-transform: uppercase;
 }
 
 .last-item {

@@ -1,20 +1,166 @@
 .alphabet {
-  border-spacing: 1px;
-  border-collapse: collapse;
   margin: 0 auto;
-
-
-  &__letter-item {
-    width: 40px;
-    height: 38px;
-    border: 1px solid var(--border-color);
-    text-transform: uppercase;
-    background-color: var(--white);
-    color: var(--basic_blue_light-2);
-  }
+  padding: 0;
 }
 
-.active-letter {
+.alphabet__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 44px 44px 44px 44px 42px;
+  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 40px 40px 40px 40px 40px;
+  column-gap: 0;
+  grid-row-gap: 0;
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  margin-bottom: 15px;
+}
+
+.alphabet__list-item {
+  color: var(--basic_blue_light-2);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.alphabet__toggler-label {
+  background-color: var(--white);
+  border-right: 1px solid  var(--border-color);
+  border-bottom: 1px solid  var(--border-color);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 4px;
+}
+
+.alphabet__toggler--1:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-1"],
+.alphabet__toggler--2:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-2"],
+.alphabet__toggler--3:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-3"],
+.alphabet__toggler--4:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-4"],
+.alphabet__toggler--5:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-5"],
+.alphabet__toggler--6:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-6"],
+.alphabet__toggler--7:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-7"],
+.alphabet__toggler--8:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-8"],
+.alphabet__toggler--9:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-9"],
+.alphabet__toggler--10:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-10"],
+.alphabet__toggler--11:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-11"],
+.alphabet__toggler--12:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-12"],
+.alphabet__toggler--13:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-13"],
+.alphabet__toggler--14:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-14"],
+.alphabet__toggler--15:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-15"],
+.alphabet__toggler--16:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-16"],
+.alphabet__toggler--17:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-17"],
+.alphabet__toggler--18:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-18"],
+.alphabet__toggler--19:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-19"],
+.alphabet__toggler--20:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-20"],
+.alphabet__toggler--21:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-21"],
+.alphabet__toggler--22:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-22"],
+.alphabet__toggler--23:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-23"],
+.alphabet__toggler--24:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-24"],
+.alphabet__toggler--25:checked ~ .alphabet__list .alphabet__toggler-label[for="latter-25"] {
   background-color: var(--basic_blue_light-2);
   color: var(--white);
+}
+
+.alphabet__toggler--1:checked ~ .alphabet__all-countries .alphabet__countries-list--1,
+.alphabet__toggler--2:checked ~ .alphabet__all-countries .alphabet__countries-list--2,
+.alphabet__toggler--3:checked ~ .alphabet__all-countries .alphabet__countries-list--3,
+.alphabet__toggler--4:checked ~ .alphabet__all-countries .alphabet__countries-list--4,
+.alphabet__toggler--5:checked ~ .alphabet__all-countries .alphabet__countries-list--5,
+.alphabet__toggler--6:checked ~ .alphabet__all-countries .alphabet__countries-list--6,
+.alphabet__toggler--7:checked ~ .alphabet__all-countries .alphabet__countries-list--7,
+.alphabet__toggler--8:checked ~ .alphabet__all-countries .alphabet__countries-list--8,
+.alphabet__toggler--9:checked ~ .alphabet__all-countries .alphabet__countries-list--9,
+.alphabet__toggler--10:checked ~ .alphabet__all-countries .alphabet__countries-list--10,
+.alphabet__toggler--11:checked ~ .alphabet__all-countries .alphabet__countries-list--11,
+.alphabet__toggler--12:checked ~ .alphabet__all-countries .alphabet__countries-list--12,
+.alphabet__toggler--13:checked ~ .alphabet__all-countries .alphabet__countries-list--13,
+.alphabet__toggler--14:checked ~ .alphabet__all-countries .alphabet__countries-list--14,
+.alphabet__toggler--15:checked ~ .alphabet__all-countries .alphabet__countries-list--15,
+.alphabet__toggler--16:checked ~ .alphabet__all-countries .alphabet__countries-list--16,
+.alphabet__toggler--17:checked ~ .alphabet__all-countries .alphabet__countries-list--17,
+.alphabet__toggler--18:checked ~ .alphabet__all-countries .alphabet__countries-list--18,
+.alphabet__toggler--19:checked ~ .alphabet__all-countries .alphabet__countries-list--19,
+.alphabet__toggler--20:checked ~ .alphabet__all-countries .alphabet__countries-list--20,
+.alphabet__toggler--21:checked ~ .alphabet__all-countries .alphabet__countries-list--21,
+.alphabet__toggler--22:checked ~ .alphabet__all-countries .alphabet__countries-list--22,
+.alphabet__toggler--23:checked ~ .alphabet__all-countries .alphabet__countries-list--23,
+.alphabet__toggler--24:checked ~ .alphabet__all-countries .alphabet__countries-list--24,
+.alphabet__toggler--25:checked ~ .alphabet__all-countries .alphabet__countries-list--25 {
+  display: block;
+}
+
+.alphabet__toggler {
+  display: none;
+}
+
+
+.alphabet__country-letter {
+  display: none;
+}
+
+.alphabet__all-countries {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: block;
+}
+
+.alphabet__countries-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: none;
+  margin-bottom: 29px;
+}
+
+.alphabet__country-link {
+  text-decoration: none;
+  color: var(--special_grey);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+
+.alphabet__all-countries--open {
+  display: block;
+}
+
+.alphabet__btn {
+  font-family: var(--basic-font);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 auto;
+  position: relative;
+  background-color: var(--btn-color);
+  padding: 12px 0 10px 30px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 16px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: "";
+    left: 34.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 2L2 14' stroke='%23192144' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 2L14 14' stroke='%23192144' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  }
 }

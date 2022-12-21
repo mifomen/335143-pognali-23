@@ -33,137 +33,163 @@
     transform: translateX(50%);
     background-color: var(--special_white);
   }
+}
 
-  &__item-level {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 24px;
-    width: 100px;
-    min-height: 100px;
-    box-sizing: border-box;
-    color: var(--basic_blue);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+.profile-card__item-level {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  width: 100px;
+  min-height: 100px;
+  box-sizing: border-box;
+  color: var(--basic_blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--special_white);
+  border: 3px solid var(--special_orange);
+  margin-bottom: 15px;
+}
+
+.profile-card__item-level-number {
+  margin-top: -5px;
+  margin-left: -1px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 38px;
+}
+
+.profile-card__item-level-text {
+  position: relative;
+  padding-top: 9px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+
+  &::before {
+    content: "";
+    width: calc(100% + 20px);
+    height: 1px;
+    display: block;
+    background-color: var(--special_grey);
+    top: 2px;
+    left: -10px;
+    position: absolute;
+  }
+}
+
+.profile-card__avatar {
+  border-radius: 50%;
+}
+
+.profile-card__change-photo {
+  font-family: var(--basic-font);
+  outline: none;
+  border: none;
+  background-color: var(--special_blue_light);
+  color: var(--basic_blue);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  width: 100%;
+  padding: 12px 67px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  margin-bottom: 33px;
+}
+
+.profile-card__tags-wrapper {
+  position: relative;
+  width: 100%;
+  // margin: 0 auto;
+  display: flex;
+}
+
+.profile-card__tags-lead {
+  content: "тэги";
+  margin: 0;
+  position: absolute;
+  top: -10px;
+  z-index: 5;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--basic_blue_light-2);
+  background-color: var(--special_white);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 0 18px;
+}
+
+.profile-card__tags-area {
+  font-family: var(--basic-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 25px 24px 26px 24px;
+  position: relative;
+  color: var(--special_grey_opacity-6);
+  margin-bottom: 25px;
+  resize: none;
+  display: block;
+  width: 100%;
+  background-color: var(--special_white);
+
+  &:hover {
+    border: 1px solid var(--border-hover-area);
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid var(--basic_blue);
+    color: var(--special_grey);
+    outline: 0;
+  }
+}
+
+.profile-card__item-ways-of-travel {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 15px 24px 13px 24px;
+  position: relative;
+  color: var(--special_grey);
+  text-align: center;
+  font-size: 0;
+  margin-bottom: 10px;
+
+  &::before {
+    content: "транспорт";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--basic_blue_light-2);
     background-color: var(--special_white);
-    border: 3px solid var(--special_orange);
-    margin-bottom: 15px;
-  }
-
-  &__item-level-number {
-    margin-top: -5px;
-    margin-left: -1px;
+    text-transform: uppercase;
     font-style: normal;
     font-weight: bold;
-    font-size: 38px;
-    line-height: 38px;
-  }
-
-  &__item-level-text {
-    position: relative;
-    padding-top: 9px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 18px;
-
-    &::before {
-      content: "";
-      width: calc(100% + 20px);
-      height: 1px;
-      display: block;
-      background-color: var(--special_grey);
-      top: 2px;
-      left: -10px;
-      position: absolute;
-    }
-  }
-
-  &__avatar {
-    border-radius: 50%;
-  }
-
-  &__change-photo {
-    font-family: var(--basic-font);
-    outline: none;
-    border: none;
-    background-color: var(--special_blue_light);
-    color: var(--basic_blue);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 18px;
-    width: 100%;
-    padding: 12px 67px;
-    border-radius: 25px;
-    text-transform: uppercase;
-    margin-bottom: 33px;
-  }
-
-  &__tags {
-
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 18px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    padding: 25px 24px 26px 24px;
-    position: relative;
-    color: var(--special_grey);
-    margin-bottom: 25px;
-
-    &::before {
-      content: "тэги";
-      position: absolute;
-      top: -10px;
-      left: 23.5%;
-      transform: translateX(50%);
-      color: var(--basic_blue_light-2);
-      background-color: var(--special_white);
-      text-transform: uppercase;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 18px;
-      padding: 0 18px;
-    }
+    padding: 0 18px;
   }
+}
 
-  &__item-ways-of-travel {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    padding: 15px 24px 13px 24px;
-    position: relative;
-    color: var(--special_grey);
-    text-align: center;
-    font-size: 0;
-    margin-bottom: 10px;
-
-    &::before {
-      content: "транспорт";
-      position: absolute;
-      top: -9px;
-      left: 28%;
-      color: var(--basic_blue_light-2);
-      background-color: var(--special_white);
-      text-transform: uppercase;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 18px;
-      padding: 0 18px;
-    }
-  }
-
-  &__item-ways-of-travel-image {
-    border-radius: 50%;
-  }
+.profile-card__item-ways-of-travel-image {
+  border-radius: 50%;
 }

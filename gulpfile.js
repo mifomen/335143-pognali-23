@@ -10,6 +10,8 @@ const csso = require("gulp-csso");
 const rm = require( "gulp-rm" )
 const stylelint   = require("stylelint");
 const sourcemaps = require("gulp-sourcemaps");
+const webp = require("gulp-webp");
+
 
 
 gulp.task("less",function () {
@@ -20,10 +22,10 @@ gulp.task("less",function () {
 // .pipe(less()).on("error", less.logError)
 .pipe(sourcemaps.write({includeContente: false, sourceRoot: "."}))// delete ?
 .pipe(sourcemaps.init({loadMaps: true})) // delete ?
-.pipe(postcss([
-  mqpacker({ sort: true })
-  ])
-)
+// .pipe(postcss([
+//   mqpacker({ sort: true })
+//   ])
+// )
 // .pipe(uncss({
 //   html: ["./build/index.html"]
 // }))
@@ -35,7 +37,7 @@ gulp.task("less",function () {
 //   title: "Error in scss"
 // }))
 // .pipe(stripCssComments())
-// .pipe(csso())
+.pipe(csso())
 .pipe(rename("style.min.css"))
 .pipe(sourcemaps.write(".")) // delete "," ? ok ?
 .pipe(gulp.dest("build/css"))
@@ -105,6 +107,16 @@ gulp.task("copy-img", function (){
   }))
 })
 
+gulp.task("optimizationImage", function (){
+  return gulp.src(["./build/img/*.{jpg,png}"])
+  .pipe(webp({quality: 85}))
+  .pipe(gulp.dest("build/img"))
+  .pipe(bs.reload({
+    stream: true
+  }))
+})
+
+
 gulp.task("copy-fonts", function (){
   return gulp.src(["source/fonts/**/*.{woff,woff2}"])
   .pipe(gulp.dest("./build/fonts"))
@@ -139,6 +151,14 @@ gulp.task("clear", function() {
   }) )
 })
 
+gulp.task("clear-img", function() {
+  return gulp.src( "build/img/**/*", { read: false })
+  .pipe(rm({
+    async: true
+  }) )
+})
+
+
 gulp.task("build",
   gulp.series(
     "clear",
@@ -153,6 +173,7 @@ gulp.task("build",
 "copy-favicon",
 "copy-webmanifest",
 "copy-img",
+"optimizationImage",
 "html",
 "less",
 "script",
@@ -161,8 +182,6 @@ gulp.task("build",
 // "serve",
 // "watch"
 ));
-
-
 
 gulp.task("serve", function (){
   bs.init({
@@ -176,9 +195,6 @@ gulp.task("serve", function (){
   gulp.watch("source/less/**/*.less",  gulp.parallel("less"));
   gulp.watch("source/**/*.html",  gulp.parallel("html"));
   gulp.watch("source/**/*.js",  gulp.parallel("script"));
-  gulp.watch("source/**/*.{png,jpg,jpeg,svg}",  gulp.parallel("copy-img"));
+  gulp.watch("source/**/*.{png,jpg,jpeg,svg,webp}",  gulp.series("clear-img", "copy-img"));
   gulp.watch("source/manifest.webmanifest",  gulp.parallel("copy-webmanifest"));
-
-
-
 })
