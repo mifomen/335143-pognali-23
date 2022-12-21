@@ -10,7 +10,8 @@ const csso = require("gulp-csso");
 const rm = require( "gulp-rm" )
 const stylelint   = require("stylelint");
 const sourcemaps = require("gulp-sourcemaps");
-const webp = require("gulp-webp");
+// const webp = require("gulp-webp");
+// const gic = require('gulp-imgconv');
 
 
 
@@ -107,9 +108,9 @@ gulp.task("copy-img", function (){
   }))
 })
 
-gulp.task("optimizationImage", function (){
-  return gulp.src(["./build/img/*.{jpg,png}"])
-  .pipe(webp({quality: 85}))
+gulp.task("optimizationImage", () => {
+  return gulp.src(['./build/img/*.*'])
+  // .pipe(webp())
   .pipe(gulp.dest("build/img"))
   .pipe(bs.reload({
     stream: true
@@ -163,24 +164,24 @@ gulp.task("build",
   gulp.series(
     "clear",
     "copy-fonts",
-// "copy-css",
-// "copy-css-54",
-// "html2pug",
-// "pug",
-// "html",
-// "img",
-// "svg",
-"copy-favicon",
-"copy-webmanifest",
-"copy-img",
-"optimizationImage",
-"html",
-"less",
-"script",
-// "scripts:lib",
-// "script"
-// "serve",
-// "watch"
+  // "copy-css",
+  // "copy-css-54",
+  // "html2pug",
+  // "pug",
+  // "html",
+  // "img",
+  // "svg",
+  "copy-favicon",
+  "copy-webmanifest",
+  "copy-img",
+  "optimizationImage",
+  "html",
+  "less",
+  "script",
+  // "scripts:lib",
+  // "script"
+  // "serve",
+  // "watch"
 ));
 
 gulp.task("serve", function (){
